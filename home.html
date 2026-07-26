@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlee: Home</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-controls="sidebar" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <aside class="sidebar" id="sidebar" aria-hidden="true">
+        <div class="sidebar-panel">
+          <button class="sidebar-close" id="menuClose" aria-label="Close navigation menu">×</button>
+          <div class="sidebar-brand">
+            <span class="sidebar-logo">Carlee</span>
+            <p class="sidebar-tag">Car guessing game</p>
+          </div>
+          <nav class="sidebar-nav" aria-label="Primary">
+            <a class="sidebar-link active" href="home.html">Home</a>
+            <a class="sidebar-link" href="/index.html">Play Game</a>
+            <a class="sidebar-link" href="#how-to-play">How To Play</a>
+            <a class="sidebar-link" href="#statistics">Statistics</a>
+            <a class="sidebar-link" href="#about">About</a>
+          </nav>
+        </div>
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+      </aside>
+
+      <main class="hero-wrapper">
+        <section class="hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">Carlee</p>
+            <h1>Car guessing made simple.</h1>
+            <p class="hero-description">10 guesses. Hundreds of cars. Can you find today’s car?</p>
+            <div class="hero-cta">
+              <a class="button-play" href="/index.html">PLAY</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="info-cards">
+          <article class="info-card">
+            <h2>Daily challenge</h2>
+            <p>One new car every day. Same rules, fresh puzzle.</p>
+          </article>
+          <article class="info-card">
+            <h2>Game stats</h2>
+            <p>Track guesses, streaks, and your best runs.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="home.js"></script>
+  </body>
+</html>
