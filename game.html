@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carlee: Car Guessing Game Home</title>
-    <link rel="stylesheet" href="home.css" />
+    <title>Carlee: Car Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="sidebar.css" />
   </head>
   <body>
@@ -39,8 +39,8 @@
           <img src="CARLEE_LOGO.svg" class="hero-logo-svg" alt="Carlee logo">
         </div>
         <nav class="sidebar-nav" aria-label="Primary">
-          <a class="sidebar-link active" href="index.html">Home</a>
-          <a class="sidebar-link" href="/game.html">Play Game</a>
+          <a class="sidebar-link" href="index.html">Home</a>
+          <a class="sidebar-link active" href="/game.html">Play Game</a>
           <a class="sidebar-link" href="#how-to-play">How To Play</a>
           <a class="sidebar-link" href="#statistics">Statistics</a>
           <a class="sidebar-link" href="#about">About</a>
@@ -58,37 +58,61 @@
       </div>
     </div>
 
-    <div class="page-shell">
-      <main class="hero-wrapper">
-        <section class="hero-panel">
-          <div class="hero-copy">
-            <div class="hero-logo-wrap">
-                <img
-                    src="CARLEE_LOGO.svg"
-                    class="hero-logo-svg"
-                    alt="Carlee logo">
-            </div>
-            <h2>Car guessing made simple.</h2>
-            <p class="hero-description">10 guesses. Hundreds of cars. Can you find today’s car?</p>
-            <div class="hero-cta">
-              <a class="button-play" href="/game.html">PLAY UNLIMITED</a>
-            </div>
-          </div>
-        </section>
-
-        <section class="info-cards">
-          <article class="info-card">
-            <h2>Daily challenge</h2>
-            <p>One new car every day. Same rules, fresh puzzle.</p>
-          </article>
-          <article class="info-card">
-            <h2>Game stats</h2>
-            <p>Track guesses, streaks, and your best runs.</p>
-          </article>
-        </section>
-      </main>
+    <div id="loading" class="loading" aria-live="polite">
+      <div class="loading-spinner" aria-hidden="true"></div>
+      <p>Loading cars…</p>
     </div>
 
+    <div id="error" class="error hidden" role="alert" aria-live="assertive">
+      <p>Failed to load the car catalog. Please refresh the page.</p>
+    </div>
+
+    <main id="app" class="app hidden">
+      <header class="header">
+        <p class="subtitle">Guess the car in 6 tries</p>
+      </header>
+      
+      <p id="guess-counter" class="guess-counter" aria-live="polite">Guesses: 0 / 6</p>
+      <section class="search-section" aria-label="Guess a car">
+        <div class="search-wrapper">
+          <input
+            id="search-input"
+            type="text"
+            class="search-input"
+            placeholder="Search make or model…"
+            autocomplete="off"
+            aria-autocomplete="list"
+            aria-controls="search-dropdown"
+            aria-expanded="false"
+            disabled
+          />
+          <ul id="search-dropdown" class="search-dropdown hidden" role="listbox"></ul>
+        </div>
+      </section>
+
+      <p id="search-error" class="search-error hidden" role="alert"></p>
+
+      <section class="board-section" aria-label="Guess history">
+        <p id="empty-hint" class="empty-hint">Make your first guess to see comparisons.</p>
+        <div id="guess-cards" class="guess-cards" aria-live="polite"></div>
+      </section>
+
+      <section
+        id="game-over"
+        class="game-over hidden"
+        aria-live="polite"
+        aria-label="Game over"
+      >
+        <div class="game-over-wrapped">
+          <button id="close-game-over-btn" class="game-over-close" type="button" aria-label="Close game over screen">×</button>
+          <p id="game-over-message" class="game-over-message"></p>
+          <div id="secret-reveal" class="secret-reveal"></div>
+          <button id="play-again-btn" class="play-again-btn" type="button">Play again</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
     <script src="sidebar.js"></script>
   </body>
 </html>

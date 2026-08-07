@@ -20,6 +20,9 @@
   --error: #f87171;
   --radius: 8px;
   --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  /* card/search sizing */
+  --card-width: 760px; /* preferred max width for guess/results card */
+  --search-offset: 48px; /* how much wider the search bar is than the card (32-64px recommended) */
 }
 
 *,
@@ -41,133 +44,6 @@ body {
   display: none !important;
 }
 
-.hamburger {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 40;
-  width: 40px;
-  height: 30px;
-  padding: 0;
-  border: 1.5px solid rgba(255, 255, 255, 0.12);
-  border-radius: 5px;
-  background: rgba(14, 18, 30, 0.9);
-  backdrop-filter: blur(12px);
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-}
-
-.hamburger span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: #f4f7ff;
-  border-radius: 999px;
-  margin: 1px 0;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 35;
-}
-
-.sidebar-panel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: min(320px, 82vw);
-  max-width: 320px;
-  height: 100%;
-  padding: 28px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background: #0d1117;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 14px 0 64px rgba(0, 0, 0, 0.24);
-  transform: translateX(-105%);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.28s ease, opacity 0.28s ease;
-}
-
-.sidebar-open .sidebar-panel {
-  transform: translateX(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.sidebar-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  pointer-events: none;
-}
-
-.sidebar-open .sidebar-backdrop {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.sidebar-close {
-  align-self: flex-end;
-  border: none;
-  background: transparent;
-  color: #f4f7ff;
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0;
-}
-
-.sidebar-brand {
-  margin-top: 20px;
-  margin-bottom: 2rem;
-}
-
-.sidebar-logo {
-  display: block;
-  font-size: 1.45rem;
-  font-weight: 800;
-  letter-spacing: -0.05em;
-}
-
-.sidebar-tag {
-  margin: 10px 0 0;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-
-.sidebar-nav {
-  display: grid;
-  gap: 14px;
-}
-
-.sidebar-link {
-  display: block;
-  padding: 14px 16px;
-  border-radius: 16px;
-  color: #f4f7ff;
-  background: rgba(255, 255, 255, 0.03);
-  transition: background 0.25s ease, transform 0.25s ease;
-}
-
-.sidebar-link:hover,
-.sidebar-link:focus-visible,
-.sidebar-link.active {
-  background: rgba(139, 124, 255, 0.18);
-  transform: translateX(2px);
-}
-
 
 /* Loading & error */
 
@@ -177,7 +53,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--navbar-height, 64px));
   gap: 1rem;
   color: var(--text-muted);
 }
@@ -211,24 +87,15 @@ body {
 
 .header {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .subtitle {
-  margin: 0.25rem 0 0;
+  margin: 0;
   color: var(--text-muted);
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .guess-counter {
@@ -252,8 +119,9 @@ body {
 
 .search-wrapper {
   position: relative;
-  flex: 0 1 660px;
-  max-width: 750px;
+  /* Make the search bar slightly wider than the main card while staying responsive.
+     It will be `--card-width + --search-offset` up to `95vw`, preventing overflow on small screens. */
+  width: min(95vw, calc(var(--card-width) + var(--search-offset)));
 }
 
 .search-input {
@@ -280,7 +148,7 @@ body {
 
 .search-dropdown {
   position: absolute;
-  top: calc(100% + 4px);
+  top: 100%;
   left: 0;
   right: 0;
   z-index: 100;
@@ -306,7 +174,6 @@ body {
   background: var(--surface);
 }
 
-.guess-btn,
 .play-again-btn {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -321,15 +188,10 @@ body {
   white-space: nowrap;
 }
 
-.guess-btn:hover:not(:disabled),
 .play-again-btn:hover {
   background: var(--accent-hover);
 }
 
-.guess-btn:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
 
 .search-error {
   margin: 0 0 1rem;
@@ -365,7 +227,8 @@ body {
 
 .guess-card {
   display: grid;
-  width: min(100%, 760px);
+  /* Keep the guess/results card centered and constrained by --card-width */
+  width: min(100%, var(--card-width));
   padding: 0.75rem;
   border: 1px solid var(--border);
   border-radius: calc(var(--radius) * 1.25);
@@ -504,6 +367,21 @@ body {
   }
 }
 
+/* Responsive adjustments: reduce the extra width on smaller viewports to avoid overflow */
+@media (max-width: 900px) {
+  :root {
+    --search-offset: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --search-offset: 12px;
+  }
+}
+
+/* for mobile view */
+
 @media (max-width: 640px) {
   .search-section {
     flex-direction: column;
@@ -511,6 +389,40 @@ body {
 
   .guess-card-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem 0.9rem 1rem;
+  }
+
+  .header {
+    margin-bottom: 1rem;
+  }
+
+  .guess-counter {
+    margin-left: auto;
+    font-size: 0.95rem;
+  }
+
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .board-section {
+    margin-top: 0.5rem;
+  }
+
+  .guess-cards {
+    gap: 0.75rem;
+  }
+
+  .empty-hint {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -667,15 +579,49 @@ body {
 }
 
 @media (max-width: 600px) {
-  .header h1 {
-    font-size: 1.5rem;
-  }
-
   .search-section {
     flex-direction: column;
   }
+}
 
-  .guess-btn {
-    width: 100%;
+/* Desktop-only placement: align the guess counter with the search controls (guess button)
+   without modifying any mobile `@media` rules. This floats the counter so its right
+   edge matches the desktop search wrapper and vertically centers it with the
+   guess button. */
+@media (min-width: 769px) {
+  .app {
+    position: relative;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .guess-counter {
+    position: absolute;
+    right: calc((100% - 900px) / 2);
+    top: calc(1.5rem + 1.75rem);
+    transform: translateY(-50%);
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  .search-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .search-wrapper {
+    position: relative;
+    flex: 0 1 auto;
+    min-width: 0;
+    width: min(95vw, calc(var(--card-width) + var(--search-offset)));
+    max-width: calc(var(--card-width) + var(--search-offset));
+    margin: 0 auto;
   }
 }
