@@ -616,7 +616,7 @@ body {
   padding: 1.5rem;
   padding-top: 3rem;
   text-align: center;
-  background: rgba(15, 20, 25, 0.88);
+  background: rgba(15, 20, 25, 0.422);
   backdrop-filter: blur(10px);
   z-index: 25;
 }
