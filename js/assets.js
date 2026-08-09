@@ -30,6 +30,19 @@ const COUNTRY_FLAGS = {
   USA: '🇺🇸',
 };
 
+/** Maps catalog bodyStyle → SVG filename in assets/cars/ */
+const BODY_STYLE_SVG = {
+  Sedan: 'Sedan.svg',
+  Coupe: 'Coupe.svg',
+  Convertible: 'Convertible.svg',
+  SUV: 'SUV.svg',
+  Truck: 'Truck.svg',
+  Wagon: 'Wagon.svg',
+  // Closest available silhouettes when a dedicated SVG is not present yet
+  Hatchback: 'Sedan.svg',
+  Roadster: 'Convertible.svg',
+};
+
 export function makeToSlug(make) {
   if (MAKE_SLUG_ALIASES[make]) return MAKE_SLUG_ALIASES[make];
 
@@ -50,7 +63,13 @@ export function getCountryFlagEmoji(country) {
   return COUNTRY_FLAGS[country] || '';
 }
 
-/** Convention for optional per-car photos: assets/cars/{carId}.png */
+/** Body-style silhouette SVG for guess cards / game over. */
+export function getBodyStyleSvgUrl(bodyStyle) {
+  const file = BODY_STYLE_SVG[bodyStyle] || BODY_STYLE_SVG.Sedan;
+  return `assets/cars/${file}`;
+}
+
+/** @deprecated Prefer getBodyStyleSvgUrl(car.bodyStyle) */
 export function getCarPhotoUrl(carId) {
   return `assets/cars/${carId}.png`;
 }

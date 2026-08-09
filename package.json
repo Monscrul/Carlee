@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "fetch-logos": "node scripts/fetch-brand-logos.mjs"
+    "fetch-logos": "node scripts/fetch-brand-logos.mjs",
+    "optimize-car-svgs": "node scripts/optimize-car-svgs.mjs"
   }
 }

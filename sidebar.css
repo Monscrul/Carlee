@@ -315,13 +315,40 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+html:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 999px;
+}
+
+html:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
 /* Site footer */
 
 .site-footer {
   margin-top: auto;
-  padding: 14px 20px 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(13, 17, 23, 0.6);
+  padding: 20px 20px 16px;
+  border-top: none;
+  background: transparent;
   text-align: center;
 }
 

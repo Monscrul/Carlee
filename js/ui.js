@@ -1,5 +1,5 @@
 import { ATTRIBUTES, FEEDBACK, GAME_STATUS } from './constants.js';
-import { getBrandLogoUrl, getCarPhotoUrl, getCountryFlagEmoji } from './assets.js';
+import { getBrandLogoUrl, getBodyStyleSvgUrl, getCountryFlagEmoji } from './assets.js';
 
 const elements = {};
 
@@ -17,6 +17,8 @@ export function initUI() {
   elements.gameOver = document.getElementById('game-over');
   elements.gameOverMessage = document.getElementById('game-over-message');
   elements.secretReveal = document.getElementById('secret-reveal');
+  elements.gameOverPhoto = document.getElementById('game-over-photo');
+  elements.gameOverPhotoImg = document.getElementById('game-over-photo-img');
   elements.playAgainBtn = document.getElementById('play-again-btn');
   elements.closeGameOverBtn = document.getElementById('close-game-over-btn');
 
@@ -217,11 +219,12 @@ function createGuessCard(guess, car, isNew) {
   const photoSlot = document.createElement('div');
   photoSlot.className = 'guess-card-photo';
   photoSlot.dataset.carId = car.id;
+  photoSlot.dataset.bodyStyle = car.bodyStyle;
 
   const photoImg = document.createElement('img');
   photoImg.className = 'guess-card-photo-img';
-  photoImg.alt = `${car.displayName} photo`;
-  photoImg.src = getCarPhotoUrl(car.id);
+  photoImg.alt = `${car.bodyStyle} silhouette`;
+  photoImg.src = getBodyStyleSvgUrl(car.bodyStyle);
   photoImg.loading = 'lazy';
   photoImg.addEventListener('error', () => {
     photoImg.remove();
@@ -332,10 +335,35 @@ export function showGameOver(state, secretCar) {
     elements.gameOver.classList.remove('game-over-won');
   }
 
-  elements.secretReveal.innerHTML = `
-    <strong>${secretCar.displayName}</strong>
-    <span>${secretCar.year} · ${secretCar.drivetrain} · ${secretCar.horsepower} hp · ${secretCar.engine}</span>
-  `;
+  if (elements.secretReveal) {
+    elements.secretReveal.innerHTML = `
+      <div class="secret-reveal-make">
+        <img
+          class="secret-reveal-logo"
+          src="${getBrandLogoUrl(secretCar.make)}"
+          alt="${secretCar.make} logo"
+        />
+      </div>
+      <strong>${secretCar.displayName}</strong>
+      <span>${secretCar.year} · ${secretCar.drivetrain} · ${secretCar.horsepower} hp · ${secretCar.engine}</span>
+    `;
+
+    const logoImg = elements.secretReveal.querySelector('.secret-reveal-logo');
+    logoImg?.addEventListener('error', () => {
+      logoImg.hidden = true;
+    });
+  }
+
+  if (elements.gameOverPhotoImg) {
+    const photoImg = elements.gameOverPhotoImg;
+    photoImg.hidden = false;
+    photoImg.alt = `${secretCar.bodyStyle} silhouette`;
+    photoImg.src = getBodyStyleSvgUrl(secretCar.bodyStyle);
+    photoImg.onerror = () => {
+      photoImg.hidden = true;
+      photoImg.removeAttribute('src');
+    };
+  }
 }
 
 export function hideGameOver() {
@@ -343,6 +371,12 @@ export function hideGameOver() {
   elements.gameOver?.classList.remove('game-over-won', 'game-over-lost');
   if (elements.secretReveal) elements.secretReveal.innerHTML = '';
   if (elements.gameOverMessage) elements.gameOverMessage.textContent = '';
+  if (elements.gameOverPhotoImg) {
+    elements.gameOverPhotoImg.hidden = true;
+    elements.gameOverPhotoImg.removeAttribute('src');
+    elements.gameOverPhotoImg.alt = '';
+    elements.gameOverPhotoImg.onerror = null;
+  }
 }
 
 export function renderGame(state, catalog) {
