@@ -1,4 +1,5 @@
 import { ATTRIBUTES, FEEDBACK, GAME_STATUS } from './constants.js';
+import { getBrandLogoUrl, getCarPhotoUrl, getCountryFlagEmoji } from './assets.js';
 
 const elements = {};
 
@@ -112,6 +113,22 @@ function getResultBadge(status) {
   }
 }
 
+/** Compact attrs (Drive/HP/Year) vs wider text attrs (Make/Country). */
+function getTileSizeClass(attrKey) {
+  switch (attrKey) {
+    case 'drivetrain':
+    case 'horsepower':
+    case 'year':
+    case 'make':
+    case 'bodyStyle':
+    case 'country':
+    case 'engine':
+      return 'guess-tile--compact';
+      default:
+      return 'guess-tile--wide';
+  }
+}
+
 function createGuessCard(guess, car, isNew) {
   const card = document.createElement('article');
   card.className = `guess-card${isNew ? ' guess-card--new' : ''}`;
@@ -121,7 +138,25 @@ function createGuessCard(guess, car, isNew) {
 
   const avatar = document.createElement('div');
   avatar.className = 'guess-card-avatar';
-  avatar.textContent = car.make?.[0] || '?';
+
+  const logoImg = document.createElement('img');
+  logoImg.className = 'guess-card-avatar-img';
+  logoImg.src = getBrandLogoUrl(car.make);
+  logoImg.alt = `${car.make} logo`;
+  logoImg.loading = 'lazy';
+
+  const logoFallback = document.createElement('span');
+  logoFallback.className = 'guess-card-avatar-fallback';
+  logoFallback.textContent = car.make?.[0] || '?';
+  logoFallback.hidden = true;
+
+  logoImg.addEventListener('error', () => {
+    logoImg.hidden = true;
+    logoFallback.hidden = false;
+  });
+
+  avatar.appendChild(logoImg);
+  avatar.appendChild(logoFallback);
 
   const title = document.createElement('div');
   const name = document.createElement('h2');
@@ -139,7 +174,8 @@ function createGuessCard(guess, car, isNew) {
   for (const attr of ATTRIBUTES) {
     const result = guess.attributes[attr.key];
     const tile = document.createElement('div');
-    tile.className = `guess-tile guess-tile--${result.status}`;
+    const sizeClass = getTileSizeClass(attr.key);
+    tile.className = `guess-tile guess-tile--${result.status}${sizeClass ? ` ${sizeClass}` : ''}`;
 
     const label = document.createElement('div');
     label.className = 'tile-label';
@@ -148,16 +184,28 @@ function createGuessCard(guess, car, isNew) {
     const value = document.createElement('div');
     value.className = 'tile-value';
     const attributeValue = getAttributeValue(attr.key, car);
+
+    const text = document.createElement('span');
+    text.className = 'tile-text';
+    text.textContent = attributeValue;
+    value.appendChild(text);
+
+    if (attr.key === 'country') {
+      const flag = getCountryFlagEmoji(car.country);
+      if (flag) {
+        const flagEl = document.createElement('span');
+        flagEl.className = 'tile-flag';
+        flagEl.textContent = flag;
+        flagEl.setAttribute('aria-hidden', 'true');
+        flagEl.title = car.country;
+        value.appendChild(flagEl);
+      }
+    }
+
     const badge = document.createElement('span');
     badge.className = 'tile-badge';
     badge.textContent = getResultBadge(result.status);
-
-    value.textContent = attributeValue;
-    if (result.status === FEEDBACK.CORRECT) {
-      value.appendChild(badge);
-    } else {
-      value.appendChild(badge);
-    }
+    value.appendChild(badge);
 
     tile.appendChild(label);
     tile.appendChild(value);
@@ -165,6 +213,23 @@ function createGuessCard(guess, car, isNew) {
   }
 
   card.appendChild(grid);
+
+  const photoSlot = document.createElement('div');
+  photoSlot.className = 'guess-card-photo';
+  photoSlot.dataset.carId = car.id;
+
+  const photoImg = document.createElement('img');
+  photoImg.className = 'guess-card-photo-img';
+  photoImg.alt = `${car.displayName} photo`;
+  photoImg.src = getCarPhotoUrl(car.id);
+  photoImg.loading = 'lazy';
+  photoImg.addEventListener('error', () => {
+    photoImg.remove();
+  });
+
+  photoSlot.appendChild(photoImg);
+  card.appendChild(photoSlot);
+
   return card;
 }
 

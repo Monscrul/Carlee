@@ -18,9 +18,6 @@ export const ATTRIBUTES = [
   { key: 'engine', label: 'Engine' },
 ];
 
-export const YEAR_CLOSE_THRESHOLD = 2;
-export const HORSEPOWER_CLOSE_THRESHOLD = 20;
-
 export const GAME_STATUS = {
   PLAYING: 'playing',
   WON: 'won',

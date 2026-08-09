@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn about Carlee, a simple car-guessing game where you try to identify a mystery car." />
+    <title>About — Carlee</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <link rel="icon" type="image/png" href="assets/CARLEEFAVICON.png" />
+  </head>
+  <body>
+    <header class="top-navbar">
+      <div class="navbar-left">
+        <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-controls="sidebar" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="navbar-center">
+        <a class="navbar-logo" href="index.html" aria-label="Carlee home">
+          <img src="assets/CARLEE_LOGO.svg" class="navbar-logo-svg" alt="Carlee logo" />
+        </a>
+      </div>
+      <div class="navbar-right">
+        <button class="stats-btn" id="statsToggle" type="button" aria-label="View statistics" aria-controls="statsPanel" aria-expanded="false">
+          <svg class="stats-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 3v18h18"></path>
+            <path d="M7 16l4-8 4 5 5-9"></path>
+          </svg>
+          <span class="stats-btn-label">Statistics</span>
+        </button>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar" aria-hidden="true">
+      <div class="sidebar-panel">
+        <button class="sidebar-close" id="menuClose" aria-label="Close navigation menu">×</button>
+        <div class="sidebar-brand">
+          <img src="assets/CARLEE_LOGO.svg" class="hero-logo-svg" alt="Carlee logo" />
+        </div>
+                <nav class="sidebar-nav" aria-label="Primary">
+          <a class="sidebar-link" href="index.html">Home</a>
+          <a class="sidebar-link" href="game.html">Play Game</a>
+          <a class="sidebar-link" href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    </aside>
+
+    <div class="stats-panel" id="statsPanel" aria-hidden="true" role="dialog" aria-labelledby="statsPanelTitle">
+      <div class="stats-panel-backdrop" id="statsBackdrop"></div>
+      <div class="stats-panel-content">
+        <button class="stats-panel-close" id="statsClose" type="button" aria-label="Close statistics">×</button>
+        <h2 class="stats-panel-title" id="statsPanelTitle">Statistics</h2>
+        <p class="stats-panel-message">Your game statistics will appear here. Track guesses, streaks, and win rates — coming soon.</p>
+      </div>
+    </div>
+
+    <div class="page-shell">
+      <main class="content-page">
+        <header class="content-page-header">
+          <h1>About Carlee</h1>
+          <p class="page-intro">A small car-guessing game built for people who like cars — and a good puzzle.</p>
+        </header>
+
+        <article class="content-card">
+          <h2>What is Carlee?</h2>
+          <p>
+            Carlee is a browser-based guessing game. Each round, a mystery car is chosen from the catalog,
+            and you try to figure out which one it is by making guesses and reading the feedback.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <h2>How the game works</h2>
+          <p>
+            Search for a make or model, submit a guess, and compare attributes like make, country,
+            drivetrain, body style, horsepower, year, and engine. Matching fields turn correct;
+            year and horsepower also show whether you need to go higher or lower. You have a limited
+            number of guesses to find the right car.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <h2>Why Carlee was created</h2>
+          <p>
+            Carlee started as a simple personal project: a clean, focused place to play a car-themed
+            guessing game without clutter. The goal is to keep the experience fast, readable, and fun
+            whether you know cars well or are just learning the badges and specs.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <h2>What makes Carlee different</h2>
+          <p>
+            Carlee keeps the focus on the puzzle itself — search, guess, compare, repeat. There is no
+            account signup required to play, and the interface stays intentionally simple so the cars
+            and the feedback stay front and center.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <h2>About the project</h2>
+          <p>
+            Carlee is an independent side project. Features may grow over time (for example, richer
+            statistics), but the core idea remains the same: one mystery car, a handful of guesses,
+            and a catalog worth exploring.
+          </p>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <nav class="site-footer-nav" aria-label="Footer">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+        <p class="site-footer-copy">© 2026 Carlee</p>
+      </footer>
+    </div>
+
+    <script src="sidebar.js"></script>
+  </body>
+</html>

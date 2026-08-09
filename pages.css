@@ -1,0 +1,137 @@
+/* Shared styles for About, Contact, and Privacy Policy pages */
+
+.content-page {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.content-page-header {
+  margin-bottom: 32px;
+}
+
+.content-page-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text, #e5e7eb);
+}
+
+.content-page-header .page-intro,
+.content-page-header .effective-date {
+  margin: 0;
+  color: var(--muted, #9ca3af);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.content-section {
+  margin-bottom: 28px;
+}
+
+.content-section h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text, #e5e7eb);
+}
+
+.content-section p,
+.content-section li {
+  margin: 0 0 12px;
+  color: var(--muted, #9ca3af);
+  line-height: 1.7;
+}
+
+.content-section ul {
+  margin: 0 0 12px;
+  padding-left: 1.25rem;
+}
+
+.content-section li {
+  margin-bottom: 6px;
+}
+
+.content-section a {
+  color: var(--accent, #3b82f6);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content-section a:hover,
+.content-section a:focus-visible {
+  color: #60a5fa;
+}
+
+.placeholder {
+  display: inline;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: rgba(234, 179, 8, 0.15);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  color: #fbbf24;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.content-card {
+  padding: 22px;
+  border-radius: 18px;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+  margin-bottom: 18px;
+}
+
+.content-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+.content-card p {
+  margin: 0;
+  color: var(--muted, #9ca3af);
+  line-height: 1.7;
+}
+
+.content-card + .content-card {
+  margin-top: 0;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 0.85rem 1.25rem;
+  border-radius: 14px;
+  background: #2563eb;
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 18px 40px rgba(16, 50, 93, 0.24);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-email:hover,
+.contact-email:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 70px rgba(107, 89, 255, 0.28);
+  color: #fff !important;
+}
+
+.contact-note {
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .content-page {
+    padding: 24px 16px 48px;
+  }
+
+  .content-page-header {
+    margin-bottom: 24px;
+  }
+}

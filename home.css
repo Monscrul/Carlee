@@ -42,8 +42,10 @@ a {
 }
 
 .page-shell {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--navbar-height, 64px));
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -76,6 +78,7 @@ a {
   justify-content: center;
   align-items: center;
   margin-bottom: 16px;
+  object-fit: contain;
   color: #ffffff;
 }
 

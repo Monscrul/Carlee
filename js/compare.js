@@ -1,9 +1,4 @@
-import {
-  FEEDBACK,
-  ATTRIBUTES,
-  YEAR_CLOSE_THRESHOLD,
-  HORSEPOWER_CLOSE_THRESHOLD,
-} from './constants.js';
+import { FEEDBACK, ATTRIBUTES } from './constants.js';
 
 function compareEnum(guessValue, secretValue) {
   return guessValue === secretValue
@@ -11,15 +6,9 @@ function compareEnum(guessValue, secretValue) {
     : { status: FEEDBACK.WRONG };
 }
 
-function compareNumber(guessValue, secretValue, closeThreshold) {
+function compareNumber(guessValue, secretValue) {
   if (guessValue === secretValue) {
     return { status: FEEDBACK.CORRECT };
-  }
-
-  const delta = Math.abs(secretValue - guessValue);
-
-  if (delta <= closeThreshold) {
-    return { status: FEEDBACK.WRONG, delta };
   }
 
   if (secretValue > guessValue) {
@@ -35,9 +24,8 @@ const COMPARATORS = {
   drivetrain: (guess, secret) => compareEnum(guess.drivetrain, secret.drivetrain),
   bodyStyle: (guess, secret) => compareEnum(guess.bodyStyle, secret.bodyStyle),
   engine: (guess, secret) => compareEnum(guess.engine, secret.engine),
-  year: (guess, secret) => compareNumber(guess.year, secret.year, YEAR_CLOSE_THRESHOLD),
-  horsepower: (guess, secret) =>
-    compareNumber(guess.horsepower, secret.horsepower, HORSEPOWER_CLOSE_THRESHOLD),
+  year: (guess, secret) => compareNumber(guess.year, secret.year),
+  horsepower: (guess, secret) => compareNumber(guess.horsepower, secret.horsepower),
 };
 
 export function compareCars(guessCar, secretCar) {

@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carlee: Car Guessing Game Home</title>
+    <meta name="description" content="Contact the creator of Carlee with questions, feedback, or bug reports." />
+    <title>Contact — Carlee</title>
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="pages.css" />
     <link rel="icon" type="image/png" href="assets/CARLEEFAVICON.png" />
-
   </head>
   <body>
-    
     <header class="top-navbar">
       <div class="navbar-left">
         <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-controls="sidebar" aria-expanded="false">
@@ -19,10 +19,11 @@
           <span></span>
         </button>
       </div>
-
-      <div clas="navbar-center" id="navbar-center">
+      <div class="navbar-center">
+        <a class="navbar-logo" href="index.html" aria-label="Carlee home">
+          <img src="assets/CARLEE_LOGO.svg" class="navbar-logo-svg" alt="Carlee logo" />
+        </a>
       </div>
-      
       <div class="navbar-right">
         <button class="stats-btn" id="statsToggle" type="button" aria-label="View statistics" aria-controls="statsPanel" aria-expanded="false">
           <svg class="stats-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -38,17 +39,17 @@
       <div class="sidebar-panel">
         <button class="sidebar-close" id="menuClose" aria-label="Close navigation menu">×</button>
         <div class="sidebar-brand">
-          <img src="assets/CARLEE_LOGO.svg" class="hero-logo-svg" alt="Carlee logo">
+          <img src="assets/CARLEE_LOGO.svg" class="hero-logo-svg" alt="Carlee logo" />
         </div>
                 <nav class="sidebar-nav" aria-label="Primary">
-          <a class="sidebar-link active" href="index.html">Home</a>
+          <a class="sidebar-link" href="index.html">Home</a>
           <a class="sidebar-link" href="game.html">Play Game</a>
-          <a class="sidebar-link" href="contact.html">Contact</a>
+          <a class="sidebar-link active" href="contact.html">Contact</a>
         </nav>
       </div>
       <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
     </aside>
-    
+
     <div class="stats-panel" id="statsPanel" aria-hidden="true" role="dialog" aria-labelledby="statsPanelTitle">
       <div class="stats-panel-backdrop" id="statsBackdrop"></div>
       <div class="stats-panel-content">
@@ -59,33 +60,46 @@
     </div>
 
     <div class="page-shell">
-      <main class="hero-wrapper">
-        <section class="hero-panel">
-          <div class="hero-copy">
-            <div class="hero-logo-wrap">
-                <img
-                    src="assets/CARLEE_LOGO.svg"
-                    class="hero-logo-svg"
-                    alt="Carlee logo">
-            </div>
-            <h2>Car guessing made simple.</h2>
-            <p class="hero-description">10 guesses. Hundreds of cars. Can you find today’s car?</p>
-            <div class="hero-cta">
-              <a class="button-play" href="/game.html">PLAY UNLIMITED</a>
-            </div>
-          </div>
-        </section>
+      <main class="content-page">
+        <header class="content-page-header">
+          <h1>Contact</h1>
+          <p class="page-intro">
+            Questions, feedback, bug reports, catalog corrections, or anything else about Carlee —
+            feel free to get in touch.
+          </p>
+        </header>
 
-        <section class="info-cards">
-          <article class="info-card">
-            <h2>Daily challenge</h2>
-            <p>One new car every day. Same rules, fresh puzzle.</p>
-          </article>
-          <article class="info-card">
-            <h2>Game stats</h2>
-            <p>Track guesses, streaks, and your best runs.</p>
-          </article>
-        </section>
+        <article class="content-card">
+          <h2>Email</h2>
+          <p>
+            The easiest way to reach the creator of Carlee is by email. Replace the placeholder below
+            with your real address before publishing.
+          </p>
+          <!-- TODO: Replace placeholder email with your real contact address -->
+          <a class="contact-email" href="mailto:[YOUR_EMAIL_HERE]">
+            <span class="placeholder">[YOUR_EMAIL_HERE]</span>
+          </a>
+          <p class="contact-note">
+            Tip: after you set a real address, update both the visible text and the
+            <code>mailto:</code> link so they match.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <h2>What to include</h2>
+          <p>Helpful messages often include:</p>
+          <ul>
+            <li>Questions about how the game works</li>
+            <li>Feedback or feature ideas</li>
+            <li>Bug reports (what you did, what you expected, and what happened)</li>
+            <li>Corrections to car data (make, model, year, specs, and so on)</li>
+            <li>Privacy or other inquiries</li>
+          </ul>
+          <p>
+            There is no contact form on this site yet — Carlee does not currently run a backend for
+            form submissions — so email is the contact method for now.
+          </p>
+        </article>
       </main>
 
       <footer class="site-footer">

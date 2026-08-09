@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Terms of Service for Carlee, a car-guessing game website." />
+    <title>Terms of Service — Carlee</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <link rel="icon" type="image/png" href="assets/CARLEEFAVICON.png" />
+  </head>
+  <body>
+    <header class="top-navbar">
+      <div class="navbar-left">
+        <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-controls="sidebar" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="navbar-center">
+        <a class="navbar-logo" href="index.html" aria-label="Carlee home">
+          <img src="assets/CARLEE_LOGO.svg" class="navbar-logo-svg" alt="Carlee logo" />
+        </a>
+      </div>
+      <div class="navbar-right">
+        <button class="stats-btn" id="statsToggle" type="button" aria-label="View statistics" aria-controls="statsPanel" aria-expanded="false">
+          <svg class="stats-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 3v18h18"></path>
+            <path d="M7 16l4-8 4 5 5-9"></path>
+          </svg>
+          <span class="stats-btn-label">Statistics</span>
+        </button>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar" aria-hidden="true">
+      <div class="sidebar-panel">
+        <button class="sidebar-close" id="menuClose" aria-label="Close navigation menu">×</button>
+        <div class="sidebar-brand">
+          <img src="assets/CARLEE_LOGO.svg" class="hero-logo-svg" alt="Carlee logo" />
+        </div>
+                <nav class="sidebar-nav" aria-label="Primary">
+          <a class="sidebar-link" href="index.html">Home</a>
+          <a class="sidebar-link" href="game.html">Play Game</a>
+          <a class="sidebar-link" href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    </aside>
+
+    <div class="stats-panel" id="statsPanel" aria-hidden="true" role="dialog" aria-labelledby="statsPanelTitle">
+      <div class="stats-panel-backdrop" id="statsBackdrop"></div>
+      <div class="stats-panel-content">
+        <button class="stats-panel-close" id="statsClose" type="button" aria-label="Close statistics">×</button>
+        <h2 class="stats-panel-title" id="statsPanelTitle">Statistics</h2>
+        <p class="stats-panel-message">Your game statistics will appear here. Track guesses, streaks, and win rates — coming soon.</p>
+      </div>
+    </div>
+
+    <div class="page-shell">
+      <main class="content-page">
+        <header class="content-page-header">
+          <h1>Terms of Service</h1>
+          <p class="effective-date">Effective date: August 8, 2026</p>
+        </header>
+
+        <section class="content-section">
+          <h2>Acceptance of these terms</h2>
+          <p>
+            By accessing or using the Carlee website and game, you agree to these Terms of Service.
+            If you do not agree, please do not use Carlee.
+          </p>
+          <p>
+            Carlee is operated as an independent project
+            <!-- TODO: Replace with legal/business name if you have one -->
+            by <span class="placeholder">[YOUR_NAME_OR_BUSINESS_NAME]</span>.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>What Carlee is</h2>
+          <p>
+            Carlee is a free browser-based car-guessing game. Each round, a mystery car is chosen from
+            a catalog, and you try to identify it by searching and submitting guesses. Feedback
+            compares attributes such as make, country, drivetrain, body style, horsepower, year, and
+            engine. You have a limited number of guesses per game.
+          </p>
+          <p>
+            Carlee currently does not require accounts, does not provide a contact form backend, and
+            does not currently include advertising or third-party analytics in the application itself.
+            Features may change over time.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Using the game</h2>
+          <p>When you use Carlee, you agree to:</p>
+          <ul>
+            <li>Use the site for personal, non-commercial enjoyment unless we agree otherwise in writing</li>
+            <li>Play fairly and not attempt to disrupt, overload, or interfere with the service</li>
+            <li>Not attempt to reverse-engineer, scrape at abusive rates, or misuse the car catalog or site in a way that harms the project or other users</li>
+            <li>Not use automated tools to cheat or abuse gameplay in a way that interferes with normal operation</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>User conduct</h2>
+          <p>
+            You agree not to use Carlee to engage in unlawful activity, harass others, distribute
+            malware, attempt unauthorized access to systems or data, or otherwise misuse the website.
+            We may restrict or block access if we reasonably believe these terms are being violated.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Intellectual property</h2>
+          <p>
+            The Carlee name, site design, layout, original text, and original code written for this
+            project are protected by applicable intellectual property laws. You may not copy,
+            redistribute, or claim ownership of Carlee’s original materials without permission,
+            except for ordinary personal use of the game in your browser.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Third-party content, trademarks, and car materials</h2>
+          <p>
+            Carlee references real car makes, models, and technical attributes for gameplay. Car
+            names, logos, trademarks, and related brand materials belong to their respective owners.
+            Carlee is an independent fan/project game and is not affiliated with, endorsed by, or
+            sponsored by those manufacturers or trademark owners unless explicitly stated.
+          </p>
+          <p>
+            Catalog data is provided for entertainment and educational guessing gameplay. It may
+            contain errors or omissions. If you spot a mistake, you can report it via the
+            <a href="contact.html">Contact</a> page.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Disclaimer</h2>
+          <p>
+            Carlee is provided “as is” and “as available” for entertainment purposes. We do not
+            guarantee that the game will always be available, uninterrupted, error-free, or that the
+            car catalog will be complete or perfectly accurate.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Limitation of liability</h2>
+          <p>
+            To the fullest extent permitted by law, Carlee and its operator are not liable for any
+            indirect, incidental, special, consequential, or punitive damages, or for any loss of
+            data, profits, or goodwill, arising from your use of (or inability to use) the website
+            or game. If liability cannot be excluded in your jurisdiction, it is limited to the
+            maximum extent allowed by applicable law.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Changes to the service</h2>
+          <p>
+            We may update, pause, or discontinue parts of Carlee at any time — including the catalog,
+            gameplay rules, interface, or availability — without prior notice.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Changes to these Terms</h2>
+          <p>
+            These Terms may be updated from time to time. When we make changes, we will revise the
+            effective date at the top of this page. Continued use of Carlee after an update means
+            you should review the revised Terms.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Privacy</h2>
+          <p>
+            How information related to your visit may be handled is described in our
+            <a href="privacy.html">Privacy Policy</a>.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Contact</h2>
+          <p>
+            Questions about these Terms can be sent to:
+          </p>
+          <p>
+            <!-- TODO: Replace with your real contact email -->
+            Email: <span class="placeholder">[YOUR_EMAIL_HERE]</span><br />
+            Operator: <span class="placeholder">[YOUR_NAME_OR_BUSINESS_NAME]</span>
+          </p>
+          <p>
+            You can also use the <a href="contact.html">Contact</a> page.
+          </p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <nav class="site-footer-nav" aria-label="Footer">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+        </nav>
+        <p class="site-footer-copy">© 2026 Carlee</p>
+      </footer>
+    </div>
+
+    <script src="sidebar.js"></script>
+  </body>
+</html>

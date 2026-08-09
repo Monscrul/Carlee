@@ -1,0 +1,371 @@
+{
+  "generatedAt": "2026-08-08T14:31:36.295Z",
+  "source": "carlogos.org",
+  "note": "One modern logo per catalog make; prefers {slug}-logo.png over year variants.",
+  "entries": [
+    {
+      "make": "Acura",
+      "slug": "acura",
+      "filename": "acura.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/acura-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Alfa Romeo",
+      "slug": "alfa-romeo",
+      "filename": "alfa-romeo.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/alfa-romeo-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Aston Martin",
+      "slug": "aston-martin",
+      "filename": "aston-martin.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/aston-martin-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Audi",
+      "slug": "audi",
+      "filename": "audi.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/audi-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "BMW",
+      "slug": "bmw",
+      "filename": "bmw.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/bmw-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Bugatti",
+      "slug": "bugatti",
+      "filename": "bugatti.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/bugatti-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Buick",
+      "slug": "buick",
+      "filename": "buick.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/buick-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "BYD",
+      "slug": "byd",
+      "filename": "byd.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/byd-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Cadillac",
+      "slug": "cadillac",
+      "filename": "cadillac.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/cadillac-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Chevrolet",
+      "slug": "chevrolet",
+      "filename": "chevrolet.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/chevrolet-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Citroën",
+      "slug": "citroen",
+      "filename": "citroen.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/citroen-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "DeLorean",
+      "slug": "delorean",
+      "filename": "delorean.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/delorean-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Dodge",
+      "slug": "dodge",
+      "filename": "dodge.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/dodge-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Ferrari",
+      "slug": "ferrari",
+      "filename": "ferrari.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/ferrari-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Fiat",
+      "slug": "fiat",
+      "filename": "fiat.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/fiat-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Ford",
+      "slug": "ford",
+      "filename": "ford.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/ford-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Genesis",
+      "slug": "genesis",
+      "filename": "genesis.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/genesis-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "GMC",
+      "slug": "gmc",
+      "filename": "gmc.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/gmc-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Honda",
+      "slug": "honda",
+      "filename": "honda.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/honda-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Hyundai",
+      "slug": "hyundai",
+      "filename": "hyundai.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/hyundai-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Jaguar",
+      "slug": "jaguar",
+      "filename": "jaguar.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/jaguar-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Jeep",
+      "slug": "jeep",
+      "filename": "jeep.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/jeep-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Kia",
+      "slug": "kia",
+      "filename": "kia.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/kia-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Koenigsegg",
+      "slug": "koenigsegg",
+      "filename": "koenigsegg.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/koenigsegg-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Lamborghini",
+      "slug": "lamborghini",
+      "filename": "lamborghini.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/lamborghini-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Land Rover",
+      "slug": "land-rover",
+      "filename": "land-rover.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/land-rover-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Lexus",
+      "slug": "lexus",
+      "filename": "lexus.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/lexus-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Lotus",
+      "slug": "lotus",
+      "filename": "lotus.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/lotus-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Lucid",
+      "slug": "lucid",
+      "filename": "lucid.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/lucid-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Maserati",
+      "slug": "maserati",
+      "filename": "maserati.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/maserati-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Mazda",
+      "slug": "mazda",
+      "filename": "mazda.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/mazda-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "McLaren",
+      "slug": "mclaren",
+      "filename": "mclaren.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/mclaren-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Mercedes-Benz",
+      "slug": "mercedes-benz",
+      "filename": "mercedes-benz.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/mercedes-benz-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "MINI",
+      "slug": "mini",
+      "filename": "mini.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/mini-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Mitsubishi",
+      "slug": "mitsubishi",
+      "filename": "mitsubishi.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/mitsubishi-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Nissan",
+      "slug": "nissan",
+      "filename": "nissan.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/nissan-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Oldsmobile",
+      "slug": "oldsmobile",
+      "filename": "oldsmobile.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/oldsmobile-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Pagani",
+      "slug": "pagani",
+      "filename": "pagani.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/pagani-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Peugeot",
+      "slug": "peugeot",
+      "filename": "peugeot.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/peugeot-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Plymouth",
+      "slug": "plymouth",
+      "filename": "plymouth.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/plymouth-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Pontiac",
+      "slug": "pontiac",
+      "filename": "pontiac.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/pontiac-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Porsche",
+      "slug": "porsche",
+      "filename": "porsche.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/porsche-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Ram",
+      "slug": "ram",
+      "filename": "ram.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/ram-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Renault",
+      "slug": "renault",
+      "filename": "renault.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/renault-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Rimac",
+      "slug": "rimac",
+      "filename": "rimac.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/rimac-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Rivian",
+      "slug": "rivian",
+      "filename": "rivian.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/rivian-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Saab",
+      "slug": "saab",
+      "filename": "saab.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/saab-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Subaru",
+      "slug": "subaru",
+      "filename": "subaru.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/subaru-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Tesla",
+      "slug": "tesla",
+      "filename": "tesla.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/tesla-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Toyota",
+      "slug": "toyota",
+      "filename": "toyota.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/toyota-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Volkswagen",
+      "slug": "volkswagen",
+      "filename": "volkswagen.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/volkswagen-logo.png",
+      "status": "ok"
+    },
+    {
+      "make": "Volvo",
+      "slug": "volvo",
+      "filename": "volvo.png",
+      "sourceUrl": "https://www.carlogos.org/car-logos/volvo-logo.png",
+      "status": "ok"
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 {
   "name": "car-guessing-website",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "fetch-logos": "node scripts/fetch-brand-logos.mjs"
+  }
 }

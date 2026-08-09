@@ -68,10 +68,14 @@ function selectCar(carId) {
 function handleGuessSubmit() {
   if (!gameState || !selectedCarId) return;
 
+  // Disable immediately to prevent double taps while processing
+  setGuessEnabled(false);
+
   const { state, error } = submitGuess(gameState, selectedCarId, catalog);
 
   if (error) {
     showSearchError(error);
+    setGuessEnabled(true);
     return;
   }
 
@@ -160,12 +164,13 @@ function setupEventListeners() {
   });
 
   document.addEventListener('click', (event) => {
-    const { searchInput, searchDropdown } = getUIElements();
+    const { searchInput, searchDropdown, guessBtn } = getUIElements();
     if (
       searchInput &&
       searchDropdown &&
       !searchInput.contains(event.target) &&
-      !searchDropdown.contains(event.target)
+      !searchDropdown.contains(event.target) &&
+      !guessBtn?.contains(event.target)
     ) {
       hideSearchDropdown();
     }
