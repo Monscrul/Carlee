@@ -8,7 +8,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Sedan",
     "horsepower": 225,
-    "year": 2024,
+    "year": 2017,
     "engine": "2.5L I4"
   },
   {
@@ -20,7 +20,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Sedan",
     "horsepower": 200,
-    "year": 2024,
+    "year": 2021,
     "engine": "1.5L I4"
   },
   {
@@ -32,7 +32,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 480,
-    "year": 2024,
+    "year": 2023,
     "engine": "5.0L V8"
   },
   {
@@ -44,7 +44,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 495,
-    "year": 2024,
+    "year": 2020,
     "engine": "6.2L V8"
   },
   {
@@ -56,7 +56,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 503,
-    "year": 2024,
+    "year": 2020,
     "engine": "3.0L I6"
   },
   {
@@ -68,7 +68,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 402,
-    "year": 2024,
+    "year": 2021,
     "engine": "2.0L I4"
   },
   {
@@ -80,7 +80,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 261,
-    "year": 2024,
+    "year": 2015,
     "engine": "2.0L I4"
   },
   {
@@ -92,7 +92,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 379,
-    "year": 2024,
+    "year": 2019,
     "engine": "3.0L H6"
   },
   {
@@ -104,7 +104,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 241,
-    "year": 2024,
+    "year": 2020,
     "engine": "2.0L I4"
   },
   {
@@ -116,7 +116,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 346,
-    "year": 2024,
+    "year": 2017,
     "engine": "Dual Motor EV"
   },
   {
@@ -128,7 +128,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 384,
-    "year": 2024,
+    "year": 2020,
     "engine": "Dual Motor EV"
   },
   {
@@ -140,7 +140,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "SUV",
     "horsepower": 285,
-    "year": 2024,
+    "year": 2017,
     "engine": "3.6L V6"
   },
   {
@@ -152,7 +152,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "Truck",
     "horsepower": 720,
-    "year": 2024,
+    "year": 2020,
     "engine": "3.5L V6"
   },
   {
@@ -164,7 +164,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "Truck",
     "horsepower": 355,
-    "year": 2024,
+    "year": 2018,
     "engine": "5.3L V8"
   },
   {
@@ -176,7 +176,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 219,
-    "year": 2024,
+    "year": 2018,
     "engine": "2.5L I4 Hybrid"
   },
   {
@@ -188,7 +188,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 190,
-    "year": 2024,
+    "year": 2022,
     "engine": "1.5L I4"
   },
   {
@@ -200,7 +200,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Wagon",
     "horsepower": 260,
-    "year": 2024,
+    "year": 2019,
     "engine": "2.4L I4"
   },
   {
@@ -212,19 +212,19 @@
     "drivetrain": "RWD",
     "bodyStyle": "Convertible",
     "horsepower": 181,
-    "year": 2024,
+    "year": 2015,
     "engine": "2.0L I4"
   },
   {
     "id": "nissan-gt-r-2024",
     "make": "Nissan",
-    "model": "GT-R",
+    "model": "GT-R Premium",
     "displayName": "Nissan GT-R Premium",
     "country": "Japan",
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 565,
-    "year": 2024,
+    "year": 2007,
     "engine": "3.8L V6"
   },
   {
@@ -236,7 +236,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 275,
-    "year": 2024,
+    "year": 2022,
     "engine": "2.4L I4"
   },
   {
@@ -248,7 +248,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 320,
-    "year": 2024,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -260,7 +260,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 320,
-    "year": 2024,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -272,7 +272,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 375,
-    "year": 2024,
+    "year": 2020,
     "engine": "3.5L V6"
   },
   {
@@ -284,7 +284,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 247,
-    "year": 2024,
+    "year": 2017,
     "engine": "2.0L I4 Hybrid"
   },
   {
@@ -296,7 +296,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 444,
-    "year": 2024,
+    "year": 2013,
     "engine": "3.0L V6"
   },
   {
@@ -308,7 +308,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 395,
-    "year": 2024,
+    "year": 2019,
     "engine": "3.0L I6"
   },
   {
@@ -320,7 +320,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 189,
-    "year": 2024,
+    "year": 2013,
     "engine": "2.0L I4"
   },
   {
@@ -332,7 +332,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 818,
-    "year": 2024,
+    "year": 2021,
     "engine": "3.0L V6 Hybrid"
   },
   {
@@ -344,7 +344,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 631,
-    "year": 2024,
+    "year": 2014,
     "engine": "5.2L V10"
   },
   {
@@ -356,7 +356,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 523,
-    "year": 2024,
+    "year": 2022,
     "engine": "3.0L V6"
   },
   {
@@ -368,7 +368,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 505,
-    "year": 2024,
+    "year": 2015,
     "engine": "2.9L V6"
   },
   {
@@ -380,19 +380,19 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 181,
-    "year": 2024,
+    "year": 2021,
     "engine": "1.2L I3"
   },
   {
     "id": "renault-clio-2024",
     "make": "Renault",
-    "model": "Clio",
+    "model": "Clio E-Tech",
     "displayName": "Renault Clio E-Tech",
     "country": "France",
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 143,
-    "year": 2024,
+    "year": 2019,
     "engine": "1.6L I4 Hybrid"
   },
   {
@@ -404,7 +404,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "SUV",
     "horsepower": 178,
-    "year": 2024,
+    "year": 2017,
     "engine": "1.2L I3"
   },
   {
@@ -416,7 +416,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 671,
-    "year": 2024,
+    "year": 2021,
     "engine": "3.0L V6 Hybrid"
   },
   {
@@ -428,7 +428,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 503,
-    "year": 2024,
+    "year": 2018,
     "engine": "4.0L V8"
   },
   {
@@ -440,7 +440,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 717,
-    "year": 2023,
+    "year": 2008,
     "engine": "6.2L V8"
   },
   {
@@ -452,7 +452,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "SUV",
     "horsepower": 420,
-    "year": 2024,
+    "year": 2020,
     "engine": "6.2L V8"
   },
   {
@@ -464,7 +464,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Truck",
     "horsepower": 533,
-    "year": 2024,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -476,7 +476,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 620,
-    "year": 2024,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -500,7 +500,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 220,
-    "year": 1957,
+    "year": 1955,
     "engine": "3.7L V8"
   },
   {
@@ -524,7 +524,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 345,
-    "year": 1959,
+    "year": 1957,
     "engine": "6.4L V8"
   },
   {
@@ -536,7 +536,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Convertible",
     "horsepower": 105,
-    "year": 1960,
+    "year": 1955,
     "engine": "1.9L I4"
   },
   {
@@ -560,7 +560,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 300,
-    "year": 1962,
+    "year": 1963,
     "engine": "4.6L V8"
   },
   {
@@ -572,7 +572,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 95,
-    "year": 1963,
+    "year": 1948,
     "engine": "1.6L H4"
   },
   {
@@ -596,7 +596,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 271,
-    "year": 1965,
+    "year": 1964,
     "engine": "4.7L V8"
   },
   {
@@ -608,7 +608,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 360,
-    "year": 1966,
+    "year": 1964,
     "engine": "6.6L V8"
   },
   {
@@ -644,7 +644,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 340,
-    "year": 1968,
+    "year": 1960,
     "engine": "5.2L V8"
   },
   {
@@ -668,7 +668,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 425,
-    "year": 1969,
+    "year": 1966,
     "engine": "7.2L V8"
   },
   {
@@ -680,7 +680,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 290,
-    "year": 1969,
+    "year": 1966,
     "engine": "5.7L V8"
   },
   {
@@ -692,7 +692,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 366,
-    "year": 1969,
+    "year": 1964,
     "engine": "6.6L V8"
   },
   {
@@ -704,7 +704,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 425,
-    "year": 1970,
+    "year": 1964,
     "engine": "7.0L V8"
   },
   {
@@ -716,7 +716,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 455,
-    "year": 1970,
+    "year": 1968,
     "engine": "7.5L V8"
   },
   {
@@ -728,7 +728,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 370,
-    "year": 1970,
+    "year": 1968,
     "engine": "7.0L V8"
   },
   {
@@ -740,7 +740,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 425,
-    "year": 1971,
+    "year": 1970,
     "engine": "7.2L V8"
   },
   {
@@ -752,7 +752,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 210,
-    "year": 1973,
+    "year": 1964,
     "engine": "2.7L H6"
   },
   {
@@ -764,7 +764,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 200,
-    "year": 1974,
+    "year": 1968,
     "engine": "3.0L I6"
   },
   {
@@ -776,7 +776,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Coupe",
     "horsepower": 190,
-    "year": 1975,
+    "year": 1971,
     "engine": "8.2L V8"
   },
   {
@@ -788,7 +788,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 200,
-    "year": 1977,
+    "year": 1967,
     "engine": "6.6L V8"
   },
   {
@@ -800,7 +800,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "SUV",
     "horsepower": 150,
-    "year": 1978,
+    "year": 1965,
     "engine": "5.8L V8"
   },
   {
@@ -812,7 +812,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 190,
-    "year": 1979,
+    "year": 1970,
     "engine": "5.7L V8"
   },
   {
@@ -824,7 +824,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Convertible",
     "horsepower": 180,
-    "year": 1980,
+    "year": 1971,
     "engine": "4.5L V8"
   },
   {
@@ -848,7 +848,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Convertible",
     "horsepower": 240,
-    "year": 1982,
+    "year": 1975,
     "engine": "3.0L V8"
   },
   {
@@ -860,7 +860,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 188,
-    "year": 1983,
+    "year": 1964,
     "engine": "3.0L H6"
   },
   {
@@ -884,7 +884,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 102,
-    "year": 1984,
+    "year": 1966,
     "engine": "1.6L I4"
   },
   {
@@ -896,7 +896,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 112,
-    "year": 1984,
+    "year": 1974,
     "engine": "1.8L I4"
   },
   {
@@ -908,7 +908,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 306,
-    "year": 1985,
+    "year": 1980,
     "engine": "2.1L I5"
   },
   {
@@ -920,7 +920,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 455,
-    "year": 1986,
+    "year": 1974,
     "engine": "5.2L V12"
   },
   {
@@ -932,7 +932,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 200,
-    "year": 1986,
+    "year": 1978,
     "engine": "1.3L Rotary"
   },
   {
@@ -944,7 +944,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Coupe",
     "horsepower": 276,
-    "year": 1987,
+    "year": 1982,
     "engine": "3.8L V6"
   },
   {
@@ -956,7 +956,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 192,
-    "year": 1987,
+    "year": 1985,
     "engine": "2.3L I4"
   },
   {
@@ -968,7 +968,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 444,
-    "year": 1988,
+    "year": 1986,
     "engine": "2.85L Flat-6 Twin-Turbo"
   },
   {
@@ -987,12 +987,24 @@
     "id": "acura-integra-type-r-1990",
     "make": "Acura",
     "model": "Integra Type R",
-    "displayName": "Acura Integra Type R",
+    "displayName": "Acura Integra Type R 1990",
     "country": "Japan",
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 195,
-    "year": 1990,
+    "year": 1986,
+    "engine": "1.8L I4"
+  },
+  {
+    "id": "honda-integra-type-r-1990",
+    "make": "Honda",
+    "model": "Integra Type R",
+    "displayName": "Honda Integra Type R 1990",
+    "country": "Japan",
+    "drivetrain": "FWD",
+    "bodyStyle": "Hatchback",
+    "horsepower": 195,
+    "year": 1986,
     "engine": "1.8L I4"
   },
   {
@@ -1004,7 +1016,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 300,
-    "year": 1990,
+    "year": 1983,
     "engine": "3.0L V6 Turbo"
   },
   {
@@ -1016,7 +1028,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 250,
-    "year": 1991,
+    "year": 1989,
     "engine": "4.0L V8"
   },
   {
@@ -1028,7 +1040,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 320,
-    "year": 1992,
+    "year": 1978,
     "engine": "3.0L I6 Turbo"
   },
   {
@@ -1040,7 +1052,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 255,
-    "year": 1993,
+    "year": 1992,
     "engine": "1.3L Rotary"
   },
   {
@@ -1052,7 +1064,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 320,
-    "year": 1994,
+    "year": 1993,
     "engine": "3.0L I6 Turbo"
   },
   {
@@ -1064,7 +1076,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 240,
-    "year": 1994,
+    "year": 1992,
     "engine": "2.0L I4 Turbo"
   },
   {
@@ -1076,7 +1088,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 250,
-    "year": 1995,
+    "year": 1994,
     "engine": "2.0L H4 Turbo"
   },
   {
@@ -1088,19 +1100,19 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 240,
-    "year": 1996,
+    "year": 1995,
     "engine": "3.2L I6"
   },
   {
     "id": "honda-nsx-1996",
     "make": "Honda",
     "model": "NSX",
-    "displayName": "Honda NSX",
+    "displayName": "Honda NSX 1996",
     "country": "Japan",
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 270,
-    "year": 1996,
+    "year": 1990,
     "engine": "3.0L V6"
   },
   {
@@ -1112,7 +1124,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Coupe",
     "horsepower": 195,
-    "year": 1997,
+    "year": 1978,
     "engine": "2.2L I4"
   },
   {
@@ -1124,7 +1136,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 420,
-    "year": 1997,
+    "year": 1995,
     "engine": "3.6L H6 Twin-Turbo"
   },
   {
@@ -1136,7 +1148,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 320,
-    "year": 1998,
+    "year": 1990,
     "engine": "3.0L V6 Turbo"
   },
   {
@@ -1172,7 +1184,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 276,
-    "year": 1999,
+    "year": 1996,
     "engine": "2.0L I4 Turbo"
   },
   {
@@ -1184,7 +1196,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Roadster",
     "horsepower": 240,
-    "year": 2000,
+    "year": 1999,
     "engine": "2.0L I4"
   },
   {
@@ -1208,7 +1220,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 291,
-    "year": 2001,
+    "year": 1990,
     "engine": "3.2L V6"
   },
   {
@@ -1220,7 +1232,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 333,
-    "year": 2001,
+    "year": 1998,
     "engine": "3.2L I6"
   },
   {
@@ -1232,7 +1244,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 420,
-    "year": 2002,
+    "year": 2000,
     "engine": "3.6L H6 Twin-Turbo"
   },
   {
@@ -1244,7 +1256,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 287,
-    "year": 2003,
+    "year": 2002,
     "engine": "3.5L V6"
   },
   {
@@ -1256,7 +1268,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 444,
-    "year": 2003,
+    "year": 2002,
     "engine": "4.2L V8"
   },
   {
@@ -1268,7 +1280,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Convertible",
     "horsepower": 252,
-    "year": 2003,
+    "year": 1996,
     "engine": "2.7L H6"
   },
   {
@@ -1280,7 +1292,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 390,
-    "year": 2004,
+    "year": 1993,
     "engine": "4.6L V8"
   },
   {
@@ -1292,7 +1304,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 400,
-    "year": 2004,
+    "year": 2003,
     "engine": "5.7L V8"
   },
   {
@@ -1304,7 +1316,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 469,
-    "year": 2004,
+    "year": 2002,
     "engine": "5.5L V8"
   },
   {
@@ -1316,7 +1328,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 550,
-    "year": 2005,
+    "year": 2004,
     "engine": "5.4L V8"
   },
   {
@@ -1328,7 +1340,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 300,
-    "year": 2005,
+    "year": 2000,
     "engine": "2.5L H4 Turbo"
   },
   {
@@ -1340,7 +1352,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 512,
-    "year": 2006,
+    "year": 2003,
     "engine": "5.0L V10"
   },
   {
@@ -1352,7 +1364,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 286,
-    "year": 2006,
+    "year": 2005,
     "engine": "2.0L I4 Turbo"
   },
   {
@@ -1364,7 +1376,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 415,
-    "year": 2007,
+    "year": 1999,
     "engine": "3.6L H6"
   },
   {
@@ -1376,7 +1388,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 416,
-    "year": 2008,
+    "year": 2005,
     "engine": "5.0L V8"
   },
   {
@@ -1388,7 +1400,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 232,
-    "year": 2008,
+    "year": 2003,
     "engine": "1.3L Rotary"
   },
   {
@@ -1400,7 +1412,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 332,
-    "year": 2009,
+    "year": 2008,
     "engine": "3.7L V6"
   },
   {
@@ -1412,7 +1424,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 562,
-    "year": 2010,
+    "year": 2009,
     "engine": "4.5L V8"
   },
   {
@@ -1424,7 +1436,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 530,
-    "year": 2010,
+    "year": 1974,
     "engine": "3.8L H6 Twin-Turbo"
   },
   {
@@ -1436,7 +1448,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Sedan",
     "horsepower": 149,
-    "year": 2011,
+    "year": 2010,
     "engine": "1.4L I4 Hybrid"
   },
   {
@@ -1448,7 +1460,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 530,
-    "year": 2011,
+    "year": 2007,
     "engine": "3.8L V6 Twin-Turbo"
   },
   {
@@ -1460,7 +1472,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 451,
-    "year": 2012,
+    "year": 2007,
     "engine": "6.2L V8"
   },
   {
@@ -1472,7 +1484,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 592,
-    "year": 2012,
+    "year": 2011,
     "engine": "3.8L V8"
   },
   {
@@ -1484,7 +1496,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 690,
-    "year": 2013,
+    "year": 2011,
     "engine": "6.5L V12"
   },
   {
@@ -1496,7 +1508,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 252,
-    "year": 2013,
+    "year": 2012,
     "engine": "2.0L I4"
   },
   {
@@ -1508,7 +1520,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 455,
-    "year": 2014,
+    "year": 2013,
     "engine": "6.2L V8"
   },
   {
@@ -1520,7 +1532,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 430,
-    "year": 2014,
+    "year": 2011,
     "engine": "3.8L H6"
   },
   {
@@ -1544,7 +1556,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 340,
-    "year": 2015,
+    "year": 2014,
     "engine": "3.0L V6"
   },
   {
@@ -1552,6 +1564,18 @@
     "make": "Acura",
     "model": "NSX",
     "displayName": "Acura NSX 2016",
+    "country": "Japan",
+    "drivetrain": "AWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 573,
+    "year": 2016,
+    "engine": "3.5L V6 Hybrid"
+  },
+  {
+    "id": "honda-nsx-2016",
+    "make": "Honda",
+    "model": "NSX",
+    "displayName": "Honda NSX 2016",
     "country": "Japan",
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
@@ -1568,7 +1592,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 540,
-    "year": 2016,
+    "year": 2006,
     "engine": "5.2L V10"
   },
   {
@@ -1580,7 +1604,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 365,
-    "year": 2016,
+    "year": 2010,
     "engine": "3.7L V6"
   },
   {
@@ -1592,7 +1616,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 505,
-    "year": 2017,
+    "year": 2015,
     "engine": "2.9L V6"
   },
   {
@@ -1604,7 +1628,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 365,
-    "year": 2017,
+    "year": 2015,
     "engine": "3.0L I6"
   },
   {
@@ -1616,7 +1640,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 600,
-    "year": 2018,
+    "year": 2007,
     "engine": "3.8L V6 Twin-Turbo"
   },
   {
@@ -1628,7 +1652,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 700,
-    "year": 2018,
+    "year": 1995,
     "engine": "3.8L H6 Twin-Turbo"
   },
   {
@@ -1640,7 +1664,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 365,
-    "year": 2018,
+    "year": 2017,
     "engine": "3.3L V6"
   },
   {
@@ -1664,7 +1688,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 710,
-    "year": 2019,
+    "year": 2017,
     "engine": "4.0L V8"
   },
   {
@@ -1676,7 +1700,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 616,
-    "year": 2020,
+    "year": 2019,
     "engine": "Dual Motor EV"
   },
   {
@@ -1688,7 +1712,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 617,
-    "year": 2020,
+    "year": 2018,
     "engine": "4.4L V8"
   },
   {
@@ -1700,7 +1724,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 450,
-    "year": 2020,
+    "year": 2017,
     "engine": "Dual Motor EV"
   },
   {
@@ -1712,7 +1736,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 382,
-    "year": 2020,
+    "year": 2019,
     "engine": "3.0L I6"
   },
   {
@@ -1736,7 +1760,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "SUV",
     "horsepower": 375,
-    "year": 2021,
+    "year": 2017,
     "engine": "2.0L I4 Hybrid"
   },
   {
@@ -1748,7 +1772,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 472,
-    "year": 2021,
+    "year": 2020,
     "engine": "5.0L V8"
   },
   {
@@ -1760,7 +1784,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 429,
-    "year": 2021,
+    "year": 2014,
     "engine": "3.0L I6"
   },
   {
@@ -1772,7 +1796,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 640,
-    "year": 2021,
+    "year": 2019,
     "engine": "3.8L H6 Twin-Turbo"
   },
   {
@@ -1784,7 +1808,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 455,
-    "year": 2021,
+    "year": 2014,
     "engine": "Plug-In Hybrid"
   },
   {
@@ -1808,7 +1832,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 576,
-    "year": 2022,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -1820,7 +1844,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 655,
-    "year": 2022,
+    "year": 2020,
     "engine": "6.2L V8 Hybrid"
   },
   {
@@ -1832,7 +1856,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 503,
-    "year": 2022,
+    "year": 2020,
     "engine": "3.0L I6"
   },
   {
@@ -1844,19 +1868,19 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 493,
-    "year": 2022,
+    "year": 2013,
     "engine": "4.0L H6"
   },
   {
     "id": "acura-integra-type-s-2023",
     "make": "Acura",
     "model": "Integra Type S",
-    "displayName": "Acura Integra Type S",
+    "displayName": "Acura Integra Type S 2023",
     "country": "Japan",
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 320,
-    "year": 2023,
+    "year": 2022,
     "engine": "2.0L I4"
   },
   {
@@ -1868,7 +1892,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 348,
-    "year": 2023,
+    "year": 2020,
     "engine": "3.5L V6"
   },
   {
@@ -1880,7 +1904,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Sedan",
     "horsepower": 204,
-    "year": 2023,
+    "year": 2022,
     "engine": "2.0L I4 Hybrid"
   },
   {
@@ -1892,7 +1916,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 389,
-    "year": 2023,
+    "year": 2022,
     "engine": "Dual Motor EV"
   },
   {
@@ -1904,7 +1928,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 220,
-    "year": 2023,
+    "year": 1997,
     "engine": "1.8L I4 Hybrid"
   },
   {
@@ -1916,7 +1940,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 295,
-    "year": 2023,
+    "year": 2020,
     "engine": "Dual Motor EV"
   },
   {
@@ -1928,7 +1952,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Truck",
     "horsepower": 580,
-    "year": 2023,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -1940,7 +1964,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 835,
-    "year": 2023,
+    "year": 2021,
     "engine": "Quad Motor EV"
   },
   {
@@ -1952,7 +1976,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 536,
-    "year": 2023,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -1964,7 +1988,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 612,
-    "year": 2023,
+    "year": 2019,
     "engine": "3.9L V8"
   },
   {
@@ -1976,7 +2000,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 473,
-    "year": 2023,
+    "year": 2019,
     "engine": "3.0L H6"
   },
   {
@@ -1988,7 +2012,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Hatchback",
     "horsepower": 300,
-    "year": 2024,
+    "year": 2022,
     "engine": "1.6L I3 Turbo"
   },
   {
@@ -2000,7 +2024,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Sedan",
     "horsepower": 286,
-    "year": 2024,
+    "year": 2020,
     "engine": "2.0L I4 Turbo"
   },
   {
@@ -2012,7 +2036,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "SUV",
     "horsepower": 139,
-    "year": 2024,
+    "year": 2016,
     "engine": "Single Motor EV"
   },
   {
@@ -2024,7 +2048,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Sedan",
     "horsepower": 215,
-    "year": 2024,
+    "year": 2018,
     "engine": "2.5L I4 Hybrid"
   },
   {
@@ -2036,7 +2060,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Convertible",
     "horsepower": 181,
-    "year": 2024,
+    "year": 2015,
     "engine": "2.0L I4"
   },
   {
@@ -2048,7 +2072,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Truck",
     "horsepower": 664,
-    "year": 2024,
+    "year": 2023,
     "engine": "Dual Motor EV"
   },
   {
@@ -2060,7 +2084,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 480,
-    "year": 2024,
+    "year": 2020,
     "engine": "Dual Motor EV"
   },
   {
@@ -2072,7 +2096,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 295,
-    "year": 2024,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -2084,7 +2108,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 402,
-    "year": 2024,
+    "year": 2022,
     "engine": "Dual Motor EV"
   },
   {
@@ -2096,7 +2120,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 483,
-    "year": 2024,
+    "year": 2018,
     "engine": "3.0L I6 Hybrid"
   },
   {
@@ -2108,7 +2132,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 288,
-    "year": 2024,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -2120,7 +2144,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 349,
-    "year": 2024,
+    "year": 2009,
     "engine": "3.5L V6"
   },
   {
@@ -2132,7 +2156,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 277,
-    "year": 2024,
+    "year": 2023,
     "engine": "2.5L I4"
   },
   {
@@ -2144,7 +2168,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 227,
-    "year": 2024,
+    "year": 2021,
     "engine": "1.6L I4 Hybrid"
   },
   {
@@ -2156,7 +2180,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 326,
-    "year": 2024,
+    "year": 2023,
     "engine": "2.4L I4 Hybrid"
   },
   {
@@ -2168,7 +2192,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 293,
-    "year": 2024,
+    "year": 2020,
     "engine": "3.6L V6"
   },
   {
@@ -2180,7 +2204,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "SUV",
     "horsepower": 418,
-    "year": 2024,
+    "year": 2020,
     "engine": "2.7L V6"
   },
   {
@@ -2192,7 +2216,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 310,
-    "year": 2024,
+    "year": 2008,
     "engine": "3.6L V6"
   },
   {
@@ -2204,7 +2228,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 180,
-    "year": 2024,
+    "year": 2021,
     "engine": "2.0L I4"
   },
   {
@@ -2216,7 +2240,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 169,
-    "year": 2024,
+    "year": 2020,
     "engine": "2.0L I4"
   },
   {
@@ -2228,7 +2252,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 187,
-    "year": 2024,
+    "year": 2011,
     "engine": "2.5L I4"
   },
   {
@@ -2240,7 +2264,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 182,
-    "year": 2024,
+    "year": 2018,
     "engine": "2.5L H4"
   },
   {
@@ -2252,7 +2276,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 201,
-    "year": 2024,
+    "year": 2020,
     "engine": "1.5L I3 Turbo"
   },
   {
@@ -2264,7 +2288,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 308,
-    "year": 2024,
+    "year": 2016,
     "engine": "Dual Motor EV"
   },
   {
@@ -2276,7 +2300,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 986,
-    "year": 2024,
+    "year": 2019,
     "engine": "4.0L V8 Hybrid"
   },
   {
@@ -2288,7 +2312,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 1015,
-    "year": 2024,
+    "year": 2023,
     "engine": "6.5L V12 Hybrid"
   },
   {
@@ -2300,7 +2324,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 740,
-    "year": 2024,
+    "year": 2023,
     "engine": "4.0L V8"
   },
   {
@@ -2312,7 +2336,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 671,
-    "year": 2024,
+    "year": 2023,
     "engine": "4.0L V8"
   },
   {
@@ -2324,7 +2348,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 1578,
-    "year": 2024,
+    "year": 2016,
     "engine": "8.0L W16"
   },
   {
@@ -2336,7 +2360,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 1280,
-    "year": 2024,
+    "year": 2019,
     "engine": "5.0L V8 Twin-Turbo"
   },
   {
@@ -2348,7 +2372,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 852,
-    "year": 2024,
+    "year": 2022,
     "engine": "6.0L V12"
   },
   {
@@ -2360,7 +2384,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Coupe",
     "horsepower": 1914,
-    "year": 2024,
+    "year": 2021,
     "engine": "Electric Quad-Motor"
   },
   {
@@ -2372,7 +2396,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 308,
-    "year": 2024,
+    "year": 2022,
     "engine": "Single Motor EV"
   },
   {
@@ -2384,7 +2408,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 365,
-    "year": 2024,
+    "year": 2020,
     "engine": "Dual Motor EV"
   },
   {
@@ -2396,7 +2420,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "SUV",
     "horsepower": 201,
-    "year": 2024,
+    "year": 2018,
     "engine": "Single Motor EV"
   },
   {
@@ -2408,7 +2432,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 379,
-    "year": 2024,
+    "year": 2023,
     "engine": "Dual Motor EV"
   },
   {
@@ -2420,7 +2444,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Truck",
     "horsepower": 845,
-    "year": 2024,
+    "year": 2023,
     "engine": "Dual Motor EV"
   },
   {
@@ -2432,7 +2456,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "SUV",
     "horsepower": 355,
-    "year": 2024,
+    "year": 2020,
     "engine": "5.3L V8"
   },
   {
@@ -2444,7 +2468,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 420,
-    "year": 2024,
+    "year": 2020,
     "engine": "6.2L V8"
   },
   {
@@ -2456,7 +2480,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 500,
-    "year": 2024,
+    "year": 2022,
     "engine": "Dual Motor EV"
   },
   {
@@ -2468,7 +2492,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 192,
-    "year": 2024,
+    "year": 2000,
     "engine": "2.5L I4 Hybrid"
   },
   {
@@ -2480,7 +2504,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 204,
-    "year": 2024,
+    "year": 2022,
     "engine": "2.0L I4 Hybrid"
   },
   {
@@ -2492,7 +2516,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 243,
-    "year": 2024,
+    "year": 2020,
     "engine": "2.5L I4 Hybrid"
   },
   {
@@ -2504,7 +2528,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Wagon",
     "horsepower": 260,
-    "year": 2024,
+    "year": 2019,
     "engine": "2.4L I4 Turbo"
   },
   {
@@ -2516,7 +2540,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 280,
-    "year": 2024,
+    "year": 2023,
     "engine": "3.3L I6"
   },
   {
@@ -2528,7 +2552,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 147,
-    "year": 2024,
+    "year": 2010,
     "engine": "Single Motor EV"
   },
   {
@@ -2540,7 +2564,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 133,
-    "year": 2024,
+    "year": 2012,
     "engine": "1.2L I3"
   },
   {
@@ -2552,7 +2576,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 145,
-    "year": 2024,
+    "year": 2019,
     "engine": "1.0L I3"
   },
   {
@@ -2564,7 +2588,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 117,
-    "year": 2024,
+    "year": 2007,
     "engine": "Single Motor EV"
   },
   {
@@ -2576,7 +2600,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 285,
-    "year": 2024,
+    "year": 2022,
     "engine": "2.0L I4 Hybrid"
   },
   {
@@ -2588,7 +2612,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 455,
-    "year": 2024,
+    "year": 2017,
     "engine": "Plug-In Hybrid"
   },
   {
@@ -2600,7 +2624,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 516,
-    "year": 2024,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -2612,7 +2636,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 523,
-    "year": 2024,
+    "year": 2020,
     "engine": "Dual Motor EV"
   },
   {
@@ -2624,7 +2648,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 516,
-    "year": 2024,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -2636,7 +2660,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 402,
-    "year": 2024,
+    "year": 2014,
     "engine": "Dual Motor EV"
   },
   {
@@ -2648,7 +2672,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Sedan",
     "horsepower": 819,
-    "year": 2024,
+    "year": 2021,
     "engine": "Dual Motor EV"
   },
   {
@@ -2672,7 +2696,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 456,
-    "year": 2024,
+    "year": 2020,
     "engine": "Dual Motor EV"
   },
   {
@@ -2684,7 +2708,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Truck",
     "horsepower": 191,
-    "year": 2024,
+    "year": 2021,
     "engine": "2.5L I4 Hybrid"
   },
   {
@@ -2696,7 +2720,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "Truck",
     "horsepower": 310,
-    "year": 2024,
+    "year": 2011,
     "engine": "2.7L I4"
   },
   {
@@ -2708,7 +2732,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "Truck",
     "horsepower": 420,
-    "year": 2024,
+    "year": 2018,
     "engine": "6.2L V8"
   },
   {
@@ -2720,7 +2744,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "Truck",
     "horsepower": 702,
-    "year": 2024,
+    "year": 2018,
     "engine": "6.2L V8"
   },
   {
@@ -2732,7 +2756,7 @@
     "drivetrain": "4WD",
     "bodyStyle": "Truck",
     "horsepower": 285,
-    "year": 2024,
+    "year": 2019,
     "engine": "3.6L V6"
   },
   {
@@ -2744,7 +2768,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 395,
-    "year": 2024,
+    "year": 2022,
     "engine": "3.0L I6"
   },
   {
@@ -2756,7 +2780,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 550,
-    "year": 2024,
+    "year": 2016,
     "engine": "5.0L V8"
   },
   {
@@ -2768,7 +2792,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 189,
-    "year": 2024,
+    "year": 2007,
     "engine": "2.0L I4"
   },
   {
@@ -2780,7 +2804,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "Wagon",
     "horsepower": 455,
-    "year": 2024,
+    "year": 2018,
     "engine": "Plug-In Hybrid"
   },
   {
@@ -2792,7 +2816,7 @@
     "drivetrain": "AWD",
     "bodyStyle": "SUV",
     "horsepower": 222,
-    "year": 2024,
+    "year": 2016,
     "engine": "1.6L I4 Hybrid"
   },
   {
@@ -2804,7 +2828,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "SUV",
     "horsepower": 160,
-    "year": 2024,
+    "year": 2022,
     "engine": "1.3L I4"
   },
   {
@@ -2816,7 +2840,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "SUV",
     "horsepower": 130,
-    "year": 2024,
+    "year": 2017,
     "engine": "1.2L I3"
   },
   {
@@ -2828,7 +2852,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Sedan",
     "horsepower": 130,
-    "year": 2024,
+    "year": 2015,
     "engine": "1.4L I4"
   },
   {
@@ -2840,7 +2864,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Hatchback",
     "horsepower": 160,
-    "year": 1985,
+    "year": 1978,
     "engine": "2.0L I4 Turbo"
   },
   {
@@ -2852,7 +2876,7 @@
     "drivetrain": "RWD",
     "bodyStyle": "Sedan",
     "horsepower": 112,
-    "year": 1977,
+    "year": 1974,
     "engine": "2.1L I4"
   },
   {
@@ -2864,7 +2888,7 @@
     "drivetrain": "FWD",
     "bodyStyle": "Sedan",
     "horsepower": 138,
-    "year": 1961,
+    "year": 1955,
     "engine": "2.0L I4"
   },
   {
@@ -2876,7 +2900,247 @@
     "drivetrain": "RWD",
     "bodyStyle": "Coupe",
     "horsepower": 215,
-    "year": 1980,
+    "year": 1976,
     "engine": "2.2L I4 Turbo"
+  },
+  {
+    "id": "toyota-corolla-ae86-1984",
+    "make": "Toyota",
+    "model": "Corolla AE86",
+    "displayName": "Toyota Corolla AE86",
+    "country": "Japan",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 128,
+    "year": 1984,
+    "engine": "1.6L I4"
+  },
+  {
+    "id": "toyota-gr86-2021",
+    "make": "Toyota",
+    "model": "GR86",
+    "displayName": "Toyota GR86",
+    "country": "Japan",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 228,
+    "year": 2021,
+    "engine": "2.4L Flat-4"
+  },
+  {
+    "id": "toyota-mr2-1984",
+    "make": "Toyota",
+    "model": "MR2",
+    "displayName": "Toyota MR2",
+    "country": "Japan",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 112,
+    "year": 1984,
+    "engine": "1.6L I4"
+  },
+  {
+    "id": "subaru-brz-2012",
+    "make": "Subaru",
+    "model": "BRZ",
+    "displayName": "Subaru BRZ",
+    "country": "Japan",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 200,
+    "year": 2012,
+    "engine": "2.0L Flat-4"
+  },
+  {
+    "id": "honda-civic-type-r-1997",
+    "make": "Honda",
+    "model": "Civic Type R",
+    "displayName": "Honda Civic Type R",
+    "country": "Japan",
+    "drivetrain": "FWD",
+    "bodyStyle": "Hatchback",
+    "horsepower": 185,
+    "year": 1997,
+    "engine": "1.6L I4"
+  },
+  {
+    "id": "tesla-model-s-2012",
+    "make": "Tesla",
+    "model": "Model S",
+    "displayName": "Tesla Model S",
+    "country": "USA",
+    "drivetrain": "AWD",
+    "bodyStyle": "Sedan",
+    "horsepower": 416,
+    "year": 2012,
+    "engine": "Electric"
+  },
+  {
+    "id": "tesla-model-x-2015",
+    "make": "Tesla",
+    "model": "Model X",
+    "displayName": "Tesla Model X",
+    "country": "USA",
+    "drivetrain": "AWD",
+    "bodyStyle": "SUV",
+    "horsepower": 532,
+    "year": 2015,
+    "engine": "Electric"
+  },
+  {
+    "id": "mercedes-g-class-1979",
+    "make": "Mercedes-Benz",
+    "model": "G-Class",
+    "displayName": "Mercedes-Benz G-Class",
+    "country": "Germany",
+    "drivetrain": "AWD",
+    "bodyStyle": "SUV",
+    "horsepower": 237,
+    "year": 1979,
+    "engine": "2.8L I6"
+  },
+  {
+    "id": "volkswagen-beetle-1938",
+    "make": "Volkswagen",
+    "model": "Beetle",
+    "displayName": "Volkswagen Beetle",
+    "country": "Germany",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 25,
+    "year": 1938,
+    "engine": "1.1L Flat-4"
+  },
+  {
+    "id": "ferrari-f40-1987",
+    "make": "Ferrari",
+    "model": "F40",
+    "displayName": "Ferrari F40",
+    "country": "Italy",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 471,
+    "year": 1987,
+    "engine": "2.9L V8 Turbo"
+  },
+  {
+    "id": "lamborghini-miura-1966",
+    "make": "Lamborghini",
+    "model": "Miura",
+    "displayName": "Lamborghini Miura",
+    "country": "Italy",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 350,
+    "year": 1966,
+    "engine": "4.0L V12"
+  },
+  {
+    "id": "mclaren-f1-1992",
+    "make": "McLaren",
+    "model": "F1",
+    "displayName": "McLaren F1",
+    "country": "UK",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 618,
+    "year": 1992,
+    "engine": "6.1L V12"
+  },
+  {
+    "id": "bugatti-veyron-2005",
+    "make": "Bugatti",
+    "model": "Veyron",
+    "displayName": "Bugatti Veyron",
+    "country": "France",
+    "drivetrain": "AWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 987,
+    "year": 2005,
+    "engine": "8.0L W16 Turbo"
+  },
+  {
+    "id": "aston-martin-db5-1963",
+    "make": "Aston Martin",
+    "model": "DB5",
+    "displayName": "Aston Martin DB5",
+    "country": "UK",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 282,
+    "year": 1963,
+    "engine": "4.0L I6"
+  },
+  {
+    "id": "lexus-lfa-2010",
+    "make": "Lexus",
+    "model": "LFA",
+    "displayName": "Lexus LFA",
+    "country": "Japan",
+    "drivetrain": "RWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 552,
+    "year": 2010,
+    "engine": "4.8L V10"
+  },
+  {
+    "id": "lotus-elise-1996",
+    "make": "Lotus",
+    "model": "Elise",
+    "displayName": "Lotus Elise",
+    "country": "UK",
+    "drivetrain": "RWD",
+    "bodyStyle": "Roadster",
+    "horsepower": 118,
+    "year": 1996,
+    "engine": "1.8L I4"
+  },
+  {
+    "id": "dodge-viper-1992",
+    "make": "Dodge",
+    "model": "Viper",
+    "displayName": "Dodge Viper RT/10",
+    "country": "USA",
+    "drivetrain": "RWD",
+    "bodyStyle": "Roadster",
+    "horsepower": 400,
+    "year": 1992,
+    "engine": "8.0L V10"
+  },
+  {
+    "id": "bmw-z4-2002",
+    "make": "BMW",
+    "model": "Z4",
+    "displayName": "BMW Z4",
+    "country": "Germany",
+    "drivetrain": "RWD",
+    "bodyStyle": "Convertible",
+    "horsepower": 225,
+    "year": 2002,
+    "engine": "2.5L I6"
+  },
+  {
+    "id": "bentley-continental-gt-2003",
+    "make": "Bentley",
+    "model": "Continental GT",
+    "displayName": "Bentley Continental GT",
+    "country": "UK",
+    "drivetrain": "AWD",
+    "bodyStyle": "Coupe",
+    "horsepower": 552,
+    "year": 2003,
+    "engine": "6.0L W12"
+  },
+  {
+    "id": "rolls-royce-phantom-2003",
+    "make": "Rolls-Royce",
+    "model": "Phantom",
+    "displayName": "Rolls-Royce Phantom",
+    "country": "UK",
+    "drivetrain": "RWD",
+    "bodyStyle": "Sedan",
+    "horsepower": 453,
+    "year": 2003,
+    "engine": "6.75L V12"
   }
 ]

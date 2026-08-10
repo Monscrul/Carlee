@@ -73,7 +73,7 @@ body {
 
 .navbar-logo-svg {
   display: block;
-  width: clamp(100px, 22vw, 115px);
+  width: clamp(100px, 22vw, 80px);
   height: auto;
   color: #ffffff;
 }
@@ -230,7 +230,7 @@ body {
 
 .sidebar-brand-logo {
   display: block;
-  width: 110px;
+  width: 100px;
   height: auto;
 }
 

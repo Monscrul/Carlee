@@ -243,9 +243,11 @@ body {
 
 
 .search-error {
-  margin: 0 0 1rem;
+  margin: 0;
   font-size: 0.875rem;
   color: var(--error);
+  text-align: left;
+  align-self: flex-start;
 }
 
 /* Board */

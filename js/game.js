@@ -1,5 +1,6 @@
 import { MAX_GUESSES, GAME_STATUS } from './constants.js';
 import { compareCars } from './compare.js';
+import { isEquivalentCar, isWinningGuess } from './make-equivalence.js';
 
 export function initGame(catalog, maxGuesses = MAX_GUESSES) {
   if (!catalog.length) {
@@ -40,9 +41,18 @@ export function submitGuess(state, carId, catalog) {
     return { state, error: 'Invalid car selection.' };
   }
 
+  const alreadyGuessedEquivalent = state.guesses.some((guess) => {
+    const priorCar = catalog.find((car) => car.id === guess.carId);
+    return priorCar && isEquivalentCar(guessCar, priorCar);
+  });
+
+  if (alreadyGuessedEquivalent) {
+    return { state, error: 'You already guessed that car.' };
+  }
+
   const comparison = compareCars(guessCar, secretCar);
   const guesses = [...state.guesses, comparison];
-  const isWin = carId === state.secretCarId;
+  const isWin = isWinningGuess(guessCar, secretCar);
   const isLoss = !isWin && guesses.length >= state.maxGuesses;
 
   let status = state.status;

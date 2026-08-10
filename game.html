@@ -72,6 +72,7 @@
       <main id="app" class="app hidden">
         <section class="search-section" aria-label="Guess a car">
           <p id="guess-counter" class="guess-counter" aria-live="polite">Guesses: 0 / 6</p>
+          <p id="search-error" class="search-error hidden" role="alert"></p>
           <div class="search-wrapper">
             <input
               id="search-input"
@@ -99,8 +100,6 @@
             <ul id="search-dropdown" class="search-dropdown hidden" role="listbox"></ul>
           </div>
         </section>
-
-        <p id="search-error" class="search-error hidden" role="alert"></p>
 
         <section class="board-section" aria-label="Guess history">
           <p id="empty-hint" class="empty-hint">Make your first guess to see comparisons.</p>

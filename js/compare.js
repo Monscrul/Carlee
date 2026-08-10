@@ -1,4 +1,5 @@
 import { FEEDBACK, ATTRIBUTES } from './constants.js';
+import { makesMatchForCompare } from './make-equivalence.js';
 
 function compareEnum(guessValue, secretValue) {
   return guessValue === secretValue
@@ -19,7 +20,10 @@ function compareNumber(guessValue, secretValue) {
 }
 
 const COMPARATORS = {
-  make: (guess, secret) => compareEnum(guess.make, secret.make),
+  make: (guess, secret) =>
+    makesMatchForCompare(guess.make, secret.make)
+      ? { status: FEEDBACK.CORRECT }
+      : { status: FEEDBACK.WRONG },
   country: (guess, secret) => compareEnum(guess.country, secret.country),
   drivetrain: (guess, secret) => compareEnum(guess.drivetrain, secret.drivetrain),
   bodyStyle: (guess, secret) => compareEnum(guess.bodyStyle, secret.bodyStyle),
