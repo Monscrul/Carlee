@@ -1,0 +1,241 @@
+id,make,model,displayName,country,drivetrain,bodyStyle,horsepower,year,engine
+toyota-camry-2024-xse,Toyota,Camry,Toyota Camry XSE,Japan,FWD,Sedan,225,2024,2.5L I4
+honda-civic-2024-si,Honda,Civic,Honda Civic Si,Japan,FWD,Sedan,200,2024,1.5L I4
+ford-mustang-2024-gt,Ford,Mustang,Ford Mustang GT,USA,RWD,Coupe,480,2024,5.0L V8
+chevrolet-corvette-2024-stingray,Chevrolet,Corvette,Chevrolet Corvette Stingray,USA,RWD,Coupe,495,2024,6.2L V8
+bmw-m3-2024-competition,BMW,M3,BMW M3 Competition,Germany,RWD,Sedan,503,2024,3.0L I6
+mercedes-c-class-2024-amg,Mercedes-Benz,C-Class,Mercedes-AMG C 43,Germany,AWD,Sedan,402,2024,2.0L I4
+audi-a4-2024-quattro,Audi,A4,Audi A4 Quattro,Germany,AWD,Sedan,261,2024,2.0L I4
+porsche-911-2024-carrera,Porsche,911,Porsche 911 Carrera,Germany,RWD,Coupe,379,2024,3.0L H6
+volkswagen-golf-gti-2024,Volkswagen,Golf GTI,Volkswagen Golf GTI 2024,Germany,FWD,Hatchback,241,2024,2.0L I4
+tesla-model-3-2024-long-range,Tesla,Model 3,Tesla Model 3 Long Range,USA,AWD,Sedan,346,2024,Dual Motor EV
+tesla-model-y-2024,Tesla,Model Y,Tesla Model Y Long Range,USA,AWD,SUV,384,2024,Dual Motor EV
+jeep-wrangler-2024-rubicon,Jeep,Wrangler,Jeep Wrangler Rubicon,USA,4WD,SUV,285,2024,3.6L V6
+ford-f150-2024-raptor,Ford,F-150,Ford F-150 Raptor,USA,4WD,Truck,720,2024,3.5L V6
+chevrolet-silverado-2024,Chevrolet,Silverado,Chevrolet Silverado 1500 LT,USA,4WD,Truck,355,2024,5.3L V8
+toyota-rav4-2024-hybrid,Toyota,RAV4,Toyota RAV4 Hybrid XSE,Japan,AWD,SUV,219,2024,2.5L I4 Hybrid
+honda-cr-v-2024,Honda,CR-V,Honda CR-V Touring,Japan,AWD,SUV,190,2024,1.5L I4
+subaru-outback-2024,Subaru,Outback,Subaru Outback Wilderness,Japan,AWD,Wagon,260,2024,2.4L I4
+mazda-mx5-2024,Mazda,MX-5 Miata,Mazda MX-5 Miata Grand Touring,Japan,RWD,Convertible,181,2024,2.0L I4
+nissan-gt-r-2024,Nissan,GT-R,Nissan GT-R Premium,Japan,AWD,Coupe,565,2024,3.8L V6
+lexus-rx-2024,Lexus,RX,Lexus RX 350,Japan,AWD,SUV,275,2024,2.4L I4
+hyundai-ioniq-5-2024,Hyundai,Ioniq 5,Hyundai Ioniq 5 Limited AWD,South Korea,AWD,SUV,320,2024,Dual Motor EV
+kia-ev6-2024,Kia,EV6,Kia EV6 GT-Line AWD,South Korea,AWD,SUV,320,2024,Dual Motor EV
+genesis-gv70-2024,Genesis,GV70,Genesis GV70 3.5T,South Korea,AWD,SUV,375,2024,3.5L V6
+volvo-xc60-2024,Volvo,XC60,Volvo XC60 B5 AWD,Sweden,AWD,SUV,247,2024,2.0L I4 Hybrid
+jaguar-f-type-2024,Jaguar,F-Type,Jaguar F-Type R Dynamic,UK,AWD,Coupe,444,2024,3.0L V6
+land-rover-defender-2024,Land Rover,Defender,Land Rover Defender 110,UK,AWD,SUV,395,2024,3.0L I6
+mini-cooper-s-2024,MINI,Cooper S,MINI Cooper S Hardtop,UK,FWD,Hatchback,189,2024,2.0L I4
+ferrari-296-gtb-2024,Ferrari,296 GTB,Ferrari 296 GTB,Italy,RWD,Coupe,818,2024,3.0L V6 Hybrid
+lamborghini-huracan-2024,Lamborghini,Huracán,Lamborghini Huracán EVO,Italy,AWD,Coupe,631,2024,5.2L V10
+maserati-grecale-2024,Maserati,Grecale,Maserati Grecale Trofeo,Italy,AWD,SUV,523,2024,3.0L V6
+alfa-romeo-giulia-2024,Alfa Romeo,Giulia,Alfa Romeo Giulia Quadrifoglio 2024,Italy,RWD,Sedan,505,2024,2.9L V6
+peugeot-308-2024,Peugeot,308,Peugeot 308 GT,France,FWD,Hatchback,181,2024,1.2L I3
+renault-clio-2024,Renault,Clio,Renault Clio E-Tech,France,FWD,Hatchback,143,2024,1.6L I4 Hybrid
+citroen-c5-aircross-2024,Citroën,C5 Aircross,Citroën C5 Aircross Shine,France,FWD,SUV,178,2024,1.2L I3
+mclaren-artura-2024,McLaren,Artura,McLaren Artura,UK,RWD,Coupe,671,2024,3.0L V6 Hybrid
+aston-martin-vantage-2024,Aston Martin,Vantage,Aston Martin Vantage,UK,RWD,Coupe,503,2024,4.0L V8
+dodge-challenger-2023-srt,Dodge,Challenger,Dodge Challenger SRT Hellcat,USA,RWD,Coupe,717,2023,6.2L V8
+cadillac-escalade-2024,Cadillac,Escalade,Cadillac Escalade Premium Luxury,USA,4WD,SUV,420,2024,6.2L V8
+rivian-r1t-2024,Rivian,R1T,Rivian R1T Adventure,USA,AWD,Truck,533,2024,Dual Motor EV
+lucid-air-2024,Lucid,Air,Lucid Air Touring,USA,AWD,Sedan,620,2024,Dual Motor EV
+chevrolet-bel-air-1955,Chevrolet,Bel Air,Chevrolet Bel Air,USA,RWD,Coupe,162,1955,3.9L V8
+ford-thunderbird-1957,Ford,Thunderbird,Ford Thunderbird,USA,RWD,Coupe,220,1957,3.7L V8
+chevrolet-impala-1958,Chevrolet,Impala,Chevrolet Impala,USA,RWD,Coupe,250,1958,4.6L V8
+cadillac-eldorado-1959,Cadillac,Eldorado,Cadillac Eldorado 1959,USA,RWD,Coupe,345,1959,6.4L V8
+mercedes-190sl-1960,Mercedes-Benz,190SL,Mercedes-Benz 190SL,Germany,RWD,Convertible,105,1960,1.9L I4
+jaguar-e-type-1961,Jaguar,E-Type,Jaguar E-Type,UK,RWD,Coupe,265,1961,3.8L I6
+chevrolet-corvette-sting-ray-1962,Chevrolet,Corvette Sting Ray,Chevrolet Corvette Sting Ray,USA,RWD,Coupe,300,1962,4.6L V8
+porsche-356b-1963,Porsche,356B,Porsche 356B,Germany,RWD,Coupe,95,1963,1.6L H4
+ford-mustang-1964,Ford,Mustang,Ford Mustang,USA,RWD,Coupe,164,1964,2.8L I6
+ford-mustang-fastback-1965,Ford,Mustang Fastback,Ford Mustang Fastback,USA,RWD,Coupe,271,1965,4.7L V8
+chevrolet-chevelle-ss-396-1966,Chevrolet,Chevelle SS 396,Chevrolet Chevelle SS 396,USA,RWD,Coupe,360,1966,6.6L V8
+oldsmobile-toronado-1966,Oldsmobile,Toronado,Oldsmobile Toronado,USA,FWD,Coupe,385,1966,7.0L V8
+pontiac-firebird-1967,Pontiac,Firebird,Pontiac Firebird,USA,RWD,Coupe,325,1967,6.6L V8
+dodge-dart-gts-1968,Dodge,Dart GTS,Dodge Dart GTS,USA,RWD,Coupe,340,1968,5.2L V8
+plymouth-road-runner-1968,Plymouth,Road Runner,Plymouth Road Runner,USA,RWD,Coupe,375,1968,7.0L V8
+dodge-charger-rt-1969,Dodge,Charger R/T,Dodge Charger R/T,USA,RWD,Coupe,425,1969,7.2L V8
+chevrolet-camaro-z28-1969,Chevrolet,Camaro Z/28,Chevrolet Camaro Z/28 1969,USA,RWD,Coupe,290,1969,5.7L V8
+pontiac-gto-judge-1969,Pontiac,GTO Judge,Pontiac GTO Judge,USA,RWD,Coupe,366,1969,6.6L V8
+plymouth-barracuda-hemi-cuda-1970,Plymouth,Barracuda Hemi Cuda,Plymouth Barracuda Hemi Cuda,USA,RWD,Coupe,425,1970,7.0L V8
+buick-gsx-1970,Buick,GSX,Buick GSX,USA,RWD,Coupe,455,1970,7.5L V8
+ford-torino-cobra-1970,Ford,Torino Cobra,Ford Torino Cobra,USA,RWD,Coupe,370,1970,7.0L V8
+dodge-challenger-rt-1971,Dodge,Challenger R/T,Dodge Challenger R/T,USA,RWD,Coupe,425,1971,7.2L V8
+porsche-911-carrera-rs-1973,Porsche,911 Carrera RS,Porsche 911 Carrera RS,Germany,RWD,Coupe,210,1973,2.7L H6
+bmw-30-csl-1974,BMW,3.0 CSL,BMW 3.0 CSL,Germany,RWD,Coupe,200,1974,3.0L I6
+cadillac-eldorado-1975,Cadillac,Eldorado,Cadillac Eldorado 1975,USA,FWD,Coupe,190,1975,8.2L V8
+pontiac-firebird-trans-am-1977,Pontiac,Firebird Trans Am,Pontiac Firebird Trans Am,USA,RWD,Coupe,200,1977,6.6L V8
+ford-bronco-1978,Ford,Bronco,Ford Bronco,USA,4WD,SUV,150,1978,5.8L V8
+chevrolet-camaro-z28-1979,Chevrolet,Camaro Z/28,Chevrolet Camaro Z/28 1979,USA,RWD,Coupe,190,1979,5.7L V8
+mercedes-450sl-1980,Mercedes-Benz,450SL,Mercedes-Benz 450SL,Germany,RWD,Convertible,180,1980,4.5L V8
+delorean-dmc12-1981,DeLorean,DMC-12,DeLorean DMC-12,USA,RWD,Coupe,130,1981,2.85L V6
+ferrari-308-gtsi-1982,Ferrari,308 GTSi,Ferrari 308 GTSi,Italy,RWD,Convertible,240,1982,3.0L V8
+porsche-911-sc-1983,Porsche,911 SC,Porsche 911 SC,Germany,RWD,Coupe,188,1983,3.0L H6
+ferrari-testarossa-1984,Ferrari,Testarossa,Ferrari Testarossa,Italy,RWD,Coupe,390,1984,4.9L Flat-12
+toyota-corolla-sr5-1984,Toyota,Corolla SR5,Toyota Corolla SR5,Japan,FWD,Hatchback,102,1984,1.6L I4
+volkswagen-golf-gti-1984,Volkswagen,Golf GTI,Volkswagen Golf GTI 1984,Germany,FWD,Hatchback,112,1984,1.8L I4
+audi-sport-quattro-1985,Audi,Sport Quattro,Audi Sport Quattro,Germany,AWD,Coupe,306,1985,2.1L I5
+lamborghini-countach-5000-qv-1986,Lamborghini,Countach 5000 QV,Lamborghini Countach 5000 QV,Italy,RWD,Coupe,455,1986,5.2L V12
+mazda-rx7-1986,Mazda,RX-7,Mazda RX-7,Japan,RWD,Coupe,200,1986,1.3L Rotary
+buick-gnx-1987,Buick,GNX,Buick GNX,USA,FWD,Coupe,276,1987,3.8L V6
+bmw-m3-e30-1987,BMW,M3 E30,BMW M3 E30,Germany,RWD,Coupe,192,1987,2.3L I4
+porsche-959-1988,Porsche,959,Porsche 959,Germany,AWD,Coupe,444,1988,2.85L Flat-6 Twin-Turbo
+nissan-skyline-gt-r-r32-1989,Nissan,Skyline GT-R R32,Nissan Skyline GT-R R32,Japan,AWD,Coupe,276,1989,2.6L I6 Turbo
+acura-integra-type-r-1990,Acura,Integra Type R,Acura Integra Type R,Japan,FWD,Hatchback,195,1990,1.8L I4
+nissan-300zx-twin-turbo-1990,Nissan,300ZX Twin Turbo,Nissan 300ZX Twin Turbo,Japan,RWD,Coupe,300,1990,3.0L V6 Turbo
+lexus-ls400-1991,Lexus,LS 400,Lexus LS 400,Japan,RWD,Sedan,250,1991,4.0L V8
+toyota-supra-turbo-1992,Toyota,Supra Turbo,Toyota Supra Turbo,Japan,RWD,Coupe,320,1992,3.0L I6 Turbo
+mazda-rx7-fd-1993,Mazda,RX-7 FD,Mazda RX-7 FD,Japan,RWD,Coupe,255,1993,1.3L Rotary
+toyota-supra-mk4-1994,Toyota,Supra Mk4,Toyota Supra Mk4,Japan,RWD,Coupe,320,1994,3.0L I6 Turbo
+mitsubishi-lancer-evo-ii-1994,Mitsubishi,Lancer Evolution II,Mitsubishi Lancer Evolution II,Japan,AWD,Sedan,240,1994,2.0L I4 Turbo
+subaru-impreza-wrx-sti-1995,Subaru,Impreza WRX STI,Subaru Impreza WRX STI 1995,Japan,AWD,Sedan,250,1995,2.0L H4 Turbo
+bmw-m3-evo-ii-1996,BMW,M3 Evolution II,BMW M3 Evolution II,Germany,RWD,Coupe,240,1996,3.2L I6
+honda-nsx-1996,Honda,NSX,Honda NSX,Japan,RWD,Coupe,270,1996,3.0L V6
+honda-prelude-type-sh-1997,Honda,Prelude Type SH,Honda Prelude Type SH,Japan,FWD,Coupe,195,1997,2.2L I4
+porsche-911-turbo-1997,Porsche,911 Turbo,Porsche 911 Turbo 1997,Germany,AWD,Coupe,420,1997,3.6L H6 Twin-Turbo
+mitsubishi-3000gt-vr4-1998,Mitsubishi,3000GT VR-4,Mitsubishi 3000GT VR-4,Japan,AWD,Coupe,320,1998,3.0L V6 Turbo
+nissan-silvia-s15-1999,Nissan,Silvia S15,Nissan Silvia S15,Japan,RWD,Coupe,250,1999,2.0L I4 Turbo
+nissan-skyline-gt-r-r34-1999,Nissan,Skyline GT-R R34,Nissan Skyline GT-R R34,Japan,AWD,Coupe,280,1999,2.6L I6 Turbo
+mitsubishi-lancer-evo-vi-1999,Mitsubishi,Lancer Evolution VI,Mitsubishi Lancer Evolution VI,Japan,AWD,Sedan,276,1999,2.0L I4 Turbo
+honda-s2000-2000,Honda,S2000,Honda S2000,Japan,RWD,Roadster,240,2000,2.0L I4
+bmw-z8-2000,BMW,Z8,BMW Z8,Germany,RWD,Roadster,400,2000,4.9L V8
+acura-nsx-2001,Acura,NSX,Acura NSX 2001,Japan,RWD,Coupe,291,2001,3.2L V6
+bmw-m3-e46-2001,BMW,M3 E46,BMW M3 E46,Germany,RWD,Coupe,333,2001,3.2L I6
+porsche-911-turbo-2002,Porsche,911 Turbo,Porsche 911 Turbo 2002,Germany,AWD,Coupe,420,2002,3.6L H6 Twin-Turbo
+nissan-350z-2003,Nissan,350Z,Nissan 350Z,Japan,RWD,Coupe,287,2003,3.5L V6
+audi-rs6-2003,Audi,RS6,Audi RS6,Germany,AWD,Sedan,444,2003,4.2L V8
+porsche-boxster-s-2003,Porsche,Boxster S,Porsche Boxster S,Germany,RWD,Convertible,252,2003,2.7L H6
+ford-mustang-svt-cobra-2004,Ford,Mustang SVT Cobra,Ford Mustang SVT Cobra,USA,RWD,Coupe,390,2004,4.6L V8
+cadillac-cts-v-2004,Cadillac,CTS-V,Cadillac CTS-V,USA,RWD,Sedan,400,2004,5.7L V8
+mercedes-e55-amg-2004,Mercedes-Benz,E55 AMG,Mercedes-Benz E55 AMG,Germany,RWD,Sedan,469,2004,5.5L V8
+ford-gt-2005,Ford,GT,Ford GT,USA,RWD,Coupe,550,2005,5.4L V8
+subaru-impreza-wrx-sti-2005,Subaru,Impreza WRX STI,Subaru Impreza WRX STI 2005,Japan,AWD,Sedan,300,2005,2.5L H4 Turbo
+lamborghini-gallardo-2006,Lamborghini,Gallardo,Lamborghini Gallardo,Italy,AWD,Coupe,512,2006,5.0L V10
+mitsubishi-lancer-evo-ix-2006,Mitsubishi,Lancer Evolution IX,Mitsubishi Lancer Evolution IX,Japan,AWD,Sedan,286,2006,2.0L I4 Turbo
+porsche-911-gt3-2007,Porsche,911 GT3,Porsche 911 GT3,Germany,RWD,Coupe,415,2007,3.6L H6
+lexus-is-f-2008,Lexus,IS F,Lexus IS F,Japan,RWD,Sedan,416,2008,5.0L V8
+mazda-rx8-2008,Mazda,RX-8,Mazda RX-8,Japan,RWD,Coupe,232,2008,1.3L Rotary
+nissan-370z-2009,Nissan,370Z,Nissan 370Z,Japan,RWD,Coupe,332,2009,3.7L V6
+ferrari-458-italia-2010,Ferrari,458 Italia,Ferrari 458 Italia,Italy,RWD,Coupe,562,2010,4.5L V8
+porsche-911-turbo-s-2010,Porsche,911 Turbo S,Porsche 911 Turbo S 2010,Germany,AWD,Coupe,530,2010,3.8L H6 Twin-Turbo
+chevrolet-volt-2011,Chevrolet,Volt,Chevrolet Volt,USA,FWD,Sedan,149,2011,1.4L I4 Hybrid
+nissan-gt-r-2011,Nissan,GT-R,Nissan GT-R,Japan,AWD,Coupe,530,2011,3.8L V6 Twin-Turbo
+mercedes-c63-amg-2012,Mercedes-Benz,C63 AMG,Mercedes-Benz C63 AMG,Germany,RWD,Sedan,451,2012,6.2L V8
+mclaren-mp4-12c-2012,McLaren,MP4-12C,McLaren MP4-12C,UK,RWD,Coupe,592,2012,3.8L V8
+lamborghini-aventador-2013,Lamborghini,Aventador,Lamborghini Aventador,Italy,AWD,Coupe,690,2013,6.5L V12
+ford-focus-st-2013,Ford,Focus ST,Ford Focus ST,USA,FWD,Hatchback,252,2013,2.0L I4
+chevrolet-corvette-c7-stingray-2014,Chevrolet,Corvette C7 Stingray,Chevrolet Corvette C7 Stingray,USA,RWD,Coupe,455,2014,6.2L V8
+porsche-911-carrera-gts-2014,Porsche,911 Carrera GTS,Porsche 911 Carrera GTS,Germany,RWD,Coupe,430,2014,3.8L H6
+ford-mustang-shelby-gt350-2015,Ford,Mustang Shelby GT350,Ford Mustang Shelby GT350,USA,RWD,Coupe,526,2015,5.2L V8
+porsche-macan-turbo-2015,Porsche,Macan Turbo,Porsche Macan Turbo,Germany,AWD,SUV,340,2015,3.0L V6
+acura-nsx-2016,Acura,NSX,Acura NSX 2016,Japan,AWD,Coupe,573,2016,3.5L V6 Hybrid
+audi-r8-v10-2016,Audi,R8 V10,Audi R8 V10,Germany,AWD,Coupe,540,2016,5.2L V10
+ford-explorer-sport-2016,Ford,Explorer Sport,Ford Explorer Sport,USA,AWD,SUV,365,2016,3.7L V6
+alfa-romeo-giulia-quadrifoglio-2017,Alfa Romeo,Giulia Quadrifoglio,Alfa Romeo Giulia Quadrifoglio 2017,Italy,RWD,Sedan,505,2017,2.9L V6
+bmw-m2-2017,BMW,M2,BMW M2,Germany,RWD,Coupe,365,2017,3.0L I6
+nissan-gt-r-nismo-2018,Nissan,GT-R Nismo,Nissan GT-R Nismo,Japan,AWD,Coupe,600,2018,3.8L V6 Twin-Turbo
+porsche-911-gt2-rs-2018,Porsche,911 GT2 RS,Porsche 911 GT2 RS,Germany,RWD,Coupe,700,2018,3.8L H6 Twin-Turbo
+kia-stinger-gt-2018,Kia,Stinger GT,Kia Stinger GT,South Korea,RWD,Sedan,365,2018,3.3L V6
+chevrolet-corvette-zr1-2019,Chevrolet,Corvette ZR1,Chevrolet Corvette ZR1,USA,RWD,Coupe,755,2019,6.2L V8
+mclaren-720s-2019,McLaren,720S,McLaren 720S,UK,RWD,Coupe,710,2019,4.0L V8
+porsche-taycan-turbo-2020,Porsche,Taycan Turbo,Porsche Taycan Turbo,Germany,AWD,Sedan,616,2020,Dual Motor EV
+bmw-m8-competition-2020,BMW,M8 Competition,BMW M8 Competition,Germany,AWD,Coupe,617,2020,4.4L V8
+tesla-model-3-performance-2020,Tesla,Model 3 Performance,Tesla Model 3 Performance,USA,AWD,Sedan,450,2020,Dual Motor EV
+toyota-supra-2020,Toyota,Supra,Toyota Supra,Japan,RWD,Coupe,382,2020,3.0L I6
+ford-mustang-shelby-gt500-2020,Ford,Mustang Shelby GT500,Ford Mustang Shelby GT500,USA,RWD,Coupe,760,2020,5.2L V8
+jeep-wrangler-4xe-2021,Jeep,Wrangler 4xe,Jeep Wrangler 4xe,USA,4WD,SUV,375,2021,2.0L I4 Hybrid
+lexus-is-500-2021,Lexus,IS 500,Lexus IS 500,Japan,RWD,Sedan,472,2021,5.0L V8
+mercedes-amg-gt-53-2021,Mercedes-Benz,AMG GT 53,Mercedes-Benz AMG GT 53,Germany,AWD,Coupe,429,2021,3.0L I6
+porsche-911-turbo-s-2021,Porsche,911 Turbo S,Porsche 911 Turbo S 2021,Germany,AWD,Coupe,640,2021,3.8L H6 Twin-Turbo
+volvo-xc90-recharge-2021,Volvo,XC90 Recharge,Volvo XC90 Recharge,Sweden,AWD,SUV,455,2021,Plug-In Hybrid
+hyundai-ioniq-6-2022,Hyundai,Ioniq 6,Hyundai Ioniq 6,South Korea,RWD,Sedan,321,2022,Single Motor EV
+kia-ev6-gt-2022,Kia,EV6 GT,Kia EV6 GT,South Korea,AWD,SUV,576,2022,Dual Motor EV
+chevrolet-corvette-e-ray-2022,Chevrolet,Corvette E-Ray,Chevrolet Corvette E-Ray,USA,AWD,Coupe,655,2022,6.2L V8 Hybrid
+bmw-m4-competition-2022,BMW,M4 Competition,BMW M4 Competition,Germany,RWD,Coupe,503,2022,3.0L I6
+porsche-cayman-gt4-rs-2022,Porsche,Cayman GT4 RS,Porsche Cayman GT4 RS,Germany,RWD,Coupe,493,2022,4.0L H6
+acura-integra-type-s-2023,Acura,Integra Type S,Acura Integra Type S,Japan,FWD,Hatchback,320,2023,2.0L I4
+genesis-g80-sport-2023,Genesis,G80 Sport,Genesis G80 Sport,South Korea,RWD,Sedan,348,2023,3.5L V6
+honda-accord-hybrid-2023,Honda,Accord Hybrid,Honda Accord Hybrid,Japan,FWD,Sedan,204,2023,2.0L I4 Hybrid
+nissan-ariya-2023,Nissan,Ariya,Nissan Ariya,Japan,AWD,SUV,389,2023,Dual Motor EV
+toyota-prius-prime-2023,Toyota,Prius Prime,Toyota Prius Prime,Japan,FWD,Hatchback,220,2023,1.8L I4 Hybrid
+volkswagen-id4-2023,Volkswagen,ID.4,Volkswagen ID.4,Germany,AWD,SUV,295,2023,Dual Motor EV
+ford-f150-lightning-2023,Ford,F-150 Lightning,Ford F-150 Lightning,USA,AWD,Truck,580,2023,Dual Motor EV
+rivian-r1s-2023,Rivian,R1S,Rivian R1S,USA,AWD,SUV,835,2023,Quad Motor EV
+bmw-i4-m50-2023,BMW,i4 M50,BMW i4 M50,Germany,AWD,Sedan,536,2023,Dual Motor EV
+ferrari-roma-2023,Ferrari,Roma,Ferrari Roma,Italy,RWD,Coupe,612,2023,3.9L V8
+porsche-911-dakar-2023,Porsche,911 Dakar,Porsche 911 Dakar,Germany,AWD,Coupe,473,2023,3.0L H6
+toyota-gr-corolla-2024,Toyota,GR Corolla,Toyota GR Corolla,Japan,AWD,Hatchback,300,2024,1.6L I3 Turbo
+hyundai-elantra-n-2024,Hyundai,Elantra N,Hyundai Elantra N,South Korea,FWD,Sedan,286,2024,2.0L I4 Turbo
+kia-niro-ev-2024,Kia,Niro EV,Kia Niro EV,South Korea,FWD,SUV,139,2024,Single Motor EV
+lexus-es-300h-2024,Lexus,ES 300h,Lexus ES 300h,Japan,FWD,Sedan,215,2024,2.5L I4 Hybrid
+mazda-mx5-rf-2024,Mazda,MX-5 RF,Mazda MX-5 RF,Japan,RWD,Convertible,181,2024,2.0L I4
+chevrolet-silverado-ev-2024,Chevrolet,Silverado EV,Chevrolet Silverado EV,USA,AWD,Truck,664,2024,Dual Motor EV
+ford-mustang-mach-e-2024,Ford,Mustang Mach-E,Ford Mustang Mach-E,USA,AWD,SUV,480,2024,Dual Motor EV
+audi-q4-etron-2024,Audi,Q4 e-tron,Audi Q4 e-tron,Germany,AWD,SUV,295,2024,Dual Motor EV
+volvo-ex90-2024,Volvo,EX90,Volvo EX90,Sweden,AWD,SUV,402,2024,Dual Motor EV
+bmw-x5-xdrive50e-2024,BMW,X5 xDrive50e,BMW X5 xDrive50e,Germany,AWD,SUV,483,2024,3.0L I6 Hybrid
+mercedes-eqe-2024,Mercedes-Benz,EQE,Mercedes-Benz EQE,Germany,AWD,Sedan,288,2024,Dual Motor EV
+lexus-gx-550-2024,Lexus,GX 550,Lexus GX 550,Japan,AWD,SUV,349,2024,3.5L V6
+hyundai-santa-fe-2024,Hyundai,Santa Fe,Hyundai Santa Fe,South Korea,AWD,SUV,277,2024,2.5L I4
+kia-sportage-hybrid-2024,Kia,Sportage Hybrid,Kia Sportage Hybrid,South Korea,AWD,SUV,227,2024,1.6L I4 Hybrid
+toyota-land-cruiser-2024,Toyota,Land Cruiser,Toyota Land Cruiser,Japan,AWD,SUV,326,2024,2.4L I4 Hybrid
+jeep-grand-cherokee-l-2024,Jeep,Grand Cherokee L,Jeep Grand Cherokee L,USA,AWD,SUV,293,2024,3.6L V6
+ford-bronco-raptor-2024,Ford,Bronco Raptor,Ford Bronco Raptor,USA,4WD,SUV,418,2024,2.7L V6
+chevrolet-traverse-2024,Chevrolet,Traverse,Chevrolet Traverse,USA,AWD,SUV,310,2024,3.6L V6
+honda-civic-hatchback-2024,Honda,Civic Hatchback,Honda Civic Hatchback,Japan,FWD,Hatchback,180,2024,2.0L I4
+toyota-corolla-cross-2024,Toyota,Corolla Cross,Toyota Corolla Cross,Japan,AWD,SUV,169,2024,2.0L I4
+mazda-cx5-2024,Mazda,CX-5,Mazda CX-5,Japan,AWD,SUV,187,2024,2.5L I4
+subaru-forester-2024,Subaru,Forester,Subaru Forester,Japan,AWD,SUV,182,2024,2.5L H4
+nissan-rogue-2024,Nissan,Rogue,Nissan Rogue,Japan,AWD,SUV,201,2024,1.5L I3 Turbo
+mini-countryman-se-2024,MINI,Countryman SE,MINI Countryman SE,UK,AWD,SUV,308,2024,Dual Motor EV
+ferrari-sf90-stradale-2024,Ferrari,SF90 Stradale,Ferrari SF90 Stradale,Italy,AWD,Coupe,986,2024,4.0L V8 Hybrid
+lamborghini-revuelto-2024,Lamborghini,Revuelto,Lamborghini Revuelto,Italy,AWD,Coupe,1015,2024,6.5L V12 Hybrid
+mclaren-750s-2024,McLaren,750S,McLaren 750S,UK,RWD,Coupe,740,2024,4.0L V8
+aston-martin-db12-2024,Aston Martin,DB12,Aston Martin DB12,UK,RWD,Coupe,671,2024,4.0L V8
+bugatti-chiron-super-sport-2024,Bugatti,Chiron Super Sport,Bugatti Chiron Super Sport,France,AWD,Coupe,1578,2024,8.0L W16
+koenigsegg-jesko-attack-2024,Koenigsegg,Jesko Attack,Koenigsegg Jesko Attack,Sweden,RWD,Coupe,1280,2024,5.0L V8 Twin-Turbo
+pagani-utopia-2024,Pagani,Utopia,Pagani Utopia,Italy,RWD,Coupe,852,2024,6.0L V12
+rimac-nevera-2024,Rimac,Nevera,Rimac Nevera,Croatia,AWD,Coupe,1914,2024,Electric Quad-Motor
+byd-seal-2024,BYD,Seal,BYD Seal,China,RWD,Sedan,308,2024,Single Motor EV
+genesis-electrified-g80-2024,Genesis,Electrified G80,Genesis Electrified G80,South Korea,AWD,Sedan,365,2024,Dual Motor EV
+hyundai-kona-electric-2024,Hyundai,Kona Electric,Hyundai Kona Electric,South Korea,FWD,SUV,201,2024,Single Motor EV
+kia-ev9-2024,Kia,EV9,Kia EV9,South Korea,AWD,SUV,379,2024,Dual Motor EV
+tesla-cybertruck-2024,Tesla,Cybertruck,Tesla Cybertruck,USA,AWD,Truck,845,2024,Dual Motor EV
+chevrolet-tahoe-z71-2024,Chevrolet,Tahoe Z71,Chevrolet Tahoe Z71,USA,4WD,SUV,355,2024,5.3L V8
+gmc-yukon-denali-2024,GMC,Yukon Denali,GMC Yukon Denali,USA,AWD,SUV,420,2024,6.2L V8
+cadillac-lyriq-2024,Cadillac,Lyriq,Cadillac Lyriq,USA,AWD,SUV,500,2024,Dual Motor EV
+ford-escape-hybrid-2024,Ford,Escape Hybrid,Ford Escape Hybrid,USA,AWD,SUV,192,2024,2.5L I4 Hybrid
+honda-cr-v-hybrid-2024,Honda,CR-V Hybrid,Honda CR-V Hybrid,Japan,AWD,SUV,204,2024,2.0L I4 Hybrid
+toyota-highlander-hybrid-2024,Toyota,Highlander Hybrid,Toyota Highlander Hybrid,Japan,AWD,SUV,243,2024,2.5L I4 Hybrid
+subaru-outback-xt-2024,Subaru,Outback XT,Subaru Outback XT,Japan,AWD,Wagon,260,2024,2.4L I4 Turbo
+mazda-cx90-2024,Mazda,CX-90,Mazda CX-90,Japan,AWD,SUV,280,2024,3.3L I6
+nissan-leaf-2024,Nissan,Leaf,Nissan Leaf,Japan,FWD,Hatchback,147,2024,Single Motor EV
+peugeot-208-2024,Peugeot,208,Peugeot 208,France,FWD,Hatchback,133,2024,1.2L I3
+renault-clio-2024-2,Renault,Clio,Renault Clio,France,FWD,Hatchback,145,2024,1.0L I3
+fiat-500e-2024,Fiat,500e,Fiat 500e,Italy,FWD,Hatchback,117,2024,Single Motor EV
+alfa-romeo-tonale-2024,Alfa Romeo,Tonale,Alfa Romeo Tonale,Italy,AWD,SUV,285,2024,2.0L I4 Hybrid
+volvo-xc60-recharge-2024,Volvo,XC60 Recharge,Volvo XC60 Recharge,Sweden,AWD,SUV,455,2024,Plug-In Hybrid
+bmw-ix-xdrive50-2024,BMW,iX xDrive50,BMW iX xDrive50,Germany,AWD,SUV,516,2024,Dual Motor EV
+audi-e-tron-gt-2024,Audi,e-tron GT,Audi e-tron GT,Germany,AWD,Sedan,523,2024,Dual Motor EV
+mercedes-eqs-2024,Mercedes-Benz,EQS,Mercedes-Benz EQS,Germany,AWD,Sedan,516,2024,Dual Motor EV
+porsche-macan-electric-2024,Porsche,Macan Electric,Porsche Macan Electric,Germany,AWD,SUV,402,2024,Dual Motor EV
+lucid-air-grand-touring-2024,Lucid,Air Grand Touring,Lucid Air Grand Touring,USA,AWD,Sedan,819,2024,Dual Motor EV
+lucid-gravity-2024,Lucid,Gravity,Lucid Gravity,USA,AWD,SUV,800,2024,Dual Motor EV
+tesla-model-y-performance-2024,Tesla,Model Y Performance,Tesla Model Y Performance,USA,AWD,SUV,456,2024,Dual Motor EV
+ford-maverick-hybrid-2024,Ford,Maverick Hybrid,Ford Maverick Hybrid,USA,FWD,Truck,191,2024,2.5L I4 Hybrid
+chevrolet-colorado-z71-2024,Chevrolet,Colorado Z71,Chevrolet Colorado Z71,USA,4WD,Truck,310,2024,2.7L I4
+gmc-sierra-denali-2024,GMC,Sierra Denali,GMC Sierra Denali,USA,4WD,Truck,420,2024,6.2L V8
+ram-1500-trx-2024,Ram,1500 TRX,Ram 1500 TRX,USA,4WD,Truck,702,2024,6.2L V8
+jeep-gladiator-rubicon-2024,Jeep,Gladiator Rubicon,Jeep Gladiator Rubicon,USA,4WD,Truck,285,2024,3.6L V6
+land-rover-range-rover-sport-2024,Land Rover,Range Rover Sport,Land Rover Range Rover Sport,UK,AWD,SUV,395,2024,3.0L I6
+jaguar-f-pace-svr-2024,Jaguar,F-Pace SVR,Jaguar F-Pace SVR,UK,AWD,SUV,550,2024,5.0L V8
+mini-clubman-s-2024,MINI,Clubman S,MINI Clubman S,UK,FWD,Hatchback,189,2024,2.0L I4
+volvo-v60-recharge-2024,Volvo,V60 Recharge,Volvo V60 Recharge,Sweden,AWD,Wagon,455,2024,Plug-In Hybrid
+peugeot-3008-2024,Peugeot,3008,Peugeot 3008,France,AWD,SUV,222,2024,1.6L I4 Hybrid
+renault-austral-2024,Renault,Austral,Renault Austral,France,FWD,SUV,160,2024,1.3L I4
+citroen-c3-aircross-2024,Citroën,C3 Aircross,Citroën C3 Aircross,France,FWD,SUV,130,2024,1.2L I3
+fiat-tipo-2024,Fiat,Tipo,Fiat Tipo,Italy,FWD,Sedan,130,2024,1.4L I4
+saab-900-turbo-1985,Saab,900 Turbo,Saab 900 Turbo,Sweden,FWD,Hatchback,160,1985,2.0L I4 Turbo
+volvo-240-dl-1977,Volvo,240 DL,Volvo 240 DL,Sweden,RWD,Sedan,112,1977,2.1L I4
+citroen-ds-1961,Citroën,DS,Citroën DS,France,FWD,Sedan,138,1961,2.0L I4
+lotus-esprit-turbo-1980,Lotus,Esprit Turbo,Lotus Esprit Turbo,UK,RWD,Coupe,215,1980,2.2L I4 Turbo

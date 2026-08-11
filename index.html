@@ -3,11 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carlee: Car Guessing Game Home</title>
+    <title>Carlee: Car Wordle Game</title>
+    <meta
+      name="description"
+      content="Carlee is a daily car guessing game. One mystery car a day, six guesses, and attribute-by-attribute feedback."
+    />
+    <meta name="theme-color" content="#0f1419" />
+    <link rel="canonical" href="https://carleecom.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Carlee" />
+    <meta property="og:title" content="Carlee: Car Wordle Game" />
+    <meta
+      property="og:description"
+      content="One mystery car a day. Six guesses. Find today's car."
+    />
+    <meta property="og:url" content="https://carleecom.vercel.app/" />
+    <meta property="og:image" content="https://carleecom.vercel.app/assets/PLAYCARLEELOGO.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Carlee: Car Wordle Game" />
+    <meta
+      name="twitter:description"
+      content="One mystery car a day. Six guesses. Find today's car."
+    />
+    <meta name="twitter:image" content="https://carleecom.vercel.app/assets/PLAYCARLEELOGO.png" />
+
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="icon" type="image/png" href="assets/CARLEEFAVICON.png" />
-
+    <link rel="apple-touch-icon" href="assets/CARLEEFAVICON.png" />
   </head>
   <body>
     
@@ -53,37 +77,123 @@
       <div class="stats-panel-content">
         <button class="stats-panel-close" id="statsClose" type="button" aria-label="Close statistics">×</button>
         <h2 class="stats-panel-title" id="statsPanelTitle">Statistics</h2>
-        <p class="stats-panel-message">Your game statistics will appear here. Track guesses, streaks, and win rates — coming soon.</p>
+        <div class="stats-panel-body" id="stats-panel-body"></div>
       </div>
     </div>
 
     <div class="page-shell">
-      <main class="hero-wrapper">
-        <section class="hero-panel">
-          <div class="hero-copy">
-            <div class="hero-logo-wrap">
-                <img
-                    src="assets/CARLEE_LOGO.svg"
-                    class="hero-logo-svg"
-                    alt="Carlee logo">
+      <main class="home-main">
+        <section class="hero-wrapper">
+          <section class="hero-panel">
+            <div class="hero-copy">
+              <div class="hero-logo-wrap">
+                  <img
+                      src="assets/CARLEE_LOGO.svg"
+                      class="hero-logo-svg"
+                      alt="Carlee logo">
+              </div>
+              <h2>One mystery car. Every day.</h2>
+              <p class="hero-description">Six guesses to name today’s car. Everyone plays the same one.</p>
+              <div class="hero-cta">
+                <a class="button-play" href="game.html">PLAY DAILY</a>
+                <a class="button-secondary" href="game.html?mode=unlimited">or play Unlimited</a>
+              </div>
             </div>
-            <h2>Car guessing made simple.</h2>
-            <p class="hero-description">10 guesses. Hundreds of cars. Can you find today’s car?</p>
-            <div class="hero-cta">
-              <a class="button-play" href="/game.html">PLAY UNLIMITED</a>
-            </div>
-          </div>
+          </section>
         </section>
 
-        <section class="info-cards">
-          <article class="info-card">
-            <h2>Daily challenge</h2>
-            <p>One new car every day. Same rules, fresh puzzle.</p>
-          </article>
-          <article class="info-card">
-            <h2>Game stats</h2>
-            <p>Track guesses, streaks, and your best runs.</p>
-          </article>
+        <section class="how-to-play" aria-labelledby="how-to-play-title">
+          <h2 class="how-to-play-title" id="how-to-play-title">How to play</h2>
+
+          <ol class="howto-steps">
+            <li class="howto-step">
+              <span class="howto-step-num" aria-hidden="true">1</span>
+              <div class="howto-step-copy">
+                <h3>Search a car</h3>
+                <p>Type any make or model and pick one from the list.</p>
+              </div>
+            </li>
+            <li class="howto-step">
+              <span class="howto-step-num" aria-hidden="true">2</span>
+              <div class="howto-step-copy">
+                <h3>Submit your guess</h3>
+                <p>Every guess is compared against the secret car, attribute by attribute.</p>
+              </div>
+            </li>
+            <li class="howto-step">
+              <span class="howto-step-num" aria-hidden="true">3</span>
+              <div class="howto-step-copy">
+                <h3>Read the colors</h3>
+                <p>Green means an exact match. Yellow means no match. Blue arrows on Year and HP point toward the answer.</p>
+              </div>
+            </li>
+            <li class="howto-step">
+              <span class="howto-step-num" aria-hidden="true">4</span>
+              <div class="howto-step-copy">
+                <h3>Solve it in six</h3>
+                <p>Narrow it down and name today’s car before your guesses run out.</p>
+              </div>
+            </li>
+          </ol>
+
+          <figure class="howto-example">
+            <figcaption class="howto-example-caption">Example guess: the secret car is a newer, more powerful Japanese coupe</figcaption>
+            <article class="example-card">
+              <div class="example-card-header">
+                <div class="example-card-avatar">
+                  <img
+                    class="example-card-avatar-img"
+                    src="assets/logos/mazda.png"
+                    alt="Mazda logo"
+                    loading="lazy"
+                    onerror="this.hidden=true; this.nextElementSibling.hidden=false"
+                  />
+                  <span class="example-card-avatar-fallback" hidden aria-hidden="true">M</span>
+                </div>
+                <h3 class="example-card-title">Mazda RX-7 1992</h3>
+              </div>
+              <div class="example-card-grid">
+                <div class="example-tile example-tile--wrong">
+                  <span class="example-tile-label">Make</span>
+                  <span class="example-tile-value">Mazda<span class="example-tile-badge">✗</span></span>
+                </div>
+                <div class="example-tile example-tile--correct">
+                  <span class="example-tile-label">Country</span>
+                  <span class="example-tile-value">Japan<span class="example-tile-badge">✓</span></span>
+                </div>
+                <div class="example-tile example-tile--correct">
+                  <span class="example-tile-label">Drive</span>
+                  <span class="example-tile-value">RWD<span class="example-tile-badge">✓</span></span>
+                </div>
+                <div class="example-tile example-tile--correct">
+                  <span class="example-tile-label">Body</span>
+                  <span class="example-tile-value">Coupe<span class="example-tile-badge">✓</span></span>
+                </div>
+                <div class="example-tile example-tile--higher">
+                  <span class="example-tile-label">HP</span>
+                  <span class="example-tile-value">255<span class="example-tile-badge">↑</span></span>
+                </div>
+                <div class="example-tile example-tile--higher">
+                  <span class="example-tile-label">Year</span>
+                  <span class="example-tile-value">1992<span class="example-tile-badge">↑</span></span>
+                </div>
+                <div class="example-tile example-tile--wrong">
+                  <span class="example-tile-label">Engine</span>
+                  <span class="example-tile-value">Rotary<span class="example-tile-badge">✗</span></span>
+                </div>
+              </div>
+            </article>
+          </figure>
+
+          <ul class="howto-legend">
+            <li class="howto-legend-item"><span class="howto-swatch howto-swatch--correct" aria-hidden="true"></span>Exact match</li>
+            <li class="howto-legend-item"><span class="howto-swatch howto-swatch--wrong" aria-hidden="true"></span>Not a match</li>
+            <li class="howto-legend-item"><span class="howto-swatch howto-swatch--hint" aria-hidden="true"></span>↑ higher / ↓ lower</li>
+          </ul>
+
+          <p class="howto-footnote">
+            Open <strong>Statistics</strong> in the top bar to see your streak and win rate.
+          </p>
         </section>
       </main>
 
@@ -106,5 +216,6 @@
     </div>
 
     <script src="sidebar.js"></script>
+    <script type="module" src="js/stats-ui.js"></script>
   </body>
 </html>

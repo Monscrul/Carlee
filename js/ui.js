@@ -3,6 +3,15 @@ import { getBrandLogoUrl, getBodyStyleSvgUrl, getCountryFlagEmoji } from './asse
 
 const elements = {};
 
+const TONE_BY_GUESSES = {
+  1: ['First try.', 'Unreal.'],
+  2: ['Sharp.', 'You knew that one.'],
+  3: ['Sharp.', 'You knew that one.'],
+  4: ['Nice solve.'],
+  5: ['Clutch.'],
+  6: ['Just in time.'],
+};
+
 export function initUI() {
   elements.loading = document.getElementById('loading');
   elements.error = document.getElementById('error');
@@ -15,13 +24,32 @@ export function initUI() {
   elements.emptyHint = document.getElementById('empty-hint');
   elements.guessCards = document.getElementById('guess-cards');
   elements.gameOver = document.getElementById('game-over');
+  elements.gameOverWrapped = document.getElementById('game-over-wrapped');
+  elements.gameOverTitle = document.getElementById('game-over-title');
+  elements.gameOverTone = document.getElementById('game-over-tone');
   elements.gameOverMessage = document.getElementById('game-over-message');
+  elements.gameOverStreak = document.getElementById('game-over-streak');
   elements.secretReveal = document.getElementById('secret-reveal');
   elements.gameOverPhoto = document.getElementById('game-over-photo');
   elements.gameOverPhotoImg = document.getElementById('game-over-photo-img');
   elements.playAgainBtn = document.getElementById('play-again-btn');
+  elements.shareResultBtn = document.getElementById('share-result-btn');
+  elements.shareStatus = document.getElementById('share-status');
   elements.closeGameOverBtn = document.getElementById('close-game-over-btn');
+  elements.modeLabel = document.getElementById('mode-label');
+  elements.dailyDoneNote = document.getElementById('daily-done-note');
+  elements.playUnlimitedLink = document.getElementById('play-unlimited-link');
+}
 
+export function setModeLabel(text) {
+  if (elements.modeLabel) elements.modeLabel.textContent = text;
+}
+
+/** Daily is one-and-done, so its game over screen swaps replay for the Unlimited exit. */
+export function setGameOverActions({ canPlayAgain }) {
+  elements.playAgainBtn?.classList.toggle('hidden', !canPlayAgain);
+  elements.dailyDoneNote?.classList.toggle('hidden', canPlayAgain);
+  elements.playUnlimitedLink?.classList.toggle('hidden', canPlayAgain);
 }
 
 export function getUIElements() {
@@ -67,39 +95,6 @@ function getAttributeValue(attrKey, car) {
   }
 }
 
-function formatCellContent(attrKey, result, car) {
-  const { status, delta, direction } = result;
-
-  if (status === FEEDBACK.CORRECT) {
-    const value = getAttributeValue(attrKey, car);
-    return value !== '' ? `${value} ✓` : '✓';
-  }
-
-  if (status === FEEDBACK.WRONG) {
-    if (attrKey === 'horsepower') return `${car.horsepower} ✗`;
-    if (attrKey === 'year') return `${car.year} ✗`;
-    return getAttributeValue(attrKey, car) || '✗';
-  }
-
-  if (status === FEEDBACK.PARTIAL) {
-    const arrow = direction === FEEDBACK.HIGHER ? '↑' : '↓';
-    const value = attrKey === 'horsepower' ? car.horsepower : car.year;
-    return `${value} ${arrow} (~${delta})`;
-  }
-
-  if (status === FEEDBACK.HIGHER) {
-    const value = attrKey === 'horsepower' ? car.horsepower : car.year;
-    return `${value} ↑`;
-  }
-
-  if (status === FEEDBACK.LOWER) {
-    const value = attrKey === 'horsepower' ? car.horsepower : car.year;
-    return `${value} ↓`;
-  }
-
-  return '';
-}
-
 function getResultBadge(status) {
   switch (status) {
     case FEEDBACK.CORRECT:
@@ -126,9 +121,18 @@ function getTileSizeClass(attrKey) {
     case 'country':
     case 'engine':
       return 'guess-tile--compact';
-      default:
+    default:
       return 'guess-tile--wide';
   }
+}
+
+function pickTone(guessCount) {
+  const options = TONE_BY_GUESSES[guessCount] || TONE_BY_GUESSES[6];
+  return options[Math.floor(Math.random() * options.length)];
+}
+
+function prefersReducedMotion() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 function createGuessCard(guess, car, isNew) {
@@ -257,6 +261,19 @@ export function renderGuessTable(guesses, catalog) {
   }
 }
 
+/** Marks the newest card as the winning punchline and returns how long to wait. */
+export function celebrateWinningCard() {
+  const card = elements.guessCards?.querySelector('.guess-card');
+  if (!card) return 0;
+
+  card.classList.add('guess-card--win');
+
+  if (prefersReducedMotion()) return 0;
+
+  // Tile flip (~350ms staggered) + short pause so the glow reads as the punchline.
+  return 650;
+}
+
 export function updateGuessCounter(guessCount, maxGuesses) {
   if (elements.guessCounter) {
     elements.guessCounter.textContent = `Guesses: ${guessCount} / ${maxGuesses}`;
@@ -318,40 +335,105 @@ export function clearSearchInput() {
   if (elements.searchInput) elements.searchInput.value = '';
 }
 
-export function showGameOver(state, secretCar) {
+function setText(el, text, { hidden = false } = {}) {
+  if (!el) return;
+  el.textContent = text || '';
+  el.classList.toggle('hidden', hidden || !text);
+}
+
+function spawnWinParticles(container) {
+  if (!container || prefersReducedMotion()) return;
+
+  const burst = document.createElement('div');
+  burst.className = 'win-particles';
+  burst.setAttribute('aria-hidden', 'true');
+
+  for (let i = 0; i < 14; i += 1) {
+    const speck = document.createElement('span');
+    speck.className = 'win-particle';
+    speck.style.setProperty('--i', String(i));
+    speck.style.setProperty('--angle', `${(360 / 14) * i}deg`);
+    burst.appendChild(speck);
+  }
+
+  container.appendChild(burst);
+  window.setTimeout(() => burst.remove(), 800);
+}
+
+function formatStreakLine(streak) {
+  if (!streak || streak < 1) return '';
+  if (streak === 1) return 'Streak started.';
+  return `Streak continues — ${streak} days`;
+}
+
+/**
+ * @param {object} state
+ * @param {object} secretCar
+ * @param {{ streak?: number|null, showShare?: boolean, celebrate?: boolean }} [options]
+ */
+export function showGameOver(state, secretCar, options = {}) {
   if (!elements.gameOver || !secretCar) return;
 
-  elements.gameOver.classList.remove('hidden');
+  const isWin = state.status === GAME_STATUS.WON;
+  const celebrate = options.celebrate !== false && isWin;
 
-  if (state.status === GAME_STATUS.WON) {
-    elements.gameOverMessage.textContent = `You got it in ${state.guesses.length} ${
-      state.guesses.length === 1 ? 'guess' : 'guesses'
-    }!`;
-    elements.gameOver.classList.add('game-over-won');
-    elements.gameOver.classList.remove('game-over-lost');
+  elements.gameOver.classList.remove('hidden');
+  elements.gameOver.classList.toggle('game-over-won', isWin);
+  elements.gameOver.classList.toggle('game-over-lost', !isWin);
+  elements.gameOver.classList.toggle('game-over-enter', celebrate && !prefersReducedMotion());
+
+  if (isWin) {
+    setText(elements.gameOverTitle, 'Congratulations! 🥳');
+    setText(elements.gameOverTone, pickTone(state.guesses.length));
+    setText(
+      elements.gameOverMessage,
+      `You got it in ${state.guesses.length} / ${state.maxGuesses} Guesses!`,
+    );
+    setText(elements.gameOverStreak, formatStreakLine(options.streak), {
+      hidden: !options.streak,
+    });
   } else {
-    elements.gameOverMessage.textContent = 'Out of guesses! The car was:';
-    elements.gameOver.classList.add('game-over-lost');
-    elements.gameOver.classList.remove('game-over-won');
+    setText(elements.gameOverTitle, 'Out of guesses! The car was:');
+    setText(elements.gameOverTone, '', { hidden: true });
+    setText(elements.gameOverMessage, '');
+    setText(elements.gameOverStreak, '', { hidden: true });
   }
+
+  elements.shareResultBtn?.classList.toggle('hidden', !isWin || options.showShare === false);
+  setText(elements.shareStatus, '', { hidden: true });
 
   if (elements.secretReveal) {
     elements.secretReveal.innerHTML = `
       <div class="secret-reveal-make">
-        <img
-          class="secret-reveal-logo"
-          src="${getBrandLogoUrl(secretCar.make)}"
-          alt="${secretCar.make} logo"
-        />
+        <div class="secret-reveal-logo-wrap${isWin ? ' secret-reveal-logo-wrap--win' : ''}">
+          <img
+            class="secret-reveal-logo"
+            src="${getBrandLogoUrl(secretCar.make)}"
+            alt="${secretCar.make} logo"
+          />
+        </div>
       </div>
       <strong>${secretCar.displayName}</strong>
-      <span>${secretCar.year} · ${secretCar.drivetrain} · ${secretCar.horsepower} hp · ${secretCar.engine}</span>
+      <div class="secret-reveal-specs">
+        <span class="secret-spec" style="--spec-i: 0">${secretCar.year}</span>
+        <span class="secret-spec-dot" aria-hidden="true">·</span>
+        <span class="secret-spec" style="--spec-i: 1">${secretCar.drivetrain}</span>
+        <span class="secret-spec-dot" aria-hidden="true">·</span>
+        <span class="secret-spec" style="--spec-i: 2">${secretCar.horsepower} hp</span>
+        <span class="secret-spec-dot" aria-hidden="true">·</span>
+        <span class="secret-spec" style="--spec-i: 3">${secretCar.engine}</span>
+      </div>
     `;
 
     const logoImg = elements.secretReveal.querySelector('.secret-reveal-logo');
     logoImg?.addEventListener('error', () => {
       logoImg.hidden = true;
     });
+
+    if (isWin && celebrate) {
+      const wrap = elements.secretReveal.querySelector('.secret-reveal-logo-wrap');
+      spawnWinParticles(wrap);
+    }
   }
 
   if (elements.gameOverPhotoImg) {
@@ -364,13 +446,24 @@ export function showGameOver(state, secretCar) {
       photoImg.removeAttribute('src');
     };
   }
+
+  if (celebrate && !prefersReducedMotion()) {
+    window.setTimeout(() => {
+      elements.gameOver?.classList.remove('game-over-enter');
+    }, 320);
+  }
 }
 
 export function hideGameOver() {
   elements.gameOver?.classList.add('hidden');
-  elements.gameOver?.classList.remove('game-over-won', 'game-over-lost');
+  elements.gameOver?.classList.remove('game-over-won', 'game-over-lost', 'game-over-enter');
   if (elements.secretReveal) elements.secretReveal.innerHTML = '';
-  if (elements.gameOverMessage) elements.gameOverMessage.textContent = '';
+  setText(elements.gameOverTitle, '');
+  setText(elements.gameOverTone, '', { hidden: true });
+  setText(elements.gameOverMessage, '');
+  setText(elements.gameOverStreak, '', { hidden: true });
+  setText(elements.shareStatus, '', { hidden: true });
+  elements.shareResultBtn?.classList.add('hidden');
   if (elements.gameOverPhotoImg) {
     elements.gameOverPhotoImg.hidden = true;
     elements.gameOverPhotoImg.removeAttribute('src');
@@ -379,7 +472,15 @@ export function hideGameOver() {
   }
 }
 
-export function renderGame(state, catalog) {
+export function setShareStatus(message) {
+  setText(elements.shareStatus, message, { hidden: !message });
+}
+
+/**
+ * Paint the board and control the search UI.
+ * Pass `showOverlay: false` when a live win should celebrate the card first.
+ */
+export function renderGame(state, catalog, { showOverlay = true, streak = null, showShare = true } = {}) {
   updateGuessCounter(state.guesses.length, state.maxGuesses);
   renderGuessTable(state.guesses, catalog);
 
@@ -387,11 +488,19 @@ export function renderGame(state, catalog) {
     hideGameOver();
     setSearchEnabled(true);
     setGuessEnabled(false);
-  } else {
-    const secretCar = catalog.find((car) => car.id === state.secretCarId);
-    showGameOver(state, secretCar);
-    setSearchEnabled(false);
-    setGuessEnabled(false);
-    hideSearchDropdown();
+    return;
   }
+
+  setSearchEnabled(false);
+  setGuessEnabled(false);
+  hideSearchDropdown();
+
+  if (!showOverlay) return;
+
+  const secretCar = catalog.find((car) => car.id === state.secretCarId);
+  showGameOver(state, secretCar, {
+    streak,
+    showShare,
+    celebrate: false,
+  });
 }

@@ -3,12 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contact the creator of Carlee with questions, feedback, or bug reports." />
-    <title>Contact — Carlee</title>
+    <title>Contact: Carlee</title>
+    <meta
+      name="description"
+      content="Reach the creator of Carlee with feedback on the Daily puzzle, bug reports, streak issues, or car catalog corrections."
+    />
+    <meta name="theme-color" content="#0f1419" />
+    <link rel="canonical" href="https://carleecom.vercel.app/contact.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Carlee" />
+    <meta property="og:title" content="Contact: Carlee" />
+    <meta
+      property="og:description"
+      content="Send feedback, bug reports, or car catalog corrections to the creator of Carlee."
+    />
+    <meta property="og:url" content="https://carleecom.vercel.app/contact.html" />
+    <meta property="og:image" content="https://carleecom.vercel.app/assets/PLAYCARLEELOGO.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact: Carlee" />
+    <meta
+      name="twitter:description"
+      content="Send feedback, bug reports, or car catalog corrections to the creator of Carlee."
+    />
+    <meta name="twitter:image" content="https://carleecom.vercel.app/assets/PLAYCARLEELOGO.png" />
+
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="pages.css" />
     <link rel="icon" type="image/png" href="assets/CARLEEFAVICON.png" />
+    <link rel="apple-touch-icon" href="assets/CARLEEFAVICON.png" />
   </head>
   <body>
     <header class="top-navbar">
@@ -57,7 +81,7 @@
       <div class="stats-panel-content">
         <button class="stats-panel-close" id="statsClose" type="button" aria-label="Close statistics">×</button>
         <h2 class="stats-panel-title" id="statsPanelTitle">Statistics</h2>
-        <p class="stats-panel-message">Your game statistics will appear here. Track guesses, streaks, and win rates — coming soon.</p>
+        <div class="stats-panel-body" id="stats-panel-body"></div>
       </div>
     </div>
 
@@ -66,7 +90,7 @@
         <header class="content-page-header">
           <h1>Contact</h1>
           <p class="page-intro">
-            Questions, feedback, bug reports, catalog corrections, or anything else about Carlee —
+            Questions, feedback, bug reports, catalog corrections, or anything else about Carlee;
             feel free to get in touch.
           </p>
         </header>
@@ -91,15 +115,21 @@
           <h2>What to include</h2>
           <p>Helpful messages often include:</p>
           <ul>
+            <li>Feedback on the Daily puzzle or on Unlimited mode</li>
             <li>Questions about how the game works</li>
-            <li>Feedback or feature ideas</li>
             <li>Bug reports (what you did, what you expected, and what happened)</li>
+            <li>Streak or statistics problems, for example a streak that reset unexpectedly</li>
             <li>Corrections to car data (make, model, year, specs, and so on)</li>
-            <li>Privacy or other inquiries</li>
+            <li>Feature ideas, privacy, or other inquiries</li>
           </ul>
           <p>
-            There is no contact form on this site yet — Carlee does not currently run a backend for
-            form submissions — so email is the contact method for now.
+            Streaks and stats are stored in your own browser rather than in an account, so there is no
+            record to look up on our side. For stats issues, the most useful thing you can send is the
+            steps to reproduce it, plus your browser and device.
+          </p>
+          <p>
+            There is no contact form on this site yet; Carlee does not currently run a backend for
+            form submissions, so email is the contact method for now.
           </p>
         </article>
       </main>
@@ -123,5 +153,6 @@
     </div>
 
     <script src="sidebar.js"></script>
+    <script type="module" src="js/stats-ui.js"></script>
   </body>
 </html>

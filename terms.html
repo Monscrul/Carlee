@@ -3,12 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Terms of Service for Carlee, a car-guessing game website." />
-    <title>Terms of Service — Carlee</title>
+    <title>Terms of Service: Carlee</title>
+    <meta
+      name="description"
+      content="Terms of Service for Carlee: fair play rules for the Daily and Unlimited car guessing modes, device-local streaks, and trademark disclaimers."
+    />
+    <meta name="theme-color" content="#0f1419" />
+    <link rel="canonical" href="https://carleecom.vercel.app/terms.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Carlee" />
+    <meta property="og:title" content="Terms of Service: Carlee" />
+    <meta
+      property="og:description"
+      content="Fair play rules for Carlee's Daily and Unlimited modes, plus streak and trademark disclaimers."
+    />
+    <meta property="og:url" content="https://carleecom.vercel.app/terms.html" />
+    <meta property="og:image" content="https://carleecom.vercel.app/assets/PLAYCARLEELOGO.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Terms of Service: Carlee" />
+    <meta
+      name="twitter:description"
+      content="Fair play rules for Carlee's Daily and Unlimited modes, plus streak and trademark disclaimers."
+    />
+    <meta name="twitter:image" content="https://carleecom.vercel.app/assets/PLAYCARLEELOGO.png" />
+
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="stylesheet" href="pages.css" />
     <link rel="icon" type="image/png" href="assets/CARLEEFAVICON.png" />
+    <link rel="apple-touch-icon" href="assets/CARLEEFAVICON.png" />
   </head>
   <body>
     <header class="top-navbar">
@@ -57,7 +81,7 @@
       <div class="stats-panel-content">
         <button class="stats-panel-close" id="statsClose" type="button" aria-label="Close statistics">×</button>
         <h2 class="stats-panel-title" id="statsPanelTitle">Statistics</h2>
-        <p class="stats-panel-message">Your game statistics will appear here. Track guesses, streaks, and win rates — coming soon.</p>
+        <div class="stats-panel-body" id="stats-panel-body"></div>
       </div>
     </div>
 
@@ -65,7 +89,7 @@
       <main class="content-page">
         <header class="content-page-header">
           <h1>Terms of Service</h1>
-          <p class="effective-date">Effective date: August 8, 2026</p>
+          <p class="effective-date">Effective date: August 10, 2026</p>
         </header>
 
         <section class="content-section">
@@ -84,15 +108,34 @@
         <section class="content-section">
           <h2>What Carlee is</h2>
           <p>
-            Carlee is a free browser-based car-guessing game. Each round, a mystery car is chosen from
-            a catalog, and you try to identify it by searching and submitting guesses. Feedback
-            compares attributes such as make, country, drivetrain, body style, horsepower, year, and
-            engine. You have a limited number of guesses per game.
+            Carlee is a free browser-based car-guessing game. The main mode is <strong>Daily</strong>:
+            one mystery car per UTC calendar day, the same car for every player, solved in up to
+            <strong>6 guesses</strong>. An optional <strong>Unlimited</strong> mode lets you play
+            random cars as often as you like and does not count toward streaks or win rate.
+          </p>
+          <p>
+            You identify the car by searching and submitting guesses. Feedback compares attributes
+            such as make, country, drivetrain, body style, horsepower, year, and engine.
           </p>
           <p>
             Carlee currently does not require accounts, does not provide a contact form backend, and
             does not currently include advertising or third-party analytics in the application itself.
             Features may change over time.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Streaks and statistics</h2>
+          <p>
+            Streaks, win rate, and other statistics are informal records stored in your own browser on
+            the device you play on. They are not an account, not a competitive ranking, and not backed
+            up by us.
+          </p>
+          <p>
+            Because this data lives only in your browser, it can be lost if you clear site data, use
+            private browsing, switch browsers or devices, or if your browser evicts stored data. We
+            cannot restore, transfer, or verify a lost streak, and we may reset or change how
+            statistics work as the game evolves.
           </p>
         </section>
 
@@ -103,7 +146,7 @@
             <li>Use the site for personal, non-commercial enjoyment unless we agree otherwise in writing</li>
             <li>Play fairly and not attempt to disrupt, overload, or interfere with the service</li>
             <li>Not attempt to reverse-engineer, scrape at abusive rates, or misuse the car catalog or site in a way that harms the project or other users</li>
-            <li>Not use automated tools to cheat or abuse gameplay in a way that interferes with normal operation</li>
+            <li>Not use automated tools to cheat or abuse gameplay in a way that interferes with normal operation, including scripting the Daily puzzle or artificially inflating streaks and statistics</li>
           </ul>
         </section>
 
@@ -164,8 +207,8 @@
         <section class="content-section">
           <h2>Changes to the service</h2>
           <p>
-            We may update, pause, or discontinue parts of Carlee at any time — including the catalog,
-            gameplay rules, interface, or availability — without prior notice.
+            We may update, pause, or discontinue parts of Carlee at any time, including the catalog,
+            gameplay rules, interface, or availability, without prior notice.
           </p>
         </section>
 
@@ -221,5 +264,6 @@
     </div>
 
     <script src="sidebar.js"></script>
+    <script type="module" src="js/stats-ui.js"></script>
   </body>
 </html>

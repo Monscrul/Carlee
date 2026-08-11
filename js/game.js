@@ -1,6 +1,7 @@
 import { MAX_GUESSES, GAME_STATUS } from './constants.js';
 import { compareCars } from './compare.js';
 import { isEquivalentCar, isWinningGuess } from './make-equivalence.js';
+import { pickDailyCarId } from './daily.js';
 
 export function initGame(catalog, maxGuesses = MAX_GUESSES) {
   if (!catalog.length) {
@@ -14,6 +15,35 @@ export function initGame(catalog, maxGuesses = MAX_GUESSES) {
     secretCarId: catalog[secretIndex].id,
     guesses: [],
     maxGuesses,
+  };
+}
+
+export function initDailyGame(catalog, dateKey, maxGuesses = MAX_GUESSES) {
+  if (!catalog.length) {
+    throw new Error('Cannot start game with empty catalog');
+  }
+
+  return {
+    status: GAME_STATUS.PLAYING,
+    secretCarId: pickDailyCarId(catalog, dateKey),
+    guesses: [],
+    maxGuesses,
+  };
+}
+
+/** Rebuilds state from a saved game; returns null if the save no longer fits the catalog. */
+export function restoreGame(save, catalog, maxGuesses = MAX_GUESSES) {
+  if (!save || !catalog.some((car) => car.id === save.secretCarId)) return null;
+
+  const guesses = save.guesses.filter((guess) =>
+    catalog.some((car) => car.id === guess.carId),
+  );
+
+  return {
+    status: save.status ?? GAME_STATUS.PLAYING,
+    secretCarId: save.secretCarId,
+    guesses,
+    maxGuesses: save.maxGuesses ?? maxGuesses,
   };
 }
 

@@ -3,10 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carlee: Car Guessing Game</title>
+    <title>Carlee: Car Wordle Game</title>
+    <meta
+      name="description"
+      content="Play today's Carlee puzzle. Guess the mystery car in six tries using make, country, drivetrain, body style, horsepower, year, and engine clues."
+    />
+    <meta name="theme-color" content="#0f1419" />
+    <link rel="canonical" href="https://carleecom.vercel.app/game.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Carlee" />
+    <meta property="og:title" content="Carlee: Car Wordle Game" />
+    <meta
+      property="og:description"
+      content="Guess today's mystery car in six tries. A new Carlee puzzle every day."
+    />
+    <meta property="og:url" content="https://carleecom.vercel.app/game.html" />
+    <meta property="og:image" content="https://carleecom.vercel.app/assets/PLAYCARLEELOGO.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Carlee: Car Wordle Game" />
+    <meta
+      name="twitter:description"
+      content="Guess today's mystery car in six tries. A new Carlee puzzle every day."
+    />
+    <meta name="twitter:image" content="https://carleecom.vercel.app/assets/PLAYCARLEELOGO.png" />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="sidebar.css" />
     <link rel="icon" type="image/png" href="assets/CARLEEFAVICON.png" />
+    <link rel="apple-touch-icon" href="assets/CARLEEFAVICON.png" />
   </head>
   <body>
     <header class="top-navbar">
@@ -55,7 +80,7 @@
       <div class="stats-panel-content">
         <button class="stats-panel-close" id="statsClose" type="button" aria-label="Close statistics">×</button>
         <h2 class="stats-panel-title" id="statsPanelTitle">Statistics</h2>
-        <p class="stats-panel-message">Your game statistics will appear here. Track guesses, streaks, and win rates — coming soon.</p>
+        <div class="stats-panel-body" id="stats-panel-body"></div>
       </div>
     </div>
 
@@ -71,7 +96,10 @@
 
       <main id="app" class="app hidden">
         <section class="search-section" aria-label="Guess a car">
-          <p id="guess-counter" class="guess-counter" aria-live="polite">Guesses: 0 / 6</p>
+          <div class="mode-bar">
+            <p id="mode-label" class="mode-label">Daily</p>
+            <p id="guess-counter" class="guess-counter" aria-live="polite">Guesses: 0 / 6</p>
+          </div>
           <p id="search-error" class="search-error hidden" role="alert"></p>
           <div class="search-wrapper">
             <input
@@ -112,14 +140,23 @@
           aria-live="polite"
           aria-label="Game over"
         >
-          <div class="game-over-wrapped">
-            <button id="close-game-over-btn" class="game-over-close" type="button" aria-label="Close game over screen">×</button>
+          <div class="game-over-wrapped" id="game-over-wrapped">
+            <button id="close-game-over-btn" class="game-over-close share-exclude" type="button" aria-label="Close game over screen">×</button>
+            <p id="game-over-title" class="game-over-title"></p>
+            <p id="game-over-tone" class="game-over-tone hidden"></p>
             <p id="game-over-message" class="game-over-message"></p>
+            <p id="game-over-streak" class="game-over-streak hidden"></p>
             <div id="secret-reveal" class="secret-reveal"></div>
             <div class="game-over-photo" id="game-over-photo">
               <img id="game-over-photo-img" class="game-over-photo-img" alt="" hidden />
             </div>
-            <button id="play-again-btn" class="play-again-btn" type="button">Play again</button>
+            <div class="game-over-actions share-exclude">
+              <button id="share-result-btn" class="share-result-btn hidden" type="button">Share</button>
+              <button id="play-again-btn" class="play-again-btn" type="button">Play again</button>
+            </div>
+            <p id="share-status" class="share-status hidden share-exclude" role="status" aria-live="polite"></p>
+            <p id="daily-done-note" class="daily-done-note hidden share-exclude">You've finished today's car. A new one unlocks at midnight UTC.</p>
+            <a id="play-unlimited-link" class="play-unlimited-link hidden share-exclude" href="game.html?mode=unlimited">Play Unlimited instead</a>
           </div>
         </section>
       </main>
