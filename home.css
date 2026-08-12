@@ -436,7 +436,7 @@ a {
 
 @media (min-width: 769px) {
   .hero-wrapper {
-    padding-top: 30px;
+    padding-top: 38px;
     padding-bottom: 120px;
   }
 
@@ -448,7 +448,7 @@ a {
 
 @media (max-width: 768px) {
   .hero-wrapper {
-    padding-top: 8px;
+    padding-top: 36px;
     padding-bottom: 40px;
   }
 
