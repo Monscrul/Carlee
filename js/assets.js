@@ -38,8 +38,8 @@ const BODY_STYLE_SVG = {
   SUV: 'SUV.svg',
   Truck: 'Truck.svg',
   Wagon: 'Wagon.svg',
-  // Closest available silhouettes when a dedicated SVG is not present yet
-  Hatchback: 'Sedan.svg',
+  Hatchback: 'Hatchback.svg',
+  // Closest available silhouette when a dedicated SVG is not present yet
   Roadster: 'Convertible.svg',
 };
 
