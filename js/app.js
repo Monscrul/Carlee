@@ -1,3 +1,4 @@
+import './speed-insights.js';
 import { loadCatalog } from './data-loader.js';
 import { initGame, initDailyGame, restoreGame, submitGuess, getGuessedCarIds } from './game.js';
 import { searchCars } from './search.js';

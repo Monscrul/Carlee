@@ -7,5 +7,8 @@
     "optimize-car-svgs": "node scripts/optimize-car-svgs.mjs",
     "normalize-debut-years": "node scripts/normalize-debut-years.mjs",
     "verify-daily": "node scripts/verify-daily.mjs"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
   }
 }
