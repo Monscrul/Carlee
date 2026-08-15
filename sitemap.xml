@@ -6,27 +6,27 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://carleecom.vercel.app/game.html</loc>
+    <loc>https://carleecom.vercel.app/game</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://carleecom.vercel.app/about.html</loc>
+    <loc>https://carleecom.vercel.app/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://carleecom.vercel.app/contact.html</loc>
+    <loc>https://carleecom.vercel.app/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://carleecom.vercel.app/privacy.html</loc>
+    <loc>https://carleecom.vercel.app/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://carleecom.vercel.app/terms.html</loc>
+    <loc>https://carleecom.vercel.app/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
