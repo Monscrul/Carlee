@@ -1,4 +1,5 @@
 /** Fills the shared navbar Statistics panel from device-local daily stats. */
+import './vercel-metrics.js';
 import { getStatsSummary } from './stats.js';
 
 const STAT_TILES = [
