@@ -1,7 +1,9 @@
 import { ATTRIBUTES, FEEDBACK, GAME_STATUS } from './constants.js';
 import { getBrandLogoUrl, getBodyStyleSvgUrl, getCountryFlagEmoji } from './assets.js';
+import { getMsUntilNextUtcMidnight, formatCountdownMs } from './daily.js';
 
 const elements = {};
+let countdownInterval = null;
 
 const TONE_BY_GUESSES = {
   1: ['First try.', 'Unreal.'],
@@ -38,6 +40,7 @@ export function initUI() {
   elements.closeGameOverBtn = document.getElementById('close-game-over-btn');
   elements.modeLabel = document.getElementById('mode-label');
   elements.dailyDoneNote = document.getElementById('daily-done-note');
+  elements.nextCarCountdown = document.getElementById('next-car-countdown');
   elements.playUnlimitedLink = document.getElementById('play-unlimited-link');
 }
 
@@ -366,10 +369,38 @@ function formatStreakLine(streak) {
   return `Streak continues — ${streak} days`;
 }
 
+function updateNextCarCountdown() {
+  const ms = getMsUntilNextUtcMidnight();
+
+  if (ms <= 0) {
+    if (elements.nextCarCountdown) {
+      elements.nextCarCountdown.textContent = 'Available now — refresh';
+    }
+    stopNextCarCountdown();
+    return;
+  }
+
+  if (elements.nextCarCountdown) {
+    elements.nextCarCountdown.textContent = formatCountdownMs(ms);
+  }
+}
+
+export function startNextCarCountdown() {
+  stopNextCarCountdown();
+  updateNextCarCountdown();
+  countdownInterval = window.setInterval(updateNextCarCountdown, 1000);
+}
+
+export function stopNextCarCountdown() {
+  if (countdownInterval === null) return;
+  window.clearInterval(countdownInterval);
+  countdownInterval = null;
+}
+
 /**
  * @param {object} state
  * @param {object} secretCar
- * @param {{ streak?: number|null, showShare?: boolean, celebrate?: boolean }} [options]
+ * @param {{ streak?: number|null, showShare?: boolean, celebrate?: boolean, showDailyCountdown?: boolean }} [options]
  */
 export function showGameOver(state, secretCar, options = {}) {
   if (!elements.gameOver || !secretCar) return;
@@ -452,9 +483,16 @@ export function showGameOver(state, secretCar, options = {}) {
       elements.gameOver?.classList.remove('game-over-enter');
     }, 320);
   }
+
+  if (options.showDailyCountdown) {
+    startNextCarCountdown();
+  } else {
+    stopNextCarCountdown();
+  }
 }
 
 export function hideGameOver() {
+  stopNextCarCountdown();
   elements.gameOver?.classList.add('hidden');
   elements.gameOver?.classList.remove('game-over-won', 'game-over-lost', 'game-over-enter');
   if (elements.secretReveal) elements.secretReveal.innerHTML = '';
@@ -480,7 +518,11 @@ export function setShareStatus(message) {
  * Paint the board and control the search UI.
  * Pass `showOverlay: false` when a live win should celebrate the card first.
  */
-export function renderGame(state, catalog, { showOverlay = true, streak = null, showShare = true } = {}) {
+export function renderGame(
+  state,
+  catalog,
+  { showOverlay = true, streak = null, showShare = true, showDailyCountdown = false } = {},
+) {
   updateGuessCounter(state.guesses.length, state.maxGuesses);
   renderGuessTable(state.guesses, catalog);
 
@@ -502,5 +544,6 @@ export function renderGame(state, catalog, { showOverlay = true, streak = null, 
     streak,
     showShare,
     celebrate: false,
+    showDailyCountdown,
   });
 }

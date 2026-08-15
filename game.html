@@ -156,7 +156,10 @@
               <button id="play-again-btn" class="play-again-btn" type="button">Play again</button>
             </div>
             <p id="share-status" class="share-status hidden share-exclude" role="status" aria-live="polite"></p>
-            <p id="daily-done-note" class="daily-done-note hidden share-exclude">You've finished today's car. A new one unlocks at midnight UTC.</p>
+            <p id="daily-done-note" class="daily-done-note hidden share-exclude">
+              Next car in
+              <span id="next-car-countdown" class="next-car-countdown" aria-live="polite">--:--:--</span>
+            </p>
             <a id="play-unlimited-link" class="play-unlimited-link hidden share-exclude" href="game.html?mode=unlimited">Play Unlimited instead</a>
           </div>
         </section>

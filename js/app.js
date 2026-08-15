@@ -29,6 +29,7 @@ import {
   celebrateWinningCard,
   showGameOver,
   setShareStatus,
+  stopNextCarCountdown,
 } from './ui.js';
 
 let catalog = [];
@@ -71,6 +72,7 @@ function openFinishedOverlay({ celebrate = false } = {}) {
     streak: gameState.status === GAME_STATUS.WON ? getWinStreak() : null,
     showShare: gameState.status === GAME_STATUS.WON,
     celebrate,
+    showDailyCountdown: mode === 'daily',
   });
 }
 
@@ -145,6 +147,7 @@ function renderCurrentGame() {
     showOverlay: true,
     streak: gameState.status === GAME_STATUS.WON ? getWinStreak() : null,
     showShare: gameState.status === GAME_STATUS.WON,
+    showDailyCountdown: mode === 'daily',
   });
 
   const { searchInput } = getUIElements();
@@ -252,6 +255,7 @@ function setupEventListeners() {
   playAgainBtn?.addEventListener('click', startNewGame);
   shareResultBtn?.addEventListener('click', handleShare);
   closeGameOverBtn?.addEventListener('click', () => {
+    stopNextCarCountdown();
     const { gameOver } = getUIElements();
     gameOver?.classList.add('hidden');
   });

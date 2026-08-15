@@ -1,5 +1,5 @@
 const MIN_QUERY_LENGTH = 2;
-const MAX_RESULTS = 8;
+const MAX_RESULTS = 25;
 
 function matchesCar(car, query) {
   const q = query.toLowerCase();

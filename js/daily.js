@@ -22,6 +22,28 @@ export function getPreviousDateKey(dateKey) {
   return getUtcDateKey(date);
 }
 
+/** Milliseconds until the next daily puzzle unlocks at UTC midnight. */
+export function getMsUntilNextUtcMidnight(now = new Date()) {
+  const next = Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate() + 1,
+  );
+  return Math.max(0, next - now.getTime());
+}
+
+/** Formats a duration as HH:MM:SS for the next-car countdown. */
+export function formatCountdownMs(ms) {
+  const totalSeconds = Math.floor(ms / 1000);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  return [hours, minutes, seconds]
+    .map((value) => String(value).padStart(2, '0'))
+    .join(':');
+}
+
 /** FNV-1a keeps the mapping stable across browsers and sessions. */
 function hashString(value) {
   let hash = 0x811c9dc5;
