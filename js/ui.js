@@ -1,6 +1,7 @@
 import { ATTRIBUTES, FEEDBACK, GAME_STATUS } from './constants.js';
 import { getBrandLogoUrl, getBodyStyleSvgUrl, getCountryFlagEmoji } from './assets.js';
 import { getMsUntilNextUtcMidnight, formatCountdownMs } from './daily.js';
+import { formatSearchSubtitle } from './search.js';
 
 const elements = {};
 let countdownInterval = null;
@@ -298,10 +299,20 @@ export function renderSearchDropdown(results, activeIndex) {
     const li = document.createElement('li');
     li.role = 'option';
     li.id = `search-option-${index}`;
-    li.textContent = car.displayName;
     li.dataset.carId = car.id;
-    li.className = index === activeIndex ? 'active' : '';
+    li.className = index === activeIndex ? 'active search-option' : 'search-option';
     li.setAttribute('aria-selected', index === activeIndex ? 'true' : 'false');
+
+    const title = document.createElement('span');
+    title.className = 'search-option-title';
+    title.textContent = car.displayName;
+
+    const subtitle = document.createElement('span');
+    subtitle.className = 'search-option-subtitle';
+    subtitle.textContent = formatSearchSubtitle(car);
+
+    li.appendChild(title);
+    li.appendChild(subtitle);
     elements.searchDropdown.appendChild(li);
   });
 

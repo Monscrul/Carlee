@@ -33,6 +33,7 @@ function validateCar(car) {
     horsepower: car.horsepower,
     year: car.year,
     engine: String(car.engine),
+    generation: car.generation ? String(car.generation) : '',
   };
 }
 

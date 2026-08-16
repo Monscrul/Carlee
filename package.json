@@ -6,6 +6,8 @@
     "fetch-logos": "node scripts/fetch-brand-logos.mjs",
     "optimize-car-svgs": "node scripts/optimize-car-svgs.mjs",
     "normalize-debut-years": "node scripts/normalize-debut-years.mjs",
+    "normalize-display-names": "node scripts/normalize-display-names.mjs",
+    "audit-engines": "node scripts/audit-engines.mjs",
     "verify-daily": "node scripts/verify-daily.mjs"
   }
 }

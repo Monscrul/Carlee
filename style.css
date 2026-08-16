@@ -218,6 +218,23 @@ body {
   font-size: 0.95rem;
 }
 
+.search-option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.search-option-title {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.search-option-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.25;
+}
+
 .search-dropdown li:hover,
 .search-dropdown li.active {
   background: var(--surface);
