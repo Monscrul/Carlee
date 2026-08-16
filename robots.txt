@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://carleecom.vercel.app/sitemap.xml
+Sitemap: https://playcarlee.com/sitemap.xml
