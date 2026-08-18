@@ -107,35 +107,37 @@
           </div>
           <p id="search-error" class="search-error hidden" role="alert"></p>
           <div class="search-wrapper">
-            <input
-              id="search-input"
-              type="text"
-              class="search-input"
-              placeholder="Search make or model…"
-              autocomplete="off"
-              aria-autocomplete="list"
-              aria-controls="search-dropdown"
-              aria-expanded="false"
-              disabled
-            />
-            <button
-              id="guess-btn"
-              class="search-submit-btn"
-              type="button"
-              aria-label="Submit guess"
-              disabled
-            >
-              <svg class="search-submit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14"></path>
-                <path d="M13 6l6 6-6 6"></path>
-              </svg>
-            </button>
+            <div class="search-bar">
+              <input
+                id="search-input"
+                type="text"
+                class="search-input"
+                placeholder="Search make or model…"
+                autocomplete="off"
+                aria-autocomplete="list"
+                aria-controls="search-dropdown"
+                aria-expanded="false"
+                disabled
+              />
+              <button
+                id="guess-btn"
+                class="search-submit-btn"
+                type="button"
+                aria-label="Submit guess"
+                disabled
+              >
+                <svg class="search-submit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"></path>
+                  <path d="M13 6l6 6-6 6"></path>
+                </svg>
+              </button>
+            </div>
             <ul id="search-dropdown" class="search-dropdown hidden" role="listbox"></ul>
           </div>
         </section>
 
         <section class="board-section" aria-label="Guess history">
-          <p id="empty-hint" class="empty-hint">Make your first guess to see comparisons.</p>
+          <p id="empty-hint" class="empty-hint">Make your first guess to see comparisons. <a class="empty-hint-howto" href="/#how-to-play">Click for how to play</a></p>
           <div id="guess-cards" class="guess-cards" aria-live="polite"></div>
         </section>
 
