@@ -469,6 +469,79 @@ body {
   display: block;
 }
 
+/* Engine Details (collapsible, display-only) */
+
+.engine-details {
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.engine-details-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  margin: 0;
+  border: none;
+  border-radius: calc(var(--radius) * 0.75);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.engine-details-toggle:hover,
+.engine-details-toggle:focus-visible {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  outline: none;
+}
+
+.engine-details-toggle:focus-visible {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.45);
+}
+
+.engine-details-chevron {
+  font-size: 0.75rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.engine-details-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease-out;
+}
+
+.engine-details-body > .engine-details-grid {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.engine-details-body--open {
+  grid-template-rows: 1fr;
+  margin-top: 0.35rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.engine-details-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 0.65rem;
+  align-items: stretch;
+  width: 100%;
+  padding-bottom: 0.15rem;
+}
+
 .guess-card-title {
   margin: 0;
   font-size: 1.05rem;
@@ -622,6 +695,10 @@ body {
   .guess-card-grid {
     gap: 0.5rem;
     justify-content: center;
+  }
+
+  .engine-details-grid {
+    gap: 0.5rem;
   }
 
   .guess-tile {
@@ -1067,6 +1144,10 @@ body {
   .secret-spec,
   .win-particle {
     animation: none !important;
+  }
+
+  .engine-details-body {
+    transition: none;
   }
 
   .secret-spec {

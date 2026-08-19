@@ -16,6 +16,10 @@ export const ATTRIBUTES = [
   { key: 'horsepower', label: 'HP' },
   { key: 'year', label: 'Year' },
   { key: 'engine', label: 'Engine' },
+  { key: 'powertrain', label: 'Powertrain', engineDetail: true },
+  { key: 'configuration', label: 'Configuration', engineDetail: true },
+  { key: 'cylinders', label: 'Cylinders', engineDetail: true },
+  { key: 'aspiration', label: 'Aspiration', engineDetail: true },
 ];
 
 export const GAME_STATUS = {

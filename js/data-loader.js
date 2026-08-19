@@ -1,3 +1,5 @@
+import { parseEngineDetails } from './engine-parser.js';
+
 const REQUIRED_FIELDS = [
   'id',
   'make',
@@ -22,7 +24,7 @@ function validateCar(car) {
     throw new Error(`Car has invalid numeric fields: ${car.id}`);
   }
 
-  return {
+  const base = {
     id: String(car.id),
     make: String(car.make),
     model: String(car.model),
@@ -34,6 +36,11 @@ function validateCar(car) {
     year: car.year,
     engine: String(car.engine),
     generation: car.generation ? String(car.generation) : '',
+  };
+
+  return {
+    ...base,
+    ...parseEngineDetails(base.engine),
   };
 }
 

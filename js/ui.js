@@ -3,6 +3,9 @@ import { getBrandLogoUrl, getBodyStyleSvgUrl, getCountryFlagEmoji } from './asse
 import { getMsUntilNextUtcMidnight, formatCountdownMs } from './daily.js';
 import { formatSearchSubtitle } from './search.js';
 
+const MAIN_ATTRIBUTES = ATTRIBUTES.filter((attr) => !attr.engineDetail);
+const ENGINE_DETAIL_ATTRIBUTES = ATTRIBUTES.filter((attr) => attr.engineDetail);
+
 const elements = {};
 let countdownInterval = null;
 
@@ -94,6 +97,14 @@ function getAttributeValue(attrKey, car) {
       return car.bodyStyle;
     case 'engine':
       return car.engine;
+    case 'powertrain':
+      return car.powertrain;
+    case 'configuration':
+      return car.configuration;
+    case 'cylinders':
+      return car.cylinders;
+    case 'aspiration':
+      return car.aspiration;
     default:
       return '';
   }
@@ -139,6 +150,74 @@ function prefersReducedMotion() {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
+function createEngineDetailsSection(car, guess) {
+  const section = document.createElement('div');
+  section.className = 'engine-details';
+
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'engine-details-toggle';
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.innerHTML =
+    '<span class="engine-details-toggle-label">Engine Details</span>' +
+    '<span class="engine-details-chevron" aria-hidden="true">▾</span>';
+
+  const body = document.createElement('div');
+  body.className = 'engine-details-body';
+  body.setAttribute('aria-hidden', 'true');
+
+  const grid = document.createElement('div');
+  grid.className = 'engine-details-grid';
+
+  for (const field of ENGINE_DETAIL_ATTRIBUTES) {
+    const result = guess.attributes[field.key];
+    const value = getAttributeValue(field.key, car);
+    const isMissing = value === null || value === undefined || value === '';
+    const status = result?.status || FEEDBACK.WRONG;
+
+    const tile = document.createElement('div');
+    tile.className = `engine-detail-tile guess-tile guess-tile--compact guess-tile--${status}`;
+
+    const label = document.createElement('div');
+    label.className = 'tile-label';
+    label.textContent = field.label;
+
+    const valueEl = document.createElement('div');
+    valueEl.className = 'tile-value';
+
+    const text = document.createElement('span');
+    text.className = 'tile-text';
+    text.textContent = isMissing ? '—' : value;
+    valueEl.appendChild(text);
+
+    const badge = document.createElement('span');
+    badge.className = 'tile-badge';
+    badge.textContent = getResultBadge(status);
+    valueEl.appendChild(badge);
+
+    tile.appendChild(label);
+    tile.appendChild(valueEl);
+    grid.appendChild(tile);
+  }
+
+  body.appendChild(grid);
+  section.appendChild(toggle);
+  section.appendChild(body);
+
+  toggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = section.classList.toggle('engine-details--open');
+    toggle.classList.toggle('engine-details-toggle--open', isOpen);
+    body.classList.toggle('engine-details-body--open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    body.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    const chevron = toggle.querySelector('.engine-details-chevron');
+    if (chevron) chevron.textContent = isOpen ? '▴' : '▾';
+  });
+
+  return section;
+}
+
 function createGuessCard(guess, car, isNew) {
   const card = document.createElement('article');
   card.className = `guess-card${isNew ? ' guess-card--new' : ''}`;
@@ -181,7 +260,7 @@ function createGuessCard(guess, car, isNew) {
   const grid = document.createElement('div');
   grid.className = 'guess-card-grid';
 
-  for (const attr of ATTRIBUTES) {
+  for (const attr of MAIN_ATTRIBUTES) {
     const result = guess.attributes[attr.key];
     const tile = document.createElement('div');
     const sizeClass = getTileSizeClass(attr.key);
@@ -223,6 +302,7 @@ function createGuessCard(guess, car, isNew) {
   }
 
   card.appendChild(grid);
+  card.appendChild(createEngineDetailsSection(car, guess));
 
   const photoSlot = document.createElement('div');
   photoSlot.className = 'guess-card-photo';

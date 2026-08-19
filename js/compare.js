@@ -19,6 +19,26 @@ function compareNumber(guessValue, secretValue) {
   return { status: FEEDBACK.LOWER, delta: guessValue - secretValue };
 }
 
+/** Null vs null = correct; one null = wrong; otherwise enum or number compare. */
+function compareNullable(guessValue, secretValue, type) {
+  const guessMissing = guessValue === null || guessValue === undefined;
+  const secretMissing = secretValue === null || secretValue === undefined;
+
+  if (guessMissing && secretMissing) {
+    return { status: FEEDBACK.CORRECT };
+  }
+
+  if (guessMissing || secretMissing) {
+    return { status: FEEDBACK.WRONG };
+  }
+
+  if (type === 'number') {
+    return compareNumber(guessValue, secretValue);
+  }
+
+  return compareEnum(guessValue, secretValue);
+}
+
 const COMPARATORS = {
   make: (guess, secret) =>
     makesMatchForCompare(guess.make, secret.make)
@@ -30,6 +50,14 @@ const COMPARATORS = {
   engine: (guess, secret) => compareEnum(guess.engine, secret.engine),
   year: (guess, secret) => compareNumber(guess.year, secret.year),
   horsepower: (guess, secret) => compareNumber(guess.horsepower, secret.horsepower),
+  powertrain: (guess, secret) =>
+    compareNullable(guess.powertrain, secret.powertrain, 'enum'),
+  configuration: (guess, secret) =>
+    compareNullable(guess.configuration, secret.configuration, 'enum'),
+  cylinders: (guess, secret) =>
+    compareNullable(guess.cylinders, secret.cylinders, 'number'),
+  aspiration: (guess, secret) =>
+    compareNullable(guess.aspiration, secret.aspiration, 'enum'),
 };
 
 export function compareCars(guessCar, secretCar) {
