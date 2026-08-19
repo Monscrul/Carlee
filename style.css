@@ -326,6 +326,8 @@ body {
 }
 
 .empty-hint-howto {
+  display: block;
+  margin-top: 0.35rem;
   color: var(--accent);
   font-weight: inherit;
   text-decoration: underline;
