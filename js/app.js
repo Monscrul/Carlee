@@ -6,12 +6,15 @@ import { getUtcDateKey, formatDateKeyLabel } from './daily.js';
 import {
   saveProgress,
   loadDailyProgress,
+  loadDailyProgressAsync,
   loadUnlimitedProgress,
   clearUnlimitedProgress,
+  enableCloudSync,
 } from './persistence.js';
-import { recordDailyResult, getStatsSummary } from './stats.js';
+import { recordDailyResult, getStatsSummary, loadStatsFromCloud, clearCloudStatsCache } from './stats.js';
 import { renderStatsPanel } from './stats-ui.js';
 import { shareGameOverCard } from './share-card.js';
+import { initAuth } from './auth.js';
 import {
   initUI,
   getUIElements,
@@ -319,14 +322,30 @@ function selectCar(carId) {
   showSearchError('');
 }
 
-function loadGameState() {
-  const save = mode === 'daily' ? loadDailyProgress(dateKey) : loadUnlimitedProgress();
-  const restored = restoreGame(save, catalog);
+async function refreshFromCloudSession(session) {
+  if (!session?.user) {
+    clearCloudStatsCache();
+    gameState = mode === 'daily' ? initDailyGame(catalog, dateKey) : initGame(catalog);
+    persist();
+    renderCurrentGame();
+    renderStatsPanel();
+    return;
+  }
 
-  if (restored) return restored;
+  await loadStatsFromCloud();
 
-  const fresh = mode === 'daily' ? initDailyGame(catalog, dateKey) : initGame(catalog);
-  return fresh;
+  if (mode === 'daily') {
+    const save = await loadDailyProgressAsync(dateKey);
+    const restored = restoreGame(save, catalog);
+    if (restored) {
+      gameState = restored;
+      // Keep local mirror in sync; cloud write is queued inside saveProgress.
+      saveProgress(mode, gameState, dateKey);
+      renderCurrentGame();
+    }
+  }
+
+  renderStatsPanel();
 }
 
 async function bootstrap() {
@@ -339,10 +358,19 @@ async function bootstrap() {
   try {
     catalog = await loadCatalog();
     showApp();
-    gameState = loadGameState();
+    // Local-first so the board paints immediately; auth may replace with cloud.
+    const localSave = mode === 'daily' ? loadDailyProgress(dateKey) : loadUnlimitedProgress();
+    gameState = restoreGame(localSave, catalog)
+      ?? (mode === 'daily' ? initDailyGame(catalog, dateKey) : initGame(catalog));
     persist();
     renderCurrentGame();
     renderStatsPanel();
+
+    await initAuth({
+      onSessionChange: refreshFromCloudSession,
+    });
+    // Allow per-guess cloud writes only after the initial pull/migration.
+    enableCloudSync();
   } catch (err) {
     console.error(err);
     showError();

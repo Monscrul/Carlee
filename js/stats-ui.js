@@ -1,6 +1,7 @@
-/** Fills the shared navbar Statistics panel from device-local daily stats. */
+/** Fills the shared navbar Statistics panel from device-local (or synced) daily stats. */
 import './vercel-metrics.js';
 import { getStatsSummary } from './stats.js';
+import { getCurrentUser } from './auth.js';
 
 const STAT_TILES = [
   { key: 'currentStreak', label: 'Current streak' },
@@ -38,9 +39,15 @@ export function renderStatsPanel() {
 
   const note = document.createElement('p');
   note.className = 'stats-panel-message';
-  note.textContent = summary.gamesPlayed
-    ? 'Daily results only.'
-    : 'Play the Daily car to start a streak.';
+  if (getCurrentUser()) {
+    note.textContent = summary.gamesPlayed
+      ? 'Daily results synced to your account.'
+      : 'Play the Daily car to start a streak.';
+  } else {
+    note.textContent = summary.gamesPlayed
+      ? 'Daily results only. Sign in to sync across devices.'
+      : 'Play the Daily car to start a streak.';
+  }
 
   container.appendChild(grid);
   container.appendChild(note);
