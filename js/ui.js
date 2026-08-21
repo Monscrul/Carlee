@@ -139,6 +139,17 @@ function prefersReducedMotion() {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
+function createCarSearchLink(displayName, className) {
+  const a = document.createElement('a');
+  a.className = className;
+  a.href = `https://www.google.com/search?q=${encodeURIComponent(displayName)}`;
+  a.target = '_blank';
+  a.rel = 'noopener noreferrer';
+  a.textContent = displayName;
+  a.title = `Search Google for ${displayName}`;
+  return a;
+}
+
 function createGuessCard(guess, car, isNew) {
   const card = document.createElement('article');
   card.className = `guess-card${isNew ? ' guess-card--new' : ''}`;
@@ -169,10 +180,10 @@ function createGuessCard(guess, car, isNew) {
   avatar.appendChild(logoFallback);
 
   const title = document.createElement('div');
-  const name = document.createElement('h2');
-  name.className = 'guess-card-title';
-  name.textContent = car.displayName;
-  title.appendChild(name);
+  const nameHeading = document.createElement('h2');
+  nameHeading.className = 'guess-card-title-wrap';
+  nameHeading.appendChild(createCarSearchLink(car.displayName, 'guess-card-title'));
+  title.appendChild(nameHeading);
 
   header.appendChild(avatar);
   header.appendChild(title);
@@ -445,36 +456,55 @@ export function showGameOver(state, secretCar, options = {}) {
   setText(elements.shareStatus, '', { hidden: true });
 
   if (elements.secretReveal) {
-    elements.secretReveal.innerHTML = `
-      <div class="secret-reveal-make">
-        <div class="secret-reveal-logo-wrap${isWin ? ' secret-reveal-logo-wrap--win' : ''}">
-          <img
-            class="secret-reveal-logo"
-            src="${getBrandLogoUrl(secretCar.make)}"
-            alt="${secretCar.make} logo"
-          />
-        </div>
-      </div>
-      <strong>${secretCar.displayName}</strong>
-      <div class="secret-reveal-specs">
-        <span class="secret-spec" style="--spec-i: 0">${secretCar.year}</span>
-        <span class="secret-spec-dot" aria-hidden="true">·</span>
-        <span class="secret-spec" style="--spec-i: 1">${secretCar.drivetrain}</span>
-        <span class="secret-spec-dot" aria-hidden="true">·</span>
-        <span class="secret-spec" style="--spec-i: 2">${secretCar.horsepower} hp</span>
-        <span class="secret-spec-dot" aria-hidden="true">·</span>
-        <span class="secret-spec" style="--spec-i: 3">${secretCar.engine}</span>
-      </div>
-    `;
+    elements.secretReveal.replaceChildren();
 
-    const logoImg = elements.secretReveal.querySelector('.secret-reveal-logo');
-    logoImg?.addEventListener('error', () => {
+    const makeRow = document.createElement('div');
+    makeRow.className = 'secret-reveal-make';
+
+    const logoWrap = document.createElement('div');
+    logoWrap.className = `secret-reveal-logo-wrap${isWin ? ' secret-reveal-logo-wrap--win' : ''}`;
+
+    const logoImg = document.createElement('img');
+    logoImg.className = 'secret-reveal-logo';
+    logoImg.src = getBrandLogoUrl(secretCar.make);
+    logoImg.alt = `${secretCar.make} logo`;
+    logoImg.addEventListener('error', () => {
       logoImg.hidden = true;
     });
 
+    logoWrap.appendChild(logoImg);
+    makeRow.appendChild(logoWrap);
+    elements.secretReveal.appendChild(makeRow);
+    elements.secretReveal.appendChild(
+      createCarSearchLink(secretCar.displayName, 'secret-reveal-name'),
+    );
+
+    const specs = document.createElement('div');
+    specs.className = 'secret-reveal-specs';
+    const specValues = [
+      String(secretCar.year),
+      secretCar.drivetrain,
+      `${secretCar.horsepower} hp`,
+      secretCar.engine,
+    ];
+    specValues.forEach((value, index) => {
+      if (index > 0) {
+        const dot = document.createElement('span');
+        dot.className = 'secret-spec-dot';
+        dot.setAttribute('aria-hidden', 'true');
+        dot.textContent = '·';
+        specs.appendChild(dot);
+      }
+      const spec = document.createElement('span');
+      spec.className = 'secret-spec';
+      spec.style.setProperty('--spec-i', String(index));
+      spec.textContent = value;
+      specs.appendChild(spec);
+    });
+    elements.secretReveal.appendChild(specs);
+
     if (isWin && celebrate) {
-      const wrap = elements.secretReveal.querySelector('.secret-reveal-logo-wrap');
-      spawnWinParticles(wrap);
+      spawnWinParticles(logoWrap);
     }
   }
 
