@@ -1,4 +1,4 @@
-/** Initializes Supabase auth on the home page and syncs stats when signed in. */
+/** Initializes Supabase auth on non-game pages and syncs stats when signed in. */
 import { initAuth } from './auth.js';
 import { loadStatsFromCloud, clearCloudStatsCache } from './stats.js';
 import { renderStatsPanel } from './stats-ui.js';

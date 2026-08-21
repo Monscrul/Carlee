@@ -6,7 +6,7 @@
     <title>Privacy Policy: Carlee</title>
     <meta
       name="description"
-      content="Carlee keeps your streaks and game progress in your browser. Vercel Analytics and Speed Insights measure visits and performance — no ad trackers."
+      content="Carlee privacy: optional accounts via Supabase, synced Daily stats when signed in, local browser storage when not, plus light Vercel analytics."
     />
     <meta name="theme-color" content="#0f1419" />
     <link rel="canonical" href="https://playcarlee.com/privacy" />
@@ -16,7 +16,7 @@
     <meta property="og:title" content="Privacy Policy: Carlee" />
     <meta
       property="og:description"
-      content="Streaks stay on your device. Light Vercel analytics for visits and speed — no ads."
+      content="Optional accounts, synced streaks when signed in, local storage when not — plus light Vercel analytics."
     />
     <meta property="og:url" content="https://playcarlee.com/privacy" />
     <meta property="og:image" content="https://playcarlee.com/assets/og-image.png" />
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Privacy Policy: Carlee" />
     <meta
       name="twitter:description"
-      content="Streaks stay on your device. Light Vercel analytics for visits and speed — no ads."
+      content="Optional accounts, synced streaks when signed in, local storage when not — plus light Vercel analytics."
     />
     <meta name="twitter:image" content="https://playcarlee.com/assets/og-image.png" />
 
@@ -53,6 +53,29 @@
         </a>
       </div>
       <div class="navbar-right">
+        <div class="auth-controls">
+          <button
+            class="auth-btn"
+            id="authToggle"
+            type="button"
+            aria-label="Sign in"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="authMenu"
+          >
+            <span class="auth-avatar hidden" id="authAvatar" aria-hidden="true"></span>
+            <svg class="auth-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="auth-btn-label" id="authToggleLabel">Sign In</span>
+          </button>
+          <div class="auth-menu hidden" id="authMenu" role="menu" aria-label="Account">
+            <p class="auth-menu-email" id="authMenuEmail"></p>
+            <button class="auth-menu-item" id="authChangeNameBtn" type="button" role="menuitem">Change display name</button>
+            <button class="auth-menu-item" id="authSignOutBtn" type="button" role="menuitem">Sign out</button>
+          </div>
+        </div>
         <button class="stats-btn" id="statsToggle" type="button" aria-label="View statistics" aria-controls="statsPanel" aria-expanded="false">
           <svg class="stats-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M3 3v18h18"></path>
@@ -62,6 +85,62 @@
         </button>
       </div>
     </header>
+
+    <div class="auth-modal" id="authModal" aria-hidden="true" role="dialog" aria-labelledby="authModalTitle">
+      <div class="auth-modal-backdrop" id="authBackdrop"></div>
+      <div class="auth-modal-content">
+        <button class="auth-modal-close" id="authClose" type="button" aria-label="Close sign in">×</button>
+        <h2 class="auth-modal-title" id="authModalTitle">Sign in to Carlee</h2>
+        <p class="auth-modal-subtitle">Save your streak and transfer progress across devices.</p>
+
+        <button class="auth-google-btn" id="authGoogleBtn" type="button">
+          <svg class="auth-google-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"></path>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z"></path>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path>
+          </svg>
+          Continue with Google
+        </button>
+
+        <div class="auth-divider"><span>or</span></div>
+
+        <form class="auth-email-form" id="authEmailForm">
+          <label class="auth-field">
+            <span class="auth-field-label">Email</span>
+            <input id="auth-email" class="auth-input" type="email" autocomplete="email" required />
+          </label>
+          <label class="auth-field">
+            <span class="auth-field-label">Password</span>
+            <input id="auth-password" class="auth-input" type="password" autocomplete="current-password" minlength="6" required />
+          </label>
+          <button class="auth-submit-btn" type="submit">Sign in</button>
+        </form>
+
+        <button class="auth-signup-btn" id="authSignUpBtn" type="button">Create account</button>
+        <p class="auth-status hidden" id="auth-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="auth-modal" id="displayNameModal" aria-hidden="true" role="dialog" aria-labelledby="displayNameModalTitle">
+      <div class="auth-modal-backdrop" id="displayNameBackdrop"></div>
+      <div class="auth-modal-content">
+        <button class="auth-modal-close" id="displayNameClose" type="button" aria-label="Close">×</button>
+        <h2 class="auth-modal-title" id="displayNameModalTitle">Display name</h2>
+        <p class="auth-modal-subtitle">This name appears in the top bar when you’re signed in.</p>
+        <form class="auth-email-form" id="displayNameForm">
+          <label class="auth-field">
+            <span class="auth-field-label">Name</span>
+            <input id="display-name-input" class="auth-input" type="text" autocomplete="nickname" minlength="2" maxlength="24" required />
+          </label>
+          <div class="display-name-actions">
+            <button class="auth-cancel-btn" id="displayNameCancel" type="button">Cancel</button>
+            <button class="auth-submit-btn" type="submit">Save</button>
+          </div>
+        </form>
+        <p class="auth-status hidden" id="display-name-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
 
     <aside class="sidebar" id="sidebar" aria-hidden="true">
       <div class="sidebar-panel">
@@ -94,7 +173,7 @@
       <main class="content-page">
         <header class="content-page-header">
           <h1>Privacy Policy</h1>
-          <p class="effective-date">Effective date: August 16, 2026</p>
+          <p class="effective-date">Effective date: August 21, 2026</p>
         </header>
 
         <section class="content-section">
@@ -110,11 +189,36 @@
         </section>
 
         <section class="content-section">
+          <h2>Accounts (optional)</h2>
+          <p>
+            You can play Carlee without an account. Progress then stays in your browser on that
+            device only.
+          </p>
+          <p>
+            If you choose to sign in, Carlee offers optional accounts through
+            <strong>Google</strong> or <strong>email and password</strong>. Sign-in is provided by
+            <strong>Supabase</strong>, a third-party authentication and database service. When you
+            create or use an account, Supabase may process information such as:
+          </p>
+          <ul>
+            <li>Your email address</li>
+            <li>Authentication tokens and session data needed to keep you signed in</li>
+            <li>
+              For Google sign-in, basic profile details Google shares with the app (such as name and
+              profile picture), subject to your Google account choices
+            </li>
+          </ul>
+          <p>
+            That account information is used to identify you, keep you signed in across visits, and
+            sync the game data described below. We do not sell it.
+          </p>
+        </section>
+
+        <section class="content-section">
           <h2>Information we collect directly</h2>
           <p>
-            Carlee does <strong>not</strong> currently require you to create an account, and it does
-            not currently provide a contact form, newsletter signup, or other feature that asks you
-            to submit personal information through the website itself.
+            Besides optional account sign-in, Carlee does not currently provide a contact form,
+            newsletter signup, or other website form that asks you to submit personal information.
           </p>
           <p>
             If you choose to email us (for example from the Contact page), you will share whatever
@@ -146,15 +250,18 @@
             Web Analytics typically records page views, such as the page path, referrer, and general
             browser or device information. Speed Insights records performance metrics known as Core
             Web Vitals (for example how quickly the page becomes usable). They are not used to serve
-            ads, and they are not tied to a Carlee account; Carlee does not have user accounts.
+            ads. Analytics events are not used as a Carlee login system; account data is handled
+            separately through Supabase when you sign in.
           </p>
         </section>
 
         <section class="content-section">
           <h2>How information is used</h2>
-          <p>Information related to your visit may be used to:</p>
+          <p>Information related to your visit or account may be used to:</p>
           <ul>
             <li>Serve and operate the Carlee website and game</li>
+            <li>Authenticate you when you choose to sign in</li>
+            <li>Sync Daily progress and statistics across your devices when you are signed in</li>
             <li>Maintain security and diagnose technical issues (for example, via hosting logs)</li>
             <li>Understand traffic and page performance through Vercel Web Analytics and Speed Insights</li>
             <li>Respond to messages you send by email</li>
@@ -163,10 +270,10 @@
         </section>
 
         <section class="content-section">
-          <h2>Game data stored on your device</h2>
+          <h2>Game data on your device and in the cloud</h2>
           <p>
-            Carlee saves your gameplay in your browser’s <strong>localStorage</strong> so that you can
-            refresh or close the page without losing an unfinished game. The stored data is:
+            Carlee saves gameplay in your browser’s <strong>localStorage</strong> so that you can
+            refresh or close the page without losing an unfinished game. The stored data may include:
           </p>
           <ul>
             <li>Your in-progress or completed Daily game for the current date (the secret car, your submitted guesses, and whether the game is won, lost, or still going)</li>
@@ -174,25 +281,40 @@
             <li>Daily statistics: games played, wins, current streak, max streak, and the date of your last completed Daily puzzle</li>
           </ul>
           <p>
-            This data stays <strong>on your device</strong> and is not sent to or stored on Carlee
-            servers. It is not tied to a name, email, or account, and it is not used for advertising.
-            Because it is per-browser, clearing your site data resets your streak, and
-            another browser or device will show separate progress.
+            <strong>When you are not signed in,</strong> this data stays on your device. It is not
+            tied to a name or email. Clearing site data resets local progress, and another browser
+            or device shows separate progress.
           </p>
           <p>
-            You can delete it at any time by clearing site data for Carlee in your browser settings.
+            <strong>When you sign in,</strong> Carlee syncs your Daily statistics and today’s Daily
+            game progress to Supabase so you can continue on another device with the same account.
+            Unlimited mode remains device-local and is not synced to your account. On first sign-in
+            from a device, existing local Daily progress and stats may be uploaded and merged with
+            your account data (the further-along record is kept; histories are not added together).
+          </p>
+          <p>
+            <strong>When you sign out,</strong> Carlee clears this device’s local game saves and
+            statistics so the next person using the same browser does not inherit your local
+            progress. Your account data in Supabase is not deleted by signing out; signing back in
+            restores it from the cloud.
+          </p>
+          <p>
+            You can delete local data at any time by clearing site data for Carlee in your browser
+            settings. To request deletion of account-related data stored with Supabase, contact us
+            at the email below.
           </p>
         </section>
 
         <section class="content-section">
           <h2>Cookies and similar technologies</h2>
           <p>
-            Carlee’s own game code does not set cookies for advertising or account sessions. The
-            localStorage described above is not a tracking cookie; it is only used to keep your own
-            game state on your device. Vercel Web Analytics and Speed Insights load scripts from
-            Vercel when you visit the production site; they are used to measure visits and
-            performance, not to show ads. Your browser may still store ordinary temporary technical
-            data needed to load pages (such as cached files).
+            Carlee’s own game code does not set cookies for advertising. The localStorage described
+            above is not a tracking cookie; it is used to keep your own game state on your device.
+            When you sign in, Supabase stores a session in your browser (typically via localStorage)
+            so you can stay signed in across visits. Vercel Web Analytics and Speed Insights load
+            scripts from Vercel when you visit the production site; they are used to measure visits
+            and performance, not to show ads. Your browser may still store ordinary temporary
+            technical data needed to load pages (such as cached files).
           </p>
           <p>
             If additional cookies or similar technologies are added later, for example for
@@ -203,17 +325,25 @@
         <section class="content-section">
           <h2>Third-party services, analytics, and advertising</h2>
           <p>
-            As of the effective date of this policy, Carlee uses <strong>Vercel Web Analytics</strong>
-            and <strong>Vercel Speed Insights</strong>, provided by Vercel, the host of this website.
-            They measure page views and performance. They are not Google Analytics, and they are not
-            an advertising network. Vercel may process this data under
-            <a href="https://vercel.com/legal/privacy-policy">Vercel’s Privacy Policy</a>.
+            As of the effective date of this policy, Carlee uses:
           </p>
-          <p>
-            The site is delivered through Vercel as a hosting and content-delivery provider. Vercel
-            may also process technical request data (such as server logs) under its own privacy
-            practices.
-          </p>
+          <ul>
+            <li>
+              <strong>Vercel</strong> for hosting, Web Analytics, and Speed Insights. Vercel may
+              process visit and technical data under
+              <a href="https://vercel.com/legal/privacy-policy">Vercel’s Privacy Policy</a>.
+            </li>
+            <li>
+              <strong>Supabase</strong> for optional authentication and synced Daily game data.
+              Supabase may process account and gameplay data under
+              <a href="https://supabase.com/privacy">Supabase’s Privacy Policy</a>.
+            </li>
+            <li>
+              <strong>Google</strong>, if you choose Sign in with Google. Google’s handling of your
+              Google account data is described in
+              <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>.
+            </li>
+          </ul>
           <p>
             <strong>Advertising (including Google AdSense):</strong> Carlee does not currently use
             Google AdSense or other advertising networks. If advertising is enabled in the future,
@@ -226,11 +356,12 @@
         <section class="content-section">
           <h2>Data retention and security</h2>
           <p>
-            Because Carlee does not currently operate its own account database or form backend,
-            personal information is not stored by the game application itself; game progress and
-            statistics remain in your own browser. Hosting providers may
-            retain server logs for a limited period according to their policies. Emails you send are
-            retained as long as needed to handle your request.
+            Local game data remains in your browser until you clear it, sign out (which clears local
+            game data on that device), or your browser removes it. Account credentials and synced
+            Daily progress are retained in Supabase while your account exists and as needed to
+            provide the service. Hosting providers may retain server logs for a limited period
+            according to their policies. Emails you send are retained as long as needed to handle
+            your request.
           </p>
           <p>
             Reasonable care is taken to keep the site and related communications secure, but no
@@ -244,7 +375,7 @@
             Carlee is a general-audience game and is not directed at children under 13. We do not
             knowingly collect personal information from children under 13 through the Carlee
             website. If you believe a child has provided personal information (for example by
-            emailing us), please contact us so we can delete it.
+            creating an account or emailing us), please contact us so we can delete it.
           </p>
         </section>
 
@@ -261,8 +392,8 @@
         <section class="content-section">
           <h2>Contact</h2>
           <p>
-            If you have questions about this Privacy Policy or privacy practices related to Carlee,
-            please contact Monscrul at:
+            If you have questions about this Privacy Policy, account data, or privacy practices
+            related to Carlee, please contact Monscrul at:
           </p>
           <p>
             Email: <a href="mailto:contact@playcarlee.com">contact@playcarlee.com</a><br />
@@ -294,5 +425,6 @@
 
     <script src="sidebar.js"></script>
     <script type="module" src="js/stats-ui.js"></script>
+    <script type="module" src="js/page-auth.js"></script>
   </body>
 </html>

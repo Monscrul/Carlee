@@ -63,10 +63,15 @@
             aria-controls="authMenu"
           >
             <span class="auth-avatar hidden" id="authAvatar" aria-hidden="true"></span>
+            <svg class="auth-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
             <span class="auth-btn-label" id="authToggleLabel">Sign In</span>
           </button>
           <div class="auth-menu hidden" id="authMenu" role="menu" aria-label="Account">
             <p class="auth-menu-email" id="authMenuEmail"></p>
+            <button class="auth-menu-item" id="authChangeNameBtn" type="button" role="menuitem">Change display name</button>
             <button class="auth-menu-item" id="authSignOutBtn" type="button" role="menuitem">Sign out</button>
           </div>
         </div>
@@ -113,6 +118,26 @@
 
         <button class="auth-signup-btn" id="authSignUpBtn" type="button">Create account</button>
         <p class="auth-status hidden" id="auth-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="auth-modal" id="displayNameModal" aria-hidden="true" role="dialog" aria-labelledby="displayNameModalTitle">
+      <div class="auth-modal-backdrop" id="displayNameBackdrop"></div>
+      <div class="auth-modal-content">
+        <button class="auth-modal-close" id="displayNameClose" type="button" aria-label="Close">×</button>
+        <h2 class="auth-modal-title" id="displayNameModalTitle">Display name</h2>
+        <p class="auth-modal-subtitle">This name appears in the top bar when you’re signed in.</p>
+        <form class="auth-email-form" id="displayNameForm">
+          <label class="auth-field">
+            <span class="auth-field-label">Name</span>
+            <input id="display-name-input" class="auth-input" type="text" autocomplete="nickname" minlength="2" maxlength="24" required />
+          </label>
+          <div class="display-name-actions">
+            <button class="auth-cancel-btn" id="displayNameCancel" type="button">Cancel</button>
+            <button class="auth-submit-btn" type="submit">Save</button>
+          </div>
+        </form>
+        <p class="auth-status hidden" id="display-name-status" role="status" aria-live="polite"></p>
       </div>
     </div>
 

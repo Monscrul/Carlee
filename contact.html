@@ -6,7 +6,7 @@
     <title>Contact: Carlee</title>
     <meta
       name="description"
-      content="Got a bug, catalog fix, or idea for Carlee? Email contact@playcarlee.com — independent developer Monscrul reads every message."
+      content="Got a bug, catalog fix, account sync question, or idea for Carlee? Email contact@playcarlee.com — independent developer Monscrul reads every message."
     />
     <meta name="theme-color" content="#0f1419" />
     <link rel="canonical" href="https://playcarlee.com/contact" />
@@ -16,7 +16,7 @@
     <meta property="og:title" content="Contact: Carlee" />
     <meta
       property="og:description"
-      content="Feedback, bugs, or catalog corrections? Reach Carlee at contact@playcarlee.com."
+      content="Feedback, bugs, account help, or catalog corrections? Reach Carlee at contact@playcarlee.com."
     />
     <meta property="og:url" content="https://playcarlee.com/contact" />
     <meta property="og:image" content="https://playcarlee.com/assets/og-image.png" />
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Contact: Carlee" />
     <meta
       name="twitter:description"
-      content="Feedback, bugs, or catalog corrections? Reach Carlee at contact@playcarlee.com."
+      content="Feedback, bugs, account help, or catalog corrections? Reach Carlee at contact@playcarlee.com."
     />
     <meta name="twitter:image" content="https://playcarlee.com/assets/og-image.png" />
 
@@ -53,6 +53,29 @@
         </a>
       </div>
       <div class="navbar-right">
+        <div class="auth-controls">
+          <button
+            class="auth-btn"
+            id="authToggle"
+            type="button"
+            aria-label="Sign in"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="authMenu"
+          >
+            <span class="auth-avatar hidden" id="authAvatar" aria-hidden="true"></span>
+            <svg class="auth-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="auth-btn-label" id="authToggleLabel">Sign In</span>
+          </button>
+          <div class="auth-menu hidden" id="authMenu" role="menu" aria-label="Account">
+            <p class="auth-menu-email" id="authMenuEmail"></p>
+            <button class="auth-menu-item" id="authChangeNameBtn" type="button" role="menuitem">Change display name</button>
+            <button class="auth-menu-item" id="authSignOutBtn" type="button" role="menuitem">Sign out</button>
+          </div>
+        </div>
         <button class="stats-btn" id="statsToggle" type="button" aria-label="View statistics" aria-controls="statsPanel" aria-expanded="false">
           <svg class="stats-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M3 3v18h18"></path>
@@ -62,6 +85,62 @@
         </button>
       </div>
     </header>
+
+    <div class="auth-modal" id="authModal" aria-hidden="true" role="dialog" aria-labelledby="authModalTitle">
+      <div class="auth-modal-backdrop" id="authBackdrop"></div>
+      <div class="auth-modal-content">
+        <button class="auth-modal-close" id="authClose" type="button" aria-label="Close sign in">×</button>
+        <h2 class="auth-modal-title" id="authModalTitle">Sign in to Carlee</h2>
+        <p class="auth-modal-subtitle">Save your streak and transfer progress across devices.</p>
+
+        <button class="auth-google-btn" id="authGoogleBtn" type="button">
+          <svg class="auth-google-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"></path>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z"></path>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path>
+          </svg>
+          Continue with Google
+        </button>
+
+        <div class="auth-divider"><span>or</span></div>
+
+        <form class="auth-email-form" id="authEmailForm">
+          <label class="auth-field">
+            <span class="auth-field-label">Email</span>
+            <input id="auth-email" class="auth-input" type="email" autocomplete="email" required />
+          </label>
+          <label class="auth-field">
+            <span class="auth-field-label">Password</span>
+            <input id="auth-password" class="auth-input" type="password" autocomplete="current-password" minlength="6" required />
+          </label>
+          <button class="auth-submit-btn" type="submit">Sign in</button>
+        </form>
+
+        <button class="auth-signup-btn" id="authSignUpBtn" type="button">Create account</button>
+        <p class="auth-status hidden" id="auth-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="auth-modal" id="displayNameModal" aria-hidden="true" role="dialog" aria-labelledby="displayNameModalTitle">
+      <div class="auth-modal-backdrop" id="displayNameBackdrop"></div>
+      <div class="auth-modal-content">
+        <button class="auth-modal-close" id="displayNameClose" type="button" aria-label="Close">×</button>
+        <h2 class="auth-modal-title" id="displayNameModalTitle">Display name</h2>
+        <p class="auth-modal-subtitle">This name appears in the top bar when you’re signed in.</p>
+        <form class="auth-email-form" id="displayNameForm">
+          <label class="auth-field">
+            <span class="auth-field-label">Name</span>
+            <input id="display-name-input" class="auth-input" type="text" autocomplete="nickname" minlength="2" maxlength="24" required />
+          </label>
+          <div class="display-name-actions">
+            <button class="auth-cancel-btn" id="displayNameCancel" type="button">Cancel</button>
+            <button class="auth-submit-btn" type="submit">Save</button>
+          </div>
+        </form>
+        <p class="auth-status hidden" id="display-name-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
 
     <aside class="sidebar" id="sidebar" aria-hidden="true">
       <div class="sidebar-panel">
@@ -116,18 +195,20 @@
             <li>Feedback on the Daily puzzle or on Unlimited mode</li>
             <li>Questions about how the game works</li>
             <li>Bug reports (what you did, what you expected, and what happened)</li>
+            <li>Sign-in or account sync problems (Google or email/password)</li>
             <li>Streak or statistics problems, for example a streak that reset unexpectedly</li>
+            <li>Requests to delete account data</li>
             <li>Corrections to car data (make, model, year, specs, and so on)</li>
             <li>Feature ideas, privacy, or other inquiries</li>
           </ul>
           <p>
-            Streaks and stats are stored in your own browser rather than in an account, so there is no
-            record to look up on our side. For stats issues, the most useful thing you can send is the
+            If you play without an account, streaks and stats live only in your browser, so there is
+            no cloud record to look up. If you are signed in, include the email on the account when
+            you write about sync or deletion. For any stats issue, the most useful extras are the
             steps to reproduce it, plus your browser and device.
           </p>
           <p>
-            There is no contact form on this site yet; Carlee does not currently run a backend for
-            form submissions, so email is the contact method for now.
+            There is no contact form on this site yet; email is the contact method for now.
           </p>
         </article>
       </main>
@@ -152,5 +233,6 @@
 
     <script src="sidebar.js"></script>
     <script type="module" src="js/stats-ui.js"></script>
+    <script type="module" src="js/page-auth.js"></script>
   </body>
 </html>

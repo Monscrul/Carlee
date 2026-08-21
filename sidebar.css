@@ -500,6 +500,20 @@ html:hover::-webkit-scrollbar-thumb {
     display: none;
   }
 
+  .auth-btn:not(.auth-btn--signed-in) {
+    padding: 0 10px;
+  }
+
+  .auth-btn--signed-in {
+    width: 36px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .auth-btn:not(.auth-btn--signed-in) .auth-btn-icon {
+    display: block;
+  }
+
   .site-footer {
     padding: 14px 14px 12px;
   }
@@ -560,7 +574,8 @@ html:hover::-webkit-scrollbar-thumb {
 }
 
 .auth-btn--signed-in {
-  padding-left: 8px;
+  padding: 0 8px;
+  justify-content: center;
 }
 
 .auth-btn-label {
@@ -570,6 +585,13 @@ html:hover::-webkit-scrollbar-thumb {
   max-width: 9rem;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.auth-btn-icon {
+  display: none;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .auth-avatar {
@@ -604,7 +626,7 @@ html:hover::-webkit-scrollbar-thumb {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: #243044;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
-  z-index: 40;
+  z-index: 45;
 }
 
 .auth-menu-email {
@@ -647,11 +669,14 @@ html:hover::-webkit-scrollbar-thumb {
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
-.auth-modal-open .auth-modal,
 .auth-modal.auth-modal-open {
   pointer-events: auto;
   opacity: 1;
   visibility: visible;
+}
+
+body.auth-modal-body-lock {
+  overflow: hidden;
 }
 
 .auth-modal-backdrop {
@@ -838,4 +863,34 @@ html:hover::-webkit-scrollbar-thumb {
 
 .auth-status--error {
   color: #f87171;
+}
+
+.display-name-actions {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+}
+
+.display-name-actions .auth-submit-btn {
+  flex: 1;
+  margin-top: 0;
+}
+
+.auth-cancel-btn {
+  flex: 1;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: transparent;
+  color: #e8edf4;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-cancel-btn:hover,
+.auth-cancel-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.28);
 }

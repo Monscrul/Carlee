@@ -6,7 +6,7 @@
     <title>Terms of Service: Carlee</title>
     <meta
       name="description"
-      content="Carlee Terms of Service: fair play for Daily and Unlimited, device-local streaks, and trademark disclaimers for this independent car guessing game."
+      content="Carlee Terms of Service: fair play for Daily and Unlimited, optional accounts for synced streaks, and trademark disclaimers."
     />
     <meta name="theme-color" content="#0f1419" />
     <link rel="canonical" href="https://playcarlee.com/terms" />
@@ -16,7 +16,7 @@
     <meta property="og:title" content="Terms of Service: Carlee" />
     <meta
       property="og:description"
-      content="Fair play for Daily and Unlimited, local streaks, and trademark notes for Carlee."
+      content="Fair play for Daily and Unlimited, optional synced accounts, and trademark notes for Carlee."
     />
     <meta property="og:url" content="https://playcarlee.com/terms" />
     <meta property="og:image" content="https://playcarlee.com/assets/og-image.png" />
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Terms of Service: Carlee" />
     <meta
       name="twitter:description"
-      content="Fair play for Daily and Unlimited, local streaks, and trademark notes for Carlee."
+      content="Fair play for Daily and Unlimited, optional synced accounts, and trademark notes for Carlee."
     />
     <meta name="twitter:image" content="https://playcarlee.com/assets/og-image.png" />
 
@@ -53,6 +53,29 @@
         </a>
       </div>
       <div class="navbar-right">
+        <div class="auth-controls">
+          <button
+            class="auth-btn"
+            id="authToggle"
+            type="button"
+            aria-label="Sign in"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="authMenu"
+          >
+            <span class="auth-avatar hidden" id="authAvatar" aria-hidden="true"></span>
+            <svg class="auth-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="auth-btn-label" id="authToggleLabel">Sign In</span>
+          </button>
+          <div class="auth-menu hidden" id="authMenu" role="menu" aria-label="Account">
+            <p class="auth-menu-email" id="authMenuEmail"></p>
+            <button class="auth-menu-item" id="authChangeNameBtn" type="button" role="menuitem">Change display name</button>
+            <button class="auth-menu-item" id="authSignOutBtn" type="button" role="menuitem">Sign out</button>
+          </div>
+        </div>
         <button class="stats-btn" id="statsToggle" type="button" aria-label="View statistics" aria-controls="statsPanel" aria-expanded="false">
           <svg class="stats-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M3 3v18h18"></path>
@@ -62,6 +85,62 @@
         </button>
       </div>
     </header>
+
+    <div class="auth-modal" id="authModal" aria-hidden="true" role="dialog" aria-labelledby="authModalTitle">
+      <div class="auth-modal-backdrop" id="authBackdrop"></div>
+      <div class="auth-modal-content">
+        <button class="auth-modal-close" id="authClose" type="button" aria-label="Close sign in">×</button>
+        <h2 class="auth-modal-title" id="authModalTitle">Sign in to Carlee</h2>
+        <p class="auth-modal-subtitle">Save your streak and transfer progress across devices.</p>
+
+        <button class="auth-google-btn" id="authGoogleBtn" type="button">
+          <svg class="auth-google-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"></path>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z"></path>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path>
+          </svg>
+          Continue with Google
+        </button>
+
+        <div class="auth-divider"><span>or</span></div>
+
+        <form class="auth-email-form" id="authEmailForm">
+          <label class="auth-field">
+            <span class="auth-field-label">Email</span>
+            <input id="auth-email" class="auth-input" type="email" autocomplete="email" required />
+          </label>
+          <label class="auth-field">
+            <span class="auth-field-label">Password</span>
+            <input id="auth-password" class="auth-input" type="password" autocomplete="current-password" minlength="6" required />
+          </label>
+          <button class="auth-submit-btn" type="submit">Sign in</button>
+        </form>
+
+        <button class="auth-signup-btn" id="authSignUpBtn" type="button">Create account</button>
+        <p class="auth-status hidden" id="auth-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div class="auth-modal" id="displayNameModal" aria-hidden="true" role="dialog" aria-labelledby="displayNameModalTitle">
+      <div class="auth-modal-backdrop" id="displayNameBackdrop"></div>
+      <div class="auth-modal-content">
+        <button class="auth-modal-close" id="displayNameClose" type="button" aria-label="Close">×</button>
+        <h2 class="auth-modal-title" id="displayNameModalTitle">Display name</h2>
+        <p class="auth-modal-subtitle">This name appears in the top bar when you’re signed in.</p>
+        <form class="auth-email-form" id="displayNameForm">
+          <label class="auth-field">
+            <span class="auth-field-label">Name</span>
+            <input id="display-name-input" class="auth-input" type="text" autocomplete="nickname" minlength="2" maxlength="24" required />
+          </label>
+          <div class="display-name-actions">
+            <button class="auth-cancel-btn" id="displayNameCancel" type="button">Cancel</button>
+            <button class="auth-submit-btn" type="submit">Save</button>
+          </div>
+        </form>
+        <p class="auth-status hidden" id="display-name-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
 
     <aside class="sidebar" id="sidebar" aria-hidden="true">
       <div class="sidebar-panel">
@@ -94,7 +173,7 @@
       <main class="content-page">
         <header class="content-page-header">
           <h1>Terms of Service</h1>
-          <p class="effective-date">Effective date: August 16, 2026</p>
+          <p class="effective-date">Effective date: August 21, 2026</p>
         </header>
 
         <section class="content-section">
@@ -122,24 +201,46 @@
             such as make, country, drivetrain, body style, horsepower, year, and engine.
           </p>
           <p>
-            Carlee currently does not require accounts and does not provide a contact form backend.
-            The production site uses Vercel Web Analytics and Speed Insights to measure visits and
-            performance. It does not currently include advertising. Features may change over time.
+            Accounts are optional. You may play without signing in, or sign in with Google or email
+            and password to sync Daily progress and statistics across devices. Authentication and
+            synced data are provided through Supabase. The production site also uses Vercel Web
+            Analytics and Speed Insights to measure visits and performance. It does not currently
+            include advertising. Features may change over time.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <h2>Accounts</h2>
+          <p>
+            Creating or using an account is optional. If you create an account, you are responsible
+            for keeping your login credentials secure and for activity that occurs under your
+            account. Do not share your password. If you sign in with Google, you must also comply
+            with Google’s terms for that service.
+          </p>
+          <p>
+            We may suspend or terminate accounts that violate these Terms, abuse the service, or
+            create security or operational risk.
           </p>
         </section>
 
         <section class="content-section">
           <h2>Streaks and statistics</h2>
           <p>
-            Streaks, win rate, and other statistics are informal records stored in your own browser on
-            the device you play on. They are not an account, not a competitive ranking, and not backed
-            up by us.
+            Streaks, win rate, and other Daily statistics are informal records for your own play.
+            They are not a competitive ranking and are not prizes.
           </p>
           <p>
-            Because this data lives only in your browser, it can be lost if you clear site data, use
-            private browsing, switch browsers or devices, or if your browser evicts stored data. We
-            cannot restore, transfer, or verify a lost streak, and we may reset or change how
-            statistics work as the game evolves.
+            <strong>Without an account,</strong> statistics and Daily progress are stored only in
+            your browser on that device. They can be lost if you clear site data, use private
+            browsing, switch browsers or devices, or if your browser removes stored data.
+          </p>
+          <p>
+            <strong>With an account,</strong> Daily statistics and today’s Daily game progress may
+            sync to your account so you can continue on another device. Unlimited mode is not
+            synced. Signing out clears local game data on that device; your account data remains
+            until you request deletion or the account is otherwise removed. We may reset or change
+            how statistics work as the game evolves, and we cannot guarantee recovery of every
+            local-only streak that was never synced.
           </p>
         </section>
 
@@ -151,6 +252,7 @@
             <li>Play fairly and not attempt to disrupt, overload, or interfere with the service</li>
             <li>Not attempt to reverse-engineer, scrape at abusive rates, or misuse the car catalog or site in a way that harms the project or other users</li>
             <li>Not use automated tools to cheat or abuse gameplay in a way that interferes with normal operation, including scripting the Daily puzzle or artificially inflating streaks and statistics</li>
+            <li>Not create accounts or manipulate synced progress in a way that abuses the service or other players</li>
           </ul>
         </section>
 
@@ -193,7 +295,8 @@
           <p>
             Carlee is provided “as is” and “as available” for entertainment purposes. We do not
             guarantee that the game will always be available, uninterrupted, error-free, or that the
-            car catalog will be complete or perfectly accurate.
+            car catalog will be complete or perfectly accurate. Optional cloud sync depends on
+            third-party services and your network connection.
           </p>
         </section>
 
@@ -212,7 +315,7 @@
           <h2>Changes to the service</h2>
           <p>
             We may update, pause, or discontinue parts of Carlee at any time, including the catalog,
-            gameplay rules, interface, or availability, without prior notice.
+            gameplay rules, accounts, sync behavior, interface, or availability, without prior notice.
           </p>
         </section>
 
@@ -228,8 +331,8 @@
         <section class="content-section">
           <h2>Privacy</h2>
           <p>
-            How information related to your visit may be handled is described in our
-            <a href="/privacy">Privacy Policy</a>.
+            How information related to your visit and optional account may be handled is described
+            in our <a href="/privacy">Privacy Policy</a>.
           </p>
         </section>
 
@@ -268,5 +371,6 @@
 
     <script src="sidebar.js"></script>
     <script type="module" src="js/stats-ui.js"></script>
+    <script type="module" src="js/page-auth.js"></script>
   </body>
 </html>
